@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="maze.gui.MazeController">
+   <top>
+      <VBox spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox spacing="5.0">
+               <children>
+                  <Label text="Width" />
+                  <TextField fx:id="width" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox spacing="5.0">
+               <children>
+                  <Label text="Height" />
+                  <TextField fx:id="height" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox spacing="5.0">
+               <children>
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#resetMaze" text="Reset Maze" HBox.hgrow="ALWAYS" />
+                  <VBox prefHeight="26.0" prefWidth="122.0">
+                     <children>
+                        <CheckBox fx:id="clearFill" mnemonicParsing="false" text="Clear/Fill" />
+                        <CheckBox fx:id="placeExplorer" mnemonicParsing="false" text="Place Explorer" />
+                        <CheckBox fx:id="placeGoal" mnemonicParsing="false" text="Place Goal" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="5.0" />
+         </BorderPane.margin>
+      </VBox>
+   </top>
+   <center>
+      <Pane fx:id="maze" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding></Pane>
+   </center>
+   <bottom>
+      <HBox spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="left" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Left" HBox.hgrow="ALWAYS" />
+            <VBox>
+               <children>
+                  <Button fx:id="forward" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Forward" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+            <Button fx:id="right" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Right" HBox.hgrow="ALWAYS" />
+         </children>
+         <BorderPane.margin>
+            <Insets top="5.0" />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</BorderPane>

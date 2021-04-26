@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="856c62dd-58f4-4f7d-b1cb-00f5ddbc79ae" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="201" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1X54xxdqZf95Cc4GRbh40djwRg6" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RunManager" selected="JUnit.ListStackTest">
+    <configuration name="MazeApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="maze.gui.MazeApp" />
+      <module name="maze151" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="maze.gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ArrayStackTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="maze151" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="maze.searchers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="maze.searchers" />
+      <option name="MAIN_CLASS_NAME" value="maze.searchers.ArrayStackTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ListStackTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="maze151" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="maze.searchers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="maze.searchers" />
+      <option name="MAIN_CLASS_NAME" value="maze.searchers.ListStackTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MazeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="maze151" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="maze.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="maze.model" />
+      <option name="MAIN_CLASS_NAME" value="maze.model.MazeTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PuzzleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="maze151" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="maze.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="maze.model" />
+      <option name="MAIN_CLASS_NAME" value="maze.model.PuzzleTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ListStackTest" />
+        <item itemvalue="JUnit.ArrayStackTest" />
+        <item itemvalue="Application.MazeApp" />
+        <item itemvalue="JUnit.MazeTest" />
+        <item itemvalue="JUnit.PuzzleTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="856c62dd-58f4-4f7d-b1cb-00f5ddbc79ae" name="Default Changelist" comment="" />
+      <created>1580322871527</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1580322871527</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="393" y="156" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600199140593">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="393" y="156" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.877/-1872.-599.1872.1057@0.23.1440.877" timestamp="1600199140593" />
+    <state width="1388" height="320" key="GridCell.Tab.0.bottom" timestamp="1600094324621">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1388" height="320" key="GridCell.Tab.0.bottom/0.23.1440.877/-1872.-599.1872.1057@0.23.1440.877" timestamp="1600094324621" />
+    <state width="1388" height="320" key="GridCell.Tab.0.center" timestamp="1600094324620">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1388" height="320" key="GridCell.Tab.0.center/0.23.1440.877/-1872.-599.1872.1057@0.23.1440.877" timestamp="1600094324620" />
+    <state width="1388" height="320" key="GridCell.Tab.0.left" timestamp="1600094324620">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1388" height="320" key="GridCell.Tab.0.left/0.23.1440.877/-1872.-599.1872.1057@0.23.1440.877" timestamp="1600094324620" />
+    <state width="1388" height="320" key="GridCell.Tab.0.right" timestamp="1600094324620">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1388" height="320" key="GridCell.Tab.0.right/0.23.1440.877/-1872.-599.1872.1057@0.23.1440.877" timestamp="1600094324620" />
+    <state x="81" y="23" key="SettingsEditor" timestamp="1600088561157">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="81" y="23" key="SettingsEditor/0.23.1440.877/-1872.-599.1872.1057@0.23.1440.877" timestamp="1600088561157" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/maze151$MazeTest.ic" NAME="MazeTest Coverage Results" MODIFIED="1580495496359" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>maze.model.*</FILTER>
+    </SUITE>
+  </component>
+</project>

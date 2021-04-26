@@ -1,0 +1,219 @@
+---
+type: location
+id: MC315
+name: MC Reynolds 315
+desc: You are in MC Reynolds 315.
+longdesc: |
+  You are in MC Reynolds 315.  Banks of desks stretch southwards
+  and upwards into the gloom.  The blackboard broods, dark and empty,
+  like a giant watchful eye.  The door is to the west.
+exits:
+  west: hallwayE3
+  out: hallwayE3
+  south: back315
+  up: back315
+items:
+  - name: eraser
+    desc: A dusty old eraser.
+  - name: blackboard
+    aliases: [board, chalkboard]
+    desc: |
+      The blackboard is empty. It looks as though it has
+      been recently washed.
+    portable: false
+  - name: desks
+    aliases: [tables]
+    desc: |
+      They're not exactly desks, more like tables that are
+      bolted to the floor in stadium-style rows.  It looks
+      like someone left a notebook sitting on a desk towards
+      the back.
+    portable: false
+---
+type: location
+id: back315
+name: Back of 315
+article: the
+desc: You are standing towards the back of MC Reynolds 315.
+longdesc: |
+  You are standing towards the back of MC Reynolds 315,
+  next to the top row of desk-table things.  The front
+  of the classroom is to the north.
+items:
+  - name: notebook
+    desc: |
+      It is a green spiral-bound notebook. It appears to
+      contain someone's physics notes, but there is no name on it.
+exits:
+  north: MC315
+  down: MC315
+---
+type: location
+id: hallwayE3
+name: Hallway
+article: a
+desc: You are at the east end of the MCRey third floor hallway.
+longdesc: |
+  You are standing at the east end of the hallway on the third
+  floor of MC Reynolds. 315 is to the east, and Dr. Goadrich's
+  office is to the south. The hallway continues to the north and
+  west.
+exits:
+  east: MC315
+  south: goadrich
+  west: hallwayE1
+  north: hallwayEB
+---
+type: location
+id: hallwayEB
+name: Hallway
+article: a
+desc: You are in the third floor hallway outside 317.
+longdesc: |
+  You are standing in a hallway on the third floor of MC Reynolds,
+  which extends to the south.  To the east is 317; to the north,
+  a doorway; to the west, a bathroom.
+exits:
+  east: MC317
+  south: hallwayE3
+  west: bathroom2
+  north: landing3NE
+---
+type: location
+id: MC317
+name: MC Reynolds 317
+desc: You are in MC Reynolds 317.
+longdesc: |
+  You are in MC Reynolds 317.  It is bright and sunny.
+  The chalkboard is covered with pictures and writing.
+items:
+  - name: stick of chalk
+    aliases: [chalk]
+    desc: |
+      It is a fat, high-quality piece of Japanese chalk,
+      with the word "Hagoromo" written on the side in
+      black letters.  You seem to recall that Dr. Yorgey
+      always uses this kind of chalk.  Perhaps he
+      accidentally left it here after teaching Algorithms.
+    goal: yorgey
+    goalmessage: |
+      You return the chalk to Dr. Yorgey, who seems very grateful.
+    score: 5
+  - name: blackboard
+    aliases: [board, chalkboard, pictures, picture, writing]
+    portable: false
+    desc: |
+      The blackboard has several pictures of graphs traced
+      over in yellow, green, blue, and orange chalk, along
+      with lots of writing.  You can make out a few words
+      like "lemma" and "theorem", but the rest seems to be
+      about things like "flows" and "cuts" and "values".
+      You realize it is probably left over from Algorithms.
+  - name: sun
+    portable: false
+    desc: You could hurt your eyes that way!
+exits:
+  west: hallwayEB
+  out: hallwayEB
+---
+type: location
+id: hallwayE1
+name: Hallway
+article: a
+desc: You are near the bathroom in the third floor hallway.
+longdesc: |
+  You are standing in the middle of the MC Reynolds third floor
+  hallway.  A bathroom is to the north, and Dr. Grossnickle and
+  Dr. Camfield's offices are to the southeast and south, respectively.
+  To the northeast there is a mysterious door marked "STAIRS".
+  The hall continues east and west.
+exits:
+  east: hallwayE3
+  north: bathroom1
+  west: landing3
+  south: camfield
+---
+type: location
+id: bathroom1
+name: Bathroom
+article: a
+desc: A bathroom on the third floor of MC Reynolds.
+longdesc: |
+  You are in a bathroom on the third floor of MC Reynolds.
+  To be honest you're not really sure why you came in here.
+  The door is to the south.
+items:
+  - name: mirror
+    portable: false
+    desc: You see yourself in the mirror.  What did you expect?
+exits:
+  south: hallwayE1
+  out: hallwayE1
+---
+type: location
+id: landing3
+name: MC Reynolds third floor landing
+article: the
+desc: You are on the landing at the top of the stairs.
+longdesc: |
+  You are on the landing at the top of the stairs in MC Reynolds.
+  Directly ahead of you, to the north, is the math lounge; to
+  the northeast is the elevator.  A hallway extends to the east
+  and west.
+exits:
+  down: landing2
+  east: hallwayE1
+  west: hallwayW1
+  north: mathlounge
+  northeast: elevator3
+---
+type: location
+id: elevator3
+name: Elevator
+article: an
+desc: You are in the elevator.
+longdesc: |
+  You are in the elevator on the third floor of MC Reynolds.
+  Unfortunately, it seems to be out of service.
+exits:
+  south: landing3
+  out: landing3
+---
+type: location
+id: hallwayW1
+name: Hallway
+article: a
+desc: You are in the hallway west of the third-floor landing.
+longdesc: |
+  You are standing in a hallway on the third floor of
+  MC Reynolds, to the west of the landing.  Dr. Downes's office
+  is to the southeast; Dr. Yorgey's to the south; and Prof. Seme's
+  to the north.  The hallway extends east and west.
+exits:
+  south: yorgey
+  east: landing3
+  west: hallwayW3
+  north: seme
+  southeast: downes
+---
+type: location
+id: yorgey
+name: Dr. Yorgey's office
+desc: You are in Dr. Yorgey's office.
+longdesc: |
+  Dr. Yorgey's office is full of books, puzzles, and strange colorful
+  things made out of paper and straws.  There is a large blackboard on
+  one side.
+items:
+  - name: blackboard
+    aliases: [board, chalkboard]
+    portable: false
+    desc: |
+      The blackboard is covered with a strange mixture of Java code,
+      Greek symbols, and drawings of graphs, trees, and arrays.
+  - name: Go set
+    desc: |
+      A cheap, portable set for playing Go, the oldest board game in the world.
+exits:
+  north: hallwayW1
+  out: hallwayW1
