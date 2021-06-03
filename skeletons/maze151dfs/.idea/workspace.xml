@@ -144,6 +144,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="393" y="156" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600199140593">

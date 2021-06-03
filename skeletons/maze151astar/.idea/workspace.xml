@@ -18,7 +18,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="ProjectId" id="1X54xxdqZf95Cc4GRbh40djwRg6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -143,35 +147,16 @@
     </task>
     <servers />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="142" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1601948030273">
-      <screen x="48" y="23" width="1392" height="877" />
-    </state>
-    <state x="142" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/48.23.1392.877@48.23.1392.877" timestamp="1601948030273" />
-    <state width="1387" height="331" key="GridCell.Tab.0.bottom" timestamp="1602008812822">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1387" height="331" key="GridCell.Tab.0.bottom/0.23.1440.877/-1872.-605.1872.1057@0.23.1440.877" timestamp="1602008812822" />
-    <state width="1340" height="214" key="GridCell.Tab.0.bottom/48.23.1392.877@48.23.1392.877" timestamp="1601952170978" />
-    <state width="1387" height="331" key="GridCell.Tab.0.center" timestamp="1602008812820">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1387" height="331" key="GridCell.Tab.0.center/0.23.1440.877/-1872.-605.1872.1057@0.23.1440.877" timestamp="1602008812820" />
-    <state width="1340" height="214" key="GridCell.Tab.0.center/48.23.1392.877@48.23.1392.877" timestamp="1601952170976" />
-    <state width="1387" height="331" key="GridCell.Tab.0.left" timestamp="1602008812819">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1387" height="331" key="GridCell.Tab.0.left/0.23.1440.877/-1872.-605.1872.1057@0.23.1440.877" timestamp="1602008812819" />
-    <state width="1340" height="214" key="GridCell.Tab.0.left/48.23.1392.877@48.23.1392.877" timestamp="1601952170975" />
-    <state width="1387" height="331" key="GridCell.Tab.0.right" timestamp="1602008812821">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1387" height="331" key="GridCell.Tab.0.right/0.23.1440.877/-1872.-605.1872.1057@0.23.1440.877" timestamp="1602008812821" />
-    <state width="1340" height="214" key="GridCell.Tab.0.right/48.23.1392.877@48.23.1392.877" timestamp="1601952170977" />
-    <state x="104" y="23" key="SettingsEditor" timestamp="1601947935504">
-      <screen x="48" y="23" width="1392" height="877" />
-    </state>
-    <state x="104" y="23" key="SettingsEditor/48.23.1392.877@48.23.1392.877" timestamp="1601947935504" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/maze151$MazeTest.ic" NAME="MazeTest Coverage Results" MODIFIED="1580495496359" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

@@ -2,20 +2,24 @@ package maze.searchers;
 
 public class ListNode<E> {
 
-    private E item;
+    private E value;
     private ListNode<E> next;
 
-    public ListNode(E item, ListNode<E> next) {
-        this.item = item;
+    public ListNode(E value) {
+        this(value, null);
+    }
+
+    public ListNode(E value, ListNode<E> next) {
+        this.value = value;
         this.next = next;
     }
 
-    public E getItem() {
-        return item;
+    public E getValue() {
+        return value;
     }
 
-    public void setItem(E item) {
-        this.item = item;
+    public void setValue(E value) {
+        this.value = value;
     }
 
     public ListNode<E> getNext() {

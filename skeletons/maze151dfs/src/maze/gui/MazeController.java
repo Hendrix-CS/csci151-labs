@@ -209,13 +209,16 @@ public class MazeController {
 	}
 
 	private Trail findSolution() {
-		if (stackBox.getSelectionModel().getSelectedItem().equals("ArrayStack")) {
+		/********** TODO UNCOMMENT IN STEP 4
+
+		 if (stackBox.getSelectionModel().getSelectedItem().equals("ArrayStack")) {
 			Stack<Trail> stack = new ArrayStack<>();
-			//return mazeData.solve(stack);
+			return mazeData.solve(stack);
 		} else {
 			Stack<Trail> stack = new ListStack<>();
-			//return mazeData.solve(stack);
+			return mazeData.solve(stack);
 		}
+		 *******/
 		return null;
 	}
 

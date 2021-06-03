@@ -21,7 +21,7 @@ public class ListStack<E> implements Stack<E> {
     @Override
     public E pop() {
         emptyCheck();
-        E temp = top.getItem();
+        E temp = top.getValue();
         top = top.getNext();
         return temp;
     }
@@ -34,14 +34,14 @@ public class ListStack<E> implements Stack<E> {
     @Override
     public E peek() {
         emptyCheck();
-        return top.getItem();
+        return top.getValue();
     }
 
     @Override
     public String toString() {
         String s = "";
         for (ListNode<E> temp = top; temp != null; temp = temp.getNext()) {
-            s = temp.getItem() + " " + s;
+            s = temp.getValue() + " " + s;
         }
         return s;
     }

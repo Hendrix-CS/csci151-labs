@@ -19,7 +19,7 @@ public class ListQueue<E> implements Queue<E> {
     @Override
     public E remove() {
         emptyCheck();
-        E temp = front.getItem();
+        E temp = front.getValue();
         front = front.getNext();
         return temp;
     }
@@ -27,7 +27,7 @@ public class ListQueue<E> implements Queue<E> {
     @Override
     public E element() {
         emptyCheck();
-        return front.getItem();
+        return front.getValue();
     }
 
     @Override
