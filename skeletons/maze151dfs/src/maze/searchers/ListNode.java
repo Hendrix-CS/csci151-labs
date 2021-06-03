@@ -6,7 +6,7 @@ public class ListNode<E> {
     private ListNode<E> next;
 
     public ListNode(E value) {
-        this.value = value;
+        this(value, null);
     }
 
     public ListNode(E value, ListNode<E> next) {
@@ -14,19 +14,28 @@ public class ListNode<E> {
         this.next = next;
     }
 
-    public void setValue(E value) {
-        this.value = value;
+    public E getValue() {
+        return value;
+    }
+
+    public void setValue(E item) {
+        this.value = item;
+    }
+
+    public ListNode<E> getNext() {
+        return next;
     }
 
     public void setNext(ListNode<E> next) {
         this.next = next;
     }
 
-    public E getValue() {
-        return value;
-    }
-
-    public ListNode<E> getNext() {
-        return next;
+    public int size() {
+        if (next == null) {
+            return 1;
+        } else {
+            return 1 + next.size();
+        }
     }
 }
+

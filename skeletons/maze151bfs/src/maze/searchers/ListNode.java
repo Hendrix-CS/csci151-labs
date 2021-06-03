@@ -5,8 +5,12 @@ public class ListNode<E> {
     private E value;
     private ListNode<E> next;
 
-    public ListNode(E item, ListNode<E> next) {
-        this.value = item;
+    public ListNode(E value) {
+        this(value, null);
+    }
+
+    public ListNode(E value, ListNode<E> next) {
+        this.value = value;
         this.next = next;
     }
 
