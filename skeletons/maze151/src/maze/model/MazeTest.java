@@ -78,28 +78,4 @@ public class MazeTest {
 
 	*********/
 
-	/********* TODO UNCOMMENT FOR STEP 4
-
-	@Test
-	public void testNeighbors() {
-		createOpeningsFrom(new Position(1, 1), new Position(1, 0), new Position(0, 1), new Position(1,2), new Position(2, 1));
-		checkNeighbors(0, 0, 2);
-		checkNeighbors(1, 0, 1);
-		checkNeighbors(2, 0, 2);
-		checkNeighbors(3, 0, 0);
-		checkNeighbors(0, 1, 1);
-		checkNeighbors(1, 1, 4);
-		checkNeighbors(2, 1, 1);
-		checkNeighbors(3, 1, 1);
-		checkNeighbors(0, 2, 2);
-		checkNeighbors(1, 2, 1);
-		checkNeighbors(2, 2, 2);
-		checkNeighbors(3, 2, 0);
-	}
-
-	public void checkNeighbors(int x, int y, int target) {
-		assertEquals(target, maze.numOpenNeighbors(new Position(x, y)));
-	}
-
-	*********/
 }

@@ -2,8 +2,6 @@ package maze.model;
 
 import javafx.scene.paint.Color;
 
-// To create your maze solver, augment with a VISITED value.
-
 public enum Cell {
 	OPEN {
 		@Override
@@ -54,7 +52,7 @@ public enum Cell {
 
 	};
 
-	abstract public Color getColor();
-	abstract public Cell flipped();
-	abstract public boolean canEnter();
+	public abstract Color getColor();
+	public abstract Cell flipped();
+	public abstract boolean canEnter();
 }
