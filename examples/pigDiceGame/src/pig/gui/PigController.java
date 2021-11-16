@@ -106,11 +106,11 @@ public class PigController {
     }
 
     public void setDieImage(int top) {
-        dieImage.setImage(new Image("pig/resources/Dice" + top + ".png"));
+        //dieImage.setImage(new Image("pig/resources/Dice" + top + ".png"));
 
-        //File f = new File("src/pig/resources/Dice0.png");
-        //System.out.println(f.toURI().toString());
-        //dieImage.setImage(new Image(f.toURI().toString()));
+        File f = new File("src/pig/resources/Dice" + top + ".png");
+        System.out.println(f.toURI().toString());
+        dieImage.setImage(new Image(f.toURI().toString()));
     }
 
     public void disableButtons(boolean disable) {
