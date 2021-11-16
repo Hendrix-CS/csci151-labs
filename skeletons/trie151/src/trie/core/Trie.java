@@ -32,8 +32,7 @@ public class Trie {
 	 * @return the child with target char, or null if not found
 	 */
 	public Optional<Trie> getChildWith(char target) {
-		// TODO
-		return Optional.empty();
+		return children.get(target);
 	}
 
 	/******
