@@ -54,13 +54,45 @@ public class BinarySearchTreeTest {
 		foreach(CHARS, c -> assertTrue(tree.contains(c)));
 		foreach("ABCDEFGHIJKLMNOPQRSTUVWXYZpqrstuvwxyz", c -> assertFalse(tree.contains(c)));
 	}
-	
+
 	@Test
 	public void testSize() {
 		test1();
 		assertEquals(CHARS.length(), tree.size());
 	}
-	
+
+	@Test
+	public void testMin() {
+		test1();
+		assertEquals("b", tree.getMin().get());
+	}
+
+	@Test
+	public void testMax() {
+		test1();
+		assertEquals("n", tree.getMax().get());
+	}
+
+	@Test
+	public void testHeight() {
+		test1();
+		assertEquals(2, (int)tree.height().get());
+	}
+
+	@Test
+	public void testHeightBig() {
+		test1();
+		foreach("pqrstuvwxyz", c -> tree.insert(c));
+		assertEquals(13, (int)tree.height().get());
+	}
+
+	@Test
+	public void testSizeSmall() {
+		tree.insert("m");
+		tree.insert("a");
+		assertEquals(2, tree.size());
+	}
+
 	@Test
 	public void testInorder() {
 		test1();

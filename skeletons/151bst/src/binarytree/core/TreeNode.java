@@ -7,16 +7,16 @@ public class TreeNode<T extends Comparable<T>> {
 	private Optional<TreeNode<T>> left = Optional.empty();
 	private Optional<TreeNode<T>> right = Optional.empty();
 	private T value;
-	
+
 	public TreeNode(T value) {
 		this.value = value;
 	}
 
 	public T get() {return value;}
-	public Optional<TreeNode<T>> getLeft() {return left;}	
+	public Optional<TreeNode<T>> getLeft() {return left;}
 	public Optional<TreeNode<T>> getRight() {return right;}
 	public boolean isLeaf() {return left.isEmpty() && right.isEmpty();}
-	
+
 	public void insert(T value) {
 		// TODO: Step 1
 		// Insert a new node containing value, preserving the ordering.
@@ -28,7 +28,7 @@ public class TreeNode<T extends Comparable<T>> {
 		// containing the value.
 		// Otherwise, call insert recursively on the child.
 	}
-	
+
 	public boolean contains(T value) {
 		// TODO: Step 1
 		// Return true if value is present in the tree, false otherwise
@@ -41,43 +41,43 @@ public class TreeNode<T extends Comparable<T>> {
 		// Otherwise, call contains recursively on the child.
 		return false;
 	}
-	
-	public int height() {
-		// TODO: Step 2
-		// Return the height of the tree, which is the maximum number of
-		// edges between the root and any leaf.
-		return 0;
-	}
-	
+
 	public int size() {
 		// TODO: Step 2
 		// Return the number of nodes in the tree, which is 1 + the number of
 		// nodes in the child trees.
 		return 0;
 	}
-	
+
 	public T getMin() {
 		// TODO: Step 2
 		// Return the smallest (left-most) value in the tree.
 		return null;
 	}
-	
+
 	public T getMax() {
 		// TODO: Step 2
 		// Return the largest (right-most) value in the tree.
 		return null;
 	}
 
+	public int height() {
+		// TODO: Step 2
+		// Return the height of the tree, which is the maximum number of
+		// edges between the root and any leaf.
+		return 0;
+	}
+
 	public void preOrder(Consumer<T> op) {
 		// TODO: Step 3
 		// Perform a preorder traversal using op.accept(value)
 	}
-	
+
 	public void postOrder(Consumer<T> op) {
 		// TODO: Step 3
 		// Perform a postorder traversal using op.accept(value)
 	}
-	
+
 	public void inOrder(Consumer<T> op) {
 		// TODO: Step 3
 		// Perform an inorder traversal using op.accept(value)
