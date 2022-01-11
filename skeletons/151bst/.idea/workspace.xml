@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11add174-885c-4d86-a179-1600fa7eff5f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/151bst.iml" beforeDir="false" afterPath="$PROJECT_DIR$/151bst.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/151bst/binarytree/core/BinarySearchTree$TreeQueueEntry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/151bst/binarytree/core/BinarySearchTree$TreeQueueEntry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/151bst/binarytree/core/BinarySearchTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/151bst/binarytree/core/BinarySearchTree.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/151bst/binarytree/core/BinarySearchTreeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/151bst/binarytree/core/BinarySearchTreeTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/151bst/binarytree/core/TreeNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/151bst/binarytree/core/TreeNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/151bst/binarytree/gui/BinaryTreeApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/151bst/binarytree/gui/BinaryTreeApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/151bst/binarytree/gui/BinaryTreeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/151bst/binarytree/gui/BinaryTreeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/151bst/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/151bst/module-info.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/binarytree/core/BinarySearchTreeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/binarytree/core/BinarySearchTreeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/binarytree/core/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/binarytree/core/TreeNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../151sortimator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../151sortimator/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="11add174-885c-4d86-a179-1600fa7eff5f" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
