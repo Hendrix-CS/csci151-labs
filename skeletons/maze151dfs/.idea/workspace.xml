@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="856c62dd-58f4-4f7d-b1cb-00f5ddbc79ae" name="Default Changelist" comment="" />
+    <list default="true" id="856c62dd-58f4-4f7d-b1cb-00f5ddbc79ae" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/maze151.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/maze151.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,7 +40,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="JUnit.ListStackTest">
+  <component name="RunManager" selected="Application.MazeApp">
     <configuration name="MazeApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="maze.gui.MazeApp" />
       <module name="maze151" />
@@ -112,9 +116,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MazeApp" />
         <item itemvalue="JUnit.ListStackTest" />
         <item itemvalue="JUnit.ArrayStackTest" />
-        <item itemvalue="Application.MazeApp" />
         <item itemvalue="JUnit.MazeTest" />
         <item itemvalue="JUnit.PuzzleTest" />
       </list>
@@ -145,32 +149,6 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="393" y="156" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600199140593">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="393" y="156" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.877/-1872.-599.1872.1057@0.23.1440.877" timestamp="1600199140593" />
-    <state width="1388" height="320" key="GridCell.Tab.0.bottom" timestamp="1600094324621">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1388" height="320" key="GridCell.Tab.0.bottom/0.23.1440.877/-1872.-599.1872.1057@0.23.1440.877" timestamp="1600094324621" />
-    <state width="1388" height="320" key="GridCell.Tab.0.center" timestamp="1600094324620">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1388" height="320" key="GridCell.Tab.0.center/0.23.1440.877/-1872.-599.1872.1057@0.23.1440.877" timestamp="1600094324620" />
-    <state width="1388" height="320" key="GridCell.Tab.0.left" timestamp="1600094324620">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1388" height="320" key="GridCell.Tab.0.left/0.23.1440.877/-1872.-599.1872.1057@0.23.1440.877" timestamp="1600094324620" />
-    <state width="1388" height="320" key="GridCell.Tab.0.right" timestamp="1600094324620">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1388" height="320" key="GridCell.Tab.0.right/0.23.1440.877/-1872.-599.1872.1057@0.23.1440.877" timestamp="1600094324620" />
-    <state x="81" y="23" key="SettingsEditor" timestamp="1600088561157">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="81" y="23" key="SettingsEditor/0.23.1440.877/-1872.-599.1872.1057@0.23.1440.877" timestamp="1600088561157" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/maze151$MazeTest.ic" NAME="MazeTest Coverage Results" MODIFIED="1580495496359" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
