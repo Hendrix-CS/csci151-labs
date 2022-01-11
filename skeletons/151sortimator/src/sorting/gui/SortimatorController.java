@@ -102,6 +102,7 @@ public class SortimatorController {
             }
         }
 
+
         int size = (int)numDots.getValue();
         xOffset = panel.getWidth() / size;
         yOffset = panel.getHeight() / size;
@@ -113,7 +114,7 @@ public class SortimatorController {
             dot.setFill(Color.BLUE);
             panel.getChildren().add(dot);
             dot.setTranslateX(xOffset * i);
-            dot.setTranslateY(yOffset * i);
+            dot.setTranslateY(panel.getHeight() - (yOffset * i));
             dots.add(dot);
         }
     }
@@ -129,7 +130,7 @@ public class SortimatorController {
     }
 
     void updateDot(int i, int where) {
-        dots.get(i).setTranslateY(yOffset * where);
+        dots.get(i).setTranslateY(panel.getHeight() - (yOffset * where));
         updateCounts.setText(Integer.toString(1 + Integer.parseInt(updateCounts.getText())));
     }
 }

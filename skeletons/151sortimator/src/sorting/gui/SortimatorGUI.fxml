@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 
-<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sorting.gui.SortimatorController">
+<BorderPane xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sorting.gui.SortimatorController">
     <top>
         <VBox>
             <children>
@@ -18,9 +23,12 @@
                         <Button mnemonicParsing="false" onAction="#reset" text="Reset" />
                     </children>
                 </HBox>
-                <HBox>
+                <HBox alignment="CENTER">
                     <children>
-                        <Label text="Array Updates" />
+                        <Label alignment="TOP_CENTER" text="Array Updates">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin></Label>
                         <TextField fx:id="updateCounts" />
                     </children>
                     <padding>
@@ -39,7 +47,10 @@
         </VBox>
     </top>
     <center>
-        <Pane fx:id="panel" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+        <Pane fx:id="panel" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin></Pane>
     </center>
     <bottom>
         <Label text="Value" BorderPane.alignment="CENTER" />
@@ -47,7 +58,7 @@
     <left>
         <Pane BorderPane.alignment="CENTER">
             <children>
-                <Label layoutY="92.0" text="Position" />
+                <Label layoutY="92.0" rotate="-90.0" text="Position" />
             </children>
         </Pane>
     </left>
