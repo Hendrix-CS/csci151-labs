@@ -18,3 +18,7 @@ skeletons/cake151/bin/
 skeletons/maze151/out/
 
 skeletons/maze151dfs/out/
+
+skeletons/maze151bfs/out/
+
+skeletons/maze151astar/out/

@@ -1,7 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="856c62dd-58f4-4f7d-b1cb-00f5ddbc79ae" name="Default Changelist" comment="" />
+    <list default="true" id="856c62dd-58f4-4f7d-b1cb-00f5ddbc79ae" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/maze151.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/maze151.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/.idea/$PRODUCT_WORKSPACE_FILE$" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/.idea/libraries/junit_junit_4_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/.idea/maze151.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/gui/MazeApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/gui/MazeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/gui/MazeGUI.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/Cell$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/Cell$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/Cell$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/Cell.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/CellTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/Direction$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/Direction$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/Direction$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/Direction$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/Direction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/DirectionTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/Explorer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/Maze.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/MazeTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/Move$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/Move$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/Move$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/Move.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/MoveTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/Position.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/Puzzle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/PuzzleTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/Trail.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/searchers/ArrayQueue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/searchers/ArrayQueueTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/searchers/ArrayStack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/searchers/ArrayStackTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/searchers/ListNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/searchers/ListQueue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/searchers/ListQueueTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/searchers/ListStack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/searchers/ListStackTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/searchers/Queue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/searchers/QueueTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/searchers/Stack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/searchers/StackTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze151.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/module-info.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/maze151/src/maze/gui/MazeGUI.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151dfs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151dfs/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,7 +97,7 @@
       <recent name="maze.searchers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ArrayQueueTest">
+  <component name="RunManager" selected="Application.MazeApp">
     <configuration name="MazeApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="maze.gui.MazeApp" />
       <module name="maze151" />
@@ -117,9 +173,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MazeApp" />
         <item itemvalue="JUnit.ArrayQueueTest" />
         <item itemvalue="JUnit.ListQueueTest" />
-        <item itemvalue="Application.MazeApp" />
         <item itemvalue="JUnit.ListStackTest" />
         <item itemvalue="JUnit.ArrayStackTest" />
       </list>
@@ -150,32 +206,6 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="406" y="156" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600700545579">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="406" y="156" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.877/-1872.-605.1872.1057@0.23.1440.877" timestamp="1600700545579" />
-    <state width="1388" height="224" key="GridCell.Tab.0.bottom" timestamp="1600808778584">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1388" height="224" key="GridCell.Tab.0.bottom/0.23.1440.877/-1872.-605.1872.1057@0.23.1440.877" timestamp="1600808778584" />
-    <state width="1388" height="224" key="GridCell.Tab.0.center" timestamp="1600808778579">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1388" height="224" key="GridCell.Tab.0.center/0.23.1440.877/-1872.-605.1872.1057@0.23.1440.877" timestamp="1600808778579" />
-    <state width="1388" height="224" key="GridCell.Tab.0.left" timestamp="1600808778577">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1388" height="224" key="GridCell.Tab.0.left/0.23.1440.877/-1872.-605.1872.1057@0.23.1440.877" timestamp="1600808778577" />
-    <state width="1388" height="224" key="GridCell.Tab.0.right" timestamp="1600808778582">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1388" height="224" key="GridCell.Tab.0.right/0.23.1440.877/-1872.-605.1872.1057@0.23.1440.877" timestamp="1600808778582" />
-    <state x="103" y="23" key="SettingsEditor" timestamp="1600799642519">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="103" y="23" key="SettingsEditor/0.23.1440.877/-1872.-605.1872.1057@0.23.1440.877" timestamp="1600799642519" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/maze151$MazeTest.ic" NAME="MazeTest Coverage Results" MODIFIED="1580495496359" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
