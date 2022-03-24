@@ -4,19 +4,15 @@ import java.util.ArrayList;
 
 import javafx.animation.AnimationTimer;
 import javafx.fxml.FXML;
-import javafx.scene.Node;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
-import javafx.scene.shape.Rectangle;
 
 public class DemoController {
 
 	@FXML
 	private Pane pane;
 
-	private ArrayList<Ball> juggling;
+	private ArrayList<BouncyBall> juggling;
+	private ArrayList<BouncyBallView> bvs;
 
 	private Movement clock;
 
@@ -26,19 +22,19 @@ public class DemoController {
 		private long INTERVAL = 1000000000L / FRAMES_PER_SEC;
 
 		private long last = 0;
-		private ArrayList<Ball> bs;
+		private ArrayList<BouncyBall> bs;
 
-		public void setBalls(ArrayList<Ball> bs) {
+		public void setBalls(ArrayList<BouncyBall> bs) {
 			this.bs = bs;
 		}
 
 		@Override
 		public void handle(long now) {
 			if (now - last > INTERVAL) {
-				for (Ball b : bs) {
+				for (BouncyBall b : bs) {
 					b.move();
-					b.draw();
 				}
+				updateViews();
 				last = now;
 			}
 		}
@@ -46,10 +42,11 @@ public class DemoController {
 
 	@FXML
 	public void initialize() {
-		juggling = new ArrayList<Ball>();
+		juggling = new ArrayList<BouncyBall>();
+		bvs = new ArrayList<BouncyBallView>();
 
 		for (int i = 0; i < 5; i++) {
-			makeCircle();
+			makeBouncyBall();
 		}
 
 		clock = new Movement();
@@ -57,35 +54,20 @@ public class DemoController {
 		clock.start();
 	}
 
-	private void makeCircle() {
-		Circle c = new Circle();
-		c.setFill(Color.GREEN);
-		c.setStroke(Color.BLACK);
-		Ball b = new Ball(10, c, pane);
-		c.setOnMouseDragged(event -> drag(event, b));
-		c.setOnMousePressed(event -> pressed(event, b));
-		c.setOnMouseReleased(event -> released(event, b));
+	private void makeBouncyBall() {
+		BouncyBall b = new BouncyBall(20);
 		juggling.add(b);
-		pane.getChildren().add(c);
+
+		BouncyBallView bv = new BouncyBallView(b);
+		bvs.add(bv);
+		pane.getChildren().add(bv);
+
+		updateViews();
 	}
 
-	// What to do when the mouse is Pressed
-	private void pressed(MouseEvent event, Ball b) {
-		b.toggleMovement();
-		b.setColor(Color.DARKRED);
-		event.consume();
-	}
-
-	// What to do when the mouse is Released
-	private void released(MouseEvent event, Ball b) {
-		b.toggleMovement();
-		b.setColor(Color.DODGERBLUE);
-	}
-
-	// What to do when the mouse is Dragged
-	private void drag(MouseEvent event, Ball b) {
-		b.setX(b.getX() + event.getX());
-		b.setY(b.getY() + event.getY());
-		b.draw();
+	private void updateViews() {
+		for (BouncyBallView bv : bvs) {
+			bv.update();
+		}
 	}
 }

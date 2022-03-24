@@ -17,9 +17,6 @@ public class LightsOutController {
     private Pane pane;
 
     @FXML
-    private ColorPicker cp;
-
-    @FXML
     private Label label;
 
     private int moveCount;
