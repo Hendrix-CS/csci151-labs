@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Circle?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rocket.gui.RocketLauncherController">
    <center>
       <Pane fx:id="centerPane" BorderPane.alignment="CENTER">
@@ -19,8 +18,8 @@
    <bottom>
       <HBox alignment="CENTER" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" onAction="#blastOff" text="Blast Off" HBox.hgrow="ALWAYS" />
-            <Button mnemonicParsing="false" onAction="#land" text="Land">
+            <Button fx:id="blastOff" mnemonicParsing="false" onAction="#blastOff" text="Blast Off" HBox.hgrow="ALWAYS" />
+            <Button fx:id="land" mnemonicParsing="false" onAction="#land" text="Land">
                <HBox.margin>
                   <Insets left="10.0" />
                </HBox.margin>

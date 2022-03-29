@@ -55,12 +55,14 @@ public class Rocket {
      * conditions are met, one pellet of fuel will be used
      * and the rocket will no longer be on the ground.
      */
-    public void blastOff() {
+    public boolean blastOff() {
         if (onGround) {
             if (useFuel()) {
                 onGround = false;
+                return true;
             }
         }
+        return false;
     }
 
     /***
@@ -69,12 +71,14 @@ public class Rocket {
      * conditions are met, one pellet of fuel will be used
      * and the rocket will now be on the ground.
      */
-    public void land() {
+    public boolean land() {
         if (!onGround) {
             if (useFuel()) {
                 onGround = true;
+                return true;
             }
         }
+        return false;
     }
 
     private boolean useFuel() {
