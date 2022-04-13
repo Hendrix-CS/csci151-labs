@@ -98,7 +98,6 @@ public class TreeNode<T extends Comparable<T>> {
 		return Optional.of(this);
 	}
 
-	/* Removed for simplicity
 	public TreeNode<T> leftRotateAt(T value) {
 		// TODO:
 		// - If value is present in the tree, perform a left rotation of
@@ -114,6 +113,4 @@ public class TreeNode<T extends Comparable<T>> {
 		// - If value is not present, just return this.
 		return this;
 	}
-
-	 */
 }

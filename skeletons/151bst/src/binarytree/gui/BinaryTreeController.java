@@ -125,9 +125,8 @@ public class BinaryTreeController {
 			c.setOnMouseClicked(event -> {
 				String t = nodeText.getText();
 				if (remove.isSelected()) tree.remove(t);
-				// removed for simplicity
-				//if (leftRotate.isSelected()) tree.leftRotateAt(t);
-				//if (rightRotate.isSelected()) tree.rightRotateAt(t);
+				if (leftRotate.isSelected()) tree.leftRotateAt(t);
+				if (rightRotate.isSelected()) tree.rightRotateAt(t);
 				redrawTree();
 			});
 			nodeText.setOnMouseClicked(c.getOnMouseClicked());

@@ -241,7 +241,6 @@ public class BinarySearchTreeTest {
 		assertTrue(!tree.contains(c) && containsAll(left));
 	}
 
-	/* Removed for simplicity
 	@Test
 	public void testLeftRotate() {
 		tree.insert("a");
@@ -262,8 +261,7 @@ public class BinarySearchTreeTest {
 		assertEquals("b a c", tree.preorderString());
 	}
 
-	 */
-	
+
 	@Test
 	public void testBig() {
 		for (char c = 0; c < 127; c++) {

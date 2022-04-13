@@ -85,7 +85,6 @@ public class BinarySearchTree<T extends Comparable<T>> {
 		}
 	}
 
-	/* Removing for simplicity
 	public void leftRotateAt(T value) {
 		if (root.isPresent()) {
 			root = Optional.of(root.get().leftRotateAt(value));
@@ -97,8 +96,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
 			root = Optional.of(root.get().rightRotateAt(value));
 		}
 	}
-	 */
-	
+
 	private class TreeQueueEntry {
 		TreeNode<T> node;
 		int level;
