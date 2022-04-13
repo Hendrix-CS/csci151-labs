@@ -27,9 +27,10 @@ public class Simulation {
             p.move();
         }
     }
-    public void draw() {
+
+    public void heal() {
         for (Person p: people) {
-            p.draw();
+            p.getBetter();
         }
     }
 
@@ -41,9 +42,9 @@ public class Simulation {
         }
     }
 
-    public void heal() {
+    public void draw() {
         for (Person p: people) {
-            p.getBetter();
+            p.draw();
         }
     }
 

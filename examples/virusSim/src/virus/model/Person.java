@@ -12,7 +12,6 @@ public class Person {
     private Position loc;
     private Heading heading;
     private Pane pane;
-    private Circle c;
 
     public static int healtime;
     private int sicktime = 0;
@@ -24,9 +23,6 @@ public class Person {
         loc = new Position(world, radius);
         heading = new Heading();
         this.pane = world;
-        c = new Circle(radius, state.getColor());
-        c.setStroke(Color.BLACK);
-        world.getChildren().add(c);
 
         origin = new Position(loc.getX(), loc.getY());
     }
@@ -35,22 +31,17 @@ public class Person {
         return state;
     }
 
+    public Position getLoc() {
+        return loc;
+    }
+
     public void move() {
         loc.move(heading, pane, radius, origin);
     }
 
     public void setState(State state) {
         this.state = state;
-        c.setFill((state.getColor()));
     }
-
-    public void draw() {
-        c.setRadius(radius);
-        c.setTranslateX(loc.getX());
-        c.setTranslateY(loc.getY());
-    }
-
-
 
     public boolean collide(Person other) {
         if (this.loc.distance(other.loc) < 2 * radius) {
@@ -61,8 +52,6 @@ public class Person {
         }
         return false;
     }
-
-
 
     public void getBetter() {
         if (state == State.INFECTED) {
