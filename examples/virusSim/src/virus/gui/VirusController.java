@@ -11,12 +11,9 @@ import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
-import javafx.scene.shape.Rectangle;
 import virus.model.*;
 
 import java.util.ArrayList;
-import java.util.EnumMap;
 
 public class VirusController {
 
@@ -55,10 +52,7 @@ public class VirusController {
 
     Simulation sim;
 
-    EnumMap<State, Rectangle> hrects = new EnumMap<State, Rectangle>(State.class);
-
     ArrayList<PersonView> pviews;
-
     HistogramView histogramView;
     ChartView chartView;
 
@@ -120,7 +114,7 @@ public class VirusController {
 
         world.getChildren().clear();
 
-        sim = new Simulation(100, world);
+        sim = new Simulation(100, world.getBoundsInLocal());
 
         pviews = new ArrayList<>();
         for (Person p : sim.getPeople()) {

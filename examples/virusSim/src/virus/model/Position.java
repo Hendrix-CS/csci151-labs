@@ -1,6 +1,6 @@
 package virus.model;
 
-import javafx.scene.layout.Pane;
+import javafx.geometry.Bounds;
 
 public class Position {
 
@@ -13,7 +13,7 @@ public class Position {
         this.y = y;
     }
 
-    public Position(Pane world, int radius) {
+    public Position(Bounds world, int radius) {
         this(radius + (Math.random() * (world.getWidth() - 2 * radius)),
                 radius + (Math.random() * (world.getHeight() - 2 * radius)));
     }
@@ -26,14 +26,14 @@ public class Position {
         return y;
     }
 
-    public void move(Heading h, Pane p, int radius, Position origin) {
+    public void move(Heading h, Bounds world, int radius, Position origin) {
         x += h.getDX();
         y += h.getDY();
-        if (x > p.getWidth() - radius || x < radius || Math.abs(x - origin.x) > limit) {
+        if (x > world.getWidth() - radius || x < radius || Math.abs(x - origin.x) > limit) {
             h.bounceX();
             x += h.getDX();
         }
-        if (y > p.getHeight() - radius || y < radius || Math.abs(y - origin.y) > limit) {
+        if (y > world.getHeight() - radius || y < radius || Math.abs(y - origin.y) > limit) {
             h.bounceY();
             y += h.getDY();
         }

@@ -1,8 +1,6 @@
 package virus.model;
 
-import javafx.scene.layout.Pane;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
+import javafx.geometry.Bounds;
 
 public class Person {
 
@@ -11,20 +9,21 @@ public class Person {
     private State state;
     private Position loc;
     private Heading heading;
-    private Pane pane;
 
     public static int healtime;
     private int sicktime = 0;
 
     private Position origin;
+    private Bounds world;
 
-    public Person(State state, Pane world) {
+    public Person(State state, Bounds world) {
         this.state = state;
         loc = new Position(world, radius);
         heading = new Heading();
-        this.pane = world;
+        this.world = world;
 
         origin = new Position(loc.getX(), loc.getY());
+
     }
 
     public State getState() {
@@ -36,7 +35,7 @@ public class Person {
     }
 
     public void move() {
-        loc.move(heading, pane, radius, origin);
+        loc.move(heading, world, radius, origin);
     }
 
     public void setState(State state) {

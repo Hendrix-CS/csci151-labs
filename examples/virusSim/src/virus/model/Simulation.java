@@ -1,6 +1,6 @@
 package virus.model;
 
-import javafx.scene.layout.Pane;
+import javafx.geometry.Bounds;
 
 import java.util.ArrayList;
 import java.util.EnumMap;
@@ -10,7 +10,7 @@ public class Simulation {
     private ArrayList<Person> people;
     private int ticks;
 
-    public Simulation(int popCount, Pane world) {
+    public Simulation(int popCount, Bounds world) {
         people = new ArrayList<Person>();
         for (int i = 0; i < popCount; i++) {
             Person p = new Person(State.SUSCEPTIBLE, world);
