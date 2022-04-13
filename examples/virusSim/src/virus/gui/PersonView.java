@@ -12,13 +12,14 @@ public class PersonView extends Parent {
 
     public PersonView(Person person) {
         this.person = person;
-        c = new Circle(person.radius, person.getState().getColor());
+        c = new Circle();
+        update();
         c.setStroke(Color.BLACK);
         getChildren().add(c);
     }
 
     public void update() {
-        c.setFill((person.getState().getColor()));
+        c.setFill(person.getState().getColor());
         c.setRadius(person.radius);
         c.setTranslateX(person.getLoc().getX());
         c.setTranslateY(person.getLoc().getY());

@@ -15,6 +15,7 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import virus.model.*;
 
+import java.util.ArrayList;
 import java.util.EnumMap;
 
 public class VirusController {
@@ -56,6 +57,11 @@ public class VirusController {
 
     EnumMap<State, Rectangle> hrects = new EnumMap<State, Rectangle>(State.class);
 
+    ArrayList<PersonView> pviews;
+
+    HistogramView histogramView;
+    ChartView chartView;
+
     private Movement clock;
 
     private class Movement extends AnimationTimer {
@@ -64,26 +70,15 @@ public class VirusController {
         private long INTERVAL = 1000000000L / FRAMES_PER_SEC;
 
         private long last = 0;
-        private int ticks = 0;
 
         @Override
         public void handle(long now) {
             if (now - last > INTERVAL) {
                 step();
-                drawCharts();
+                updateViews();
                 last = now;
-                ticks++;
-                stepCount.setText("" + ticks);
+                stepCount.setText("" + sim.getTicks());
             }
-        }
-
-        public void resetTicks() {
-            ticks = 0;
-            stepCount.setText("" + ticks);
-        }
-
-        public int getTicks() {
-            return ticks;
         }
     }
 
@@ -111,6 +106,10 @@ public class VirusController {
         clock = new Movement();
         disableButtons(true, true, true);
 
+        histogramView = new HistogramView(sim);
+        histogram.getChildren().add(histogramView);
+        chartView = new ChartView(sim);
+        timechart.getChildren().add(chartView);
 
         world.setBackground(new Background(new BackgroundFill(Color.WHITE, null, null)));
     }
@@ -118,12 +117,17 @@ public class VirusController {
     @FXML
     public void setup() {
         clock.stop();
-        clock.resetTicks();
 
         world.getChildren().clear();
 
         sim = new Simulation(100, world);
-        sim.draw();
+
+        pviews = new ArrayList<>();
+        for (Person p : sim.getPeople()) {
+            PersonView pv = new PersonView(p);
+            world.getChildren().add(pv);
+            pviews.add(pv);
+        }
 
         setSize();
         setLimit();
@@ -131,22 +135,23 @@ public class VirusController {
 
         disableButtons(true, false, false);
 
-        histogram.getChildren().clear();
-        timechart.getChildren().clear();
-        int offset = 0;
-        for (State s : State.values()) {
-            Rectangle r = new Rectangle(50, 0, s.getColor());
-            r.setTranslateX(offset);
-            offset += 55;
-            hrects.put(s, r);
-            histogram.getChildren().add(r);
-        }
-        drawCharts();
+        histogramView.reset();
+        histogramView.setSim(sim);
+        chartView.reset();
+        chartView.setSim(sim);
+
+        updateViews();
     }
 
     public void setSize() {
         Person.radius = (int) (sizeSlider.getValue());
-        sim.draw();
+        updatePeople();
+    }
+
+    public void updatePeople() {
+        for (PersonView pv : pviews) {
+            pv.update();
+        }
     }
 
     public void setLimit() {
@@ -182,26 +187,11 @@ public class VirusController {
         sim.step();
     }
 
-    public void drawCharts() {
-        EnumMap<State, Integer> currentPop = new EnumMap<State, Integer>(State.class);
-        for (Person p : sim.getPeople()) {
-            if (!currentPop.containsKey(p.getState())) {
-                currentPop.put(p.getState(), 0);
-            }
-            currentPop.put(p.getState(), 1 + currentPop.get(p.getState()));
-        }
-        for (State state : hrects.keySet()) {
-            if (currentPop.containsKey(state)) {
-                hrects.get(state).setHeight(currentPop.get(state));
-                hrects.get(state).setTranslateY(30 + 100 - currentPop.get(state));
-
-                Circle c = new Circle(1, state.getColor());
-                c.setTranslateX(clock.getTicks() / 5.0);
-                c.setTranslateY(130 - currentPop.get(state));
-                timechart.getChildren().add(c);
-            }
-        }
-        if (!currentPop.containsKey(State.INFECTED)) {
+    public void updateViews() {
+        histogramView.update();
+        chartView.update();
+        updatePeople();
+        if (!sim.getPopCounts().containsKey(State.INFECTED)) {
             clock.stop();
             disableButtons(true, true, true);
         }
