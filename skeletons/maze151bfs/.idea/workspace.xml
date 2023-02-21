@@ -1,62 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="856c62dd-58f4-4f7d-b1cb-00f5ddbc79ae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/maze151.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/maze151.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/pigDiceGame/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/pigDiceGame/pigDiceGame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/pigDiceGame/pigDiceGame.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../151bst/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../151bst/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../151bst/src/binarytree/core/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/../151bst/src/binarytree/core/TreeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/.idea/$PRODUCT_WORKSPACE_FILE$" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/.idea/libraries/junit_junit_4_12.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/.idea/maze151.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/gui/MazeApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/gui/MazeController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/gui/MazeGUI.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/Cell$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/Cell$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/Cell$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/Cell.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/CellTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/Direction$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/Direction$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/Direction$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/Direction$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/Direction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/DirectionTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/Explorer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/Maze.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/MazeTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/Move$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/Move$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/Move$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/Move.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/MoveTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/Position.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/Puzzle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/PuzzleTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/model/Trail.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/searchers/ArrayQueue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/searchers/ArrayQueueTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/searchers/ArrayStack.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/searchers/ArrayStackTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/searchers/ListNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/searchers/ListQueue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/searchers/ListQueueTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/searchers/ListStack.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/searchers/ListStackTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/searchers/Queue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/searchers/QueueTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/searchers/Stack.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze/searchers/StackTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/maze151.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/module-info.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/maze151/src/maze/gui/MazeGUI.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/maze/searchers/ArrayQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/maze/searchers/ArrayQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/maze/searchers/ListQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/maze/searchers/ListQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151dfs/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151dfs/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151dfs/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../maze151dfs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151dfs/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151dfs/src/maze/searchers/ArrayStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151dfs/src/maze/searchers/ArrayStack.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,22 +40,23 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="1X54xxdqZf95Cc4GRbh40djwRg6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="Downloaded.Files.Path.Enabled" value="false" />
-    <property name="Repository.Attach.Annotations" value="false" />
-    <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "last_opened_file_path": "/Users/goadrich/Github/csci151-labs/skeletons/maze151bfs",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="maze.searchers" />
@@ -205,7 +170,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/maze151$MazeTest.ic" NAME="MazeTest Coverage Results" MODIFIED="1580495496359" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
