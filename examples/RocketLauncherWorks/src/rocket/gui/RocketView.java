@@ -63,12 +63,6 @@ public class RocketView extends Parent {
     }
 
     public void update() {
-        if (rocket.isOnGround()) {
-            setTranslateY(groundY);
-        } else {
-            setTranslateY(airY);
-        }
-
         for (int i = 0; i < Rocket.FUEL_SPOTS; i++) {
             if (cvs[i] != null) {
                 cvs[i].update();

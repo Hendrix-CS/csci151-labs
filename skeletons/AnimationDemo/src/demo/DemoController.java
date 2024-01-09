@@ -18,8 +18,8 @@ public class DemoController {
 
 	private class Movement extends AnimationTimer {
 
-		private long FRAMES_PER_SEC = 50L;
-		private long INTERVAL = 1000000000L / FRAMES_PER_SEC;
+		private final long FRAMES_PER_SEC = 50L;
+		private final long INTERVAL = 1000000000L / FRAMES_PER_SEC;
 
 		private long last = 0;
 		private ArrayList<BouncyBall> bs;
