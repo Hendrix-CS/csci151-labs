@@ -2,8 +2,6 @@ package maze.model;
 
 // Implement all methods for each Enum value.
 
-import java.text.Normalizer;
-
 public enum Direction {
 	NORTH {
 		@Override
@@ -71,8 +69,8 @@ public enum Direction {
 	};
 	
 	public Position getNeighbor(Position src) {
-		return new Position(src.getX() - (int)(Math.sin(Math.toRadians(getRotation()))),
-				src.getY() + (int)(Math.cos(Math.toRadians(getRotation()))));
+		return new Position(src.x() - (int)(Math.sin(Math.toRadians(getRotation()))),
+				src.y() + (int)(Math.cos(Math.toRadians(getRotation()))));
 	}
 	
 	public abstract Direction getClockwise();
@@ -81,9 +79,7 @@ public enum Direction {
 	
 	public static Direction[] randomDirections() {
 		Direction[] result = new Direction[Direction.values().length];
-		for (int i = 0; i < result.length; i++) {
-			result[i] = Direction.values()[i];
-		}
+        System.arraycopy(Direction.values(), 0, result, 0, result.length);
 		for (int i = 0; i < result.length; i++) {
 			int target = (int)(Math.random() * (result.length - i)) + i;
 			Direction temp = result[i];

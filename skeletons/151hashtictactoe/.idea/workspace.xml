@@ -1,7 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="816b4dfa-6d3c-4515-a8ef-eb05cd65b203" name="Default Changelist" comment="" />
+    <list default="true" id="816b4dfa-6d3c-4515-a8ef-eb05cd65b203" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../151sortimator/.idea/libraries/junit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../151bst/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../151bst/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../151bst/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../151bst/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../151bst/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../151bst/151bst.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../151bst/151bst.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../151bst/src/binarytree/core/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/../151bst/src/binarytree/core/TreeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../151bst/src/binarytree/gui/BinaryTreeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../151bst/src/binarytree/gui/BinaryTreeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../151bst/src/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/151hashtictactoe.iml" beforeDir="false" afterPath="$PROJECT_DIR$/151hashtictactoe.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../151sortimator/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../151sortimator/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../151sortimator/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../151sortimator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../151sortimator/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../151sortimator/151sortimator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../151sortimator/151sortimator.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../151sortimator/src/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../151sortimator/src/sorting/algorithms/Setting.java" beforeDir="false" afterPath="$PROJECT_DIR$/../151sortimator/src/sorting/algorithms/Setting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../151sortimator/src/sorting/gui/ClassFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../151sortimator/src/sorting/gui/ClassFinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimationDemo/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RocketLauncher/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cake151/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../cake151/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cake151/src/engine/BasicPayoffs.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cake151/src/engine/BasicPayoffs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cake151/src/engine/Contest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cake151/src/engine/Contest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cake151/src/engine/Simulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cake151/src/engine/Simulator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cake151/src/specs/Score.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cake151/src/specs/Score.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cake151/src/strategies/Timid.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cake151/src/strategies/Timid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151/.idea/maze151.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151/.idea/maze151.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151/src/maze/model/Direction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151/src/maze/model/Direction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151/src/maze/model/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151/src/maze/model/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151/src/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151astar/.idea/maze151.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151astar/.idea/maze151.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151astar/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151astar/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151astar/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151astar/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151astar/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151astar/src/maze/gui/MazeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151astar/src/maze/gui/MazeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151astar/src/maze/model/Direction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151astar/src/maze/model/Direction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151astar/src/maze/model/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151astar/src/maze/model/Maze.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151astar/src/maze/model/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151astar/src/maze/model/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151astar/src/maze/model/Trail.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151astar/src/maze/model/Trail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151astar/src/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151bfs/.idea/maze151.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151bfs/.idea/maze151.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151bfs/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151bfs/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151bfs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151bfs/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151bfs/src/maze/gui/MazeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151bfs/src/maze/gui/MazeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151bfs/src/maze/model/Direction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151bfs/src/maze/model/Direction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151bfs/src/maze/model/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151bfs/src/maze/model/Maze.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151bfs/src/maze/model/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151bfs/src/maze/model/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151bfs/src/maze/model/Trail.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151bfs/src/maze/model/Trail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151bfs/src/maze/searchers/ArrayStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151bfs/src/maze/searchers/ArrayStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151bfs/src/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151dfs/.idea/maze151.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151dfs/.idea/maze151.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151dfs/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151dfs/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151dfs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151dfs/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151dfs/src/maze/gui/MazeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151dfs/src/maze/gui/MazeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151dfs/src/maze/model/Direction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151dfs/src/maze/model/Direction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151dfs/src/maze/model/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151dfs/src/maze/model/Maze.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151dfs/src/maze/model/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151dfs/src/maze/model/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151dfs/src/maze/model/Trail.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151dfs/src/maze/model/Trail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151dfs/src/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trie151/src/trie/core/Trie.java" beforeDir="false" afterPath="$PROJECT_DIR$/../trie151/src/trie/core/Trie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trie151/src/trie/core/TrieTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../trie151/src/trie/core/TrieTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,22 +85,33 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="1ZtdfzT7S8V9g4xmwQcr0SL47ad" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="Downloaded.Files.Path.Enabled" value="false" />
-    <property name="Repository.Attach.Annotations" value="false" />
-    <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.2" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.TicTacToe.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/goadrich/Github/csci151-labs/skeletons/151hashtictactoe&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/tictactoe/gui" />
@@ -40,7 +119,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.HashTableTest">
+  <component name="RunManager" selected="Application.TicTacToe">
     <configuration name="TicTacToe" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="tictactoe.gui.TicTacToe" />
       <module name="151hashtictactoe" />
@@ -71,10 +150,17 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.HashTableTest" />
         <item itemvalue="Application.TicTacToe" />
+        <item itemvalue="JUnit.HashTableTest" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.1-azul-21.0.1-f644763e9732-2a3cadbc" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -87,7 +173,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585662431287</updated>
+      <workItem from="1704831657263" duration="93000" />
+      <workItem from="1704831757478" duration="88000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

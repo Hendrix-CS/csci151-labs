@@ -67,7 +67,7 @@ public class BinaryTreeController {
 	
 	@FXML
 	void insert() {
-		if (insertValue.getText().length() > 0) {
+		if (!insertValue.getText().isEmpty()) {
 			Platform.runLater(() -> {
 				tree.insert(insertValue.getText());
 				insertValue.setText("");
@@ -110,7 +110,7 @@ public class BinaryTreeController {
 	}
 	
 	private void placeNodeAt(double xOffset, double yOffset, int level, int column, ArrayList<String> nodeAndKids, ArrayList<Text> allLabels, HashMap<String,Circle> string2circle) {
-		if (nodeAndKids.size() > 0) {
+		if (!nodeAndKids.isEmpty()) {
 			double x = xOffset * (1 + column);
 			double y = yOffset * (0.5 + level);
 			Circle c = new Circle(x, y, 12, Color.WHITE);

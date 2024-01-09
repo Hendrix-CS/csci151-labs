@@ -81,8 +81,8 @@ public enum Direction {
 	};
 	
 	public Position getNeighbor(Position src) {
-		return new Position(src.getX() - (int)(Math.sin(Math.toRadians(getRotation()))),
-				src.getY() + (int)(Math.cos(Math.toRadians(getRotation()))));
+		return new Position(src.x() - (int)(Math.sin(Math.toRadians(getRotation()))),
+				src.y() + (int)(Math.cos(Math.toRadians(getRotation()))));
 	}
 	
 	public abstract Direction getClockwise();

@@ -56,7 +56,8 @@ public class TrieTest {
 	
 	@Test
 	public void testNotContains() {
-		for (String s: new String[]{"arg", "a", "bail", "bo", "bor", "cat", "he"}) {
+		setupRegular();
+		for (String s: new String[]{"arg", "a", "ashen", "bail", "bo", "bor", "cat", "he"}) {
 			assertFalse(trie.contains(s));
 		}
 	}

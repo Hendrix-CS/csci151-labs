@@ -21,6 +21,11 @@ public class Trie {
 	 */
 	public int size() {
 		// TODO
+
+		for (Association<Character, Trie> a : children) {
+
+		}
+
 		return 0;
 	}
 

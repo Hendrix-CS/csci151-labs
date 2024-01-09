@@ -8,10 +8,10 @@ import specs.Payoffs;
 import specs.Strategy;
 
 public class Simulator {
-	private Map<String,Integer> scores;
-	private Map<String,Map<String,Integer>> pairScores;
-	private Payoffs payoffs;
-	private int numRounds;
+	private final Map<String,Integer> scores;
+	private final Map<String,Map<String,Integer>> pairScores;
+	private final Payoffs payoffs;
+	private final int numRounds;
 
 	private static class ClassFilter implements FileFilter {
 		@Override
@@ -20,7 +20,7 @@ public class Simulator {
 		}
 	}
 
-	private class ScoreName implements Comparable<ScoreName> {
+	private static class ScoreName implements Comparable<ScoreName> {
 		public String name;
 		public int score;
 
@@ -127,9 +127,7 @@ public class Simulator {
 
 	public void pad(String content, int colWidth, StringBuilder sb) {
 		sb.append(content);
-		for (int i = content.length(); i < colWidth; ++i) {
-			sb.append(' ');
-		}
+        sb.append(" ".repeat(Math.max(0, colWidth - content.length())));
 	}
 
 	public void numPad(double value, int colWidth, StringBuilder sb) {
@@ -137,9 +135,7 @@ public class Simulator {
 	}
 
 	public void rightPad(String content, int colWidth, StringBuilder sb) {
-		for (int i = content.length(); i < colWidth; ++i) {
-			sb.append(' ');
-		}
+        sb.append(" ".repeat(Math.max(0, colWidth - content.length())));
 		sb.append(content);
 	}
 

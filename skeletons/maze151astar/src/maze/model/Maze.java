@@ -24,19 +24,19 @@ public class Maze {
 	}
 
 	public boolean inMaze(Position p) {
-		return !(p.getX() < 0 || p.getY() < 0 || p.getX() >= getWidth() || p.getY() >= getHeight());
+		return !(p.x() < 0 || p.y() < 0 || p.x() >= getWidth() || p.y() >= getHeight());
 	}
 
 	public Cell getStateFor(Position p) {
 		if (inMaze(p)) {
-			return cells[p.getX()][p.getY()];
+			return cells[p.x()][p.y()];
 		}
 		return Cell.CLOSED;
 	}
 
 	public void setStateFor(Position p, Cell state) {
 		if (inMaze(p)) {
-			cells[p.getX()][p.getY()] = state;
+			cells[p.x()][p.y()] = state;
 		}
 	}
 

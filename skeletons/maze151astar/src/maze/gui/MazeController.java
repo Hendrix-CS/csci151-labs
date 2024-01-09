@@ -152,8 +152,8 @@ public class MazeController {
 	private void placeFigure() {
 
 		Position spot = mazeData.getExplorerPosition();
-		ex.setTranslateX(spot.getX() * cellWidth);
-		ex.setTranslateY(spot.getY() * cellHeight);
+		ex.setTranslateX(spot.x() * cellWidth);
+		ex.setTranslateY(spot.y() * cellHeight);
 		ex.setRotate(mazeData.getExplorerHeading().getRotation());
 
 
@@ -211,26 +211,25 @@ public class MazeController {
 	}
 
 	private Trail findSolution() {
-		switch (searchBox.getSelectionModel().getSelectedItem()) {
-			case "ArrayStack": {
-				WrappedStack<Trail> stack = new WrappedStack<>(new ArrayStack<>());
-				return mazeData.solve(stack);
-			}
-			case "ListStack": {
-				WrappedStack<Trail> stack = new WrappedStack<>(new ListStack<>());
-				return mazeData.solve(stack);
-			}
-			case "ArrayQueue": {
-				WrappedQueue<Trail> queue = new WrappedQueue<>(new ArrayQueue<>());
-				return mazeData.solve(queue);
-			}
-			case "ListQueue": {
-				WrappedQueue<Trail> queue = new WrappedQueue<>(new ListQueue<>());
-				return mazeData.solve(queue);
-			}
-			default:
-				return mazeData.solve(new MinHeap<>(heapEstimator));
-		}
+        return switch (searchBox.getSelectionModel().getSelectedItem()) {
+            case "ArrayStack" -> {
+                WrappedStack<Trail> stack = new WrappedStack<>(new ArrayStack<>());
+                yield mazeData.solve(stack);
+            }
+            case "ListStack" -> {
+                WrappedStack<Trail> stack = new WrappedStack<>(new ListStack<>());
+                yield mazeData.solve(stack);
+            }
+            case "ArrayQueue" -> {
+                WrappedQueue<Trail> queue = new WrappedQueue<>(new ArrayQueue<>());
+                yield mazeData.solve(queue);
+            }
+            case "ListQueue" -> {
+                WrappedQueue<Trail> queue = new WrappedQueue<>(new ListQueue<>());
+                yield mazeData.solve(queue);
+            }
+            default -> mazeData.solve(new MinHeap<>(heapEstimator));
+        };
 	}
 
 	private void updateCellCounts() {
@@ -239,9 +238,4 @@ public class MazeController {
 		}
 	}
 
-	private void setupChoices(ChoiceBox<String> choices, String type) {
-		choices.getItems().add("Array" + type);
-		choices.getItems().add("List" + type);
-
-	}
 }

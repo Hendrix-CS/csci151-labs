@@ -146,8 +146,8 @@ public class MazeController {
 	private void placeFigure() {
 
 		Position spot = mazeData.getExplorerPosition();
-		ex.setTranslateX(spot.getX() * cellWidth);
-		ex.setTranslateY(spot.getY() * cellHeight);
+		ex.setTranslateX(spot.x() * cellWidth);
+		ex.setTranslateY(spot.y() * cellHeight);
 		ex.setRotate(mazeData.getExplorerHeading().getRotation());
 
 
@@ -223,7 +223,7 @@ public class MazeController {
 	private void setupChoices(ChoiceBox<String> choices, String type) {
 		choices.getItems().add("Array" + type);
 		choices.getItems().add("List" + type);
-		if (choices.getItems().size() > 0) {
+		if (!choices.getItems().isEmpty()) {
 			choices.getSelectionModel().select(0);
 		}
 	}

@@ -1,8 +1,8 @@
 package maze.model;
 
 public class Trail {
-	private Position end;
-	private Trail prev;
+	private final Position end;
+	private final Trail prev;
 
 	public Trail(Position p, Trail prev) {
 		this.end = p;

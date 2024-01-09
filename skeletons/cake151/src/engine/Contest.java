@@ -6,9 +6,9 @@ import specs.Strategy;
 
 
 public class Contest {
-	private Strategy one, two;
+	private final Strategy one, two;
 	private int oneScore, twoScore;
-	private Payoffs payoffs;
+	private final Payoffs payoffs;
 	
 	public Contest(Strategy one, Strategy two, Payoffs p) {
 		this.one = one;
@@ -22,8 +22,8 @@ public class Contest {
 		one.rememberOtherLast(def2);
 		two.rememberOtherLast(def1);
 		Score s = payoffs.score(def1, def2);
-		oneScore += s.getOne();
-		twoScore += s.getTwo();
+		oneScore += s.one();
+		twoScore += s.two();
 	}
 	
 	public void rounds(int n) {

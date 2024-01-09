@@ -14,7 +14,7 @@ public class Timid implements Strategy {
 	}
 
 	/**
-	 * The Naive strategy does not care what the other
+	 * The Timid strategy does not care what the other
 	 * player did last round, so the code for this method
 	 * is empty.
      */

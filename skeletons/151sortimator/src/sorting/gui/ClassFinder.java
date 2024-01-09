@@ -3,6 +3,7 @@ package sorting.gui;
 import java.io.File;
 import java.io.FilenameFilter;
 import java.net.MalformedURLException;
+import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.file.Paths;
@@ -25,7 +26,7 @@ public class ClassFinder<T> {
 
         File targetDir = null;
         try {
-            URL targetDirName = new URL(getClass().getProtectionDomain().getCodeSource().getLocation() + packageName.replace('.', File.separatorChar));
+            URL targetDirName = new URI(getClass().getProtectionDomain().getCodeSource().getLocation() + packageName.replace('.', File.separatorChar)).toURL();
             targetDir = Paths.get(targetDirName.toURI()).toFile();
         } catch (URISyntaxException e) {
             // TODO Auto-generated catch block
@@ -50,7 +51,7 @@ public class ClassFinder<T> {
                 e.printStackTrace();
             }
         }
-        if (choices.getItems().size() > 0) {
+        if (!choices.getItems().isEmpty()) {
             choices.getSelectionModel().select(0);
         }
     }

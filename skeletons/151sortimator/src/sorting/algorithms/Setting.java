@@ -3,8 +3,8 @@ package sorting.algorithms;
 import java.util.ArrayList;
 
 public class Setting<E> {
-    private E value;
-    private int where;
+    private final E value;
+    private final int where;
 
     public Setting(int i, E e) {
         value = e;

@@ -13,9 +13,6 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
 import maze.model.*;
-import maze.searchers.ArrayStack;
-import maze.searchers.ListStack;
-import maze.searchers.Stack;
 
 public class MazeController {
 	@FXML
@@ -112,7 +109,8 @@ public class MazeController {
 						if (mazeData.canEnter(spot)) {
 							mazeData.placeExplorer(spot);
 							maze.getChildren().remove(ex);
-							ex = new Polygon(cellWidth/4, cellHeight/4, 3*cellWidth/4, cellHeight/4, cellWidth/2, 3*cellHeight/4);
+							ex = new Polygon(cellWidth/4, cellHeight/4, 3*cellWidth/4,
+									cellHeight/4, cellWidth/2, 3*cellHeight/4);
 							ex.setFill(Color.GREEN);
 							maze.getChildren().add(ex);
 							placeFigure();
@@ -146,8 +144,8 @@ public class MazeController {
 	private void placeFigure() {
 
 		Position spot = mazeData.getExplorerPosition();
-		ex.setTranslateX(spot.getX() * cellWidth);
-		ex.setTranslateY(spot.getY() * cellHeight);
+		ex.setTranslateX(spot.x() * cellWidth);
+		ex.setTranslateY(spot.y() * cellHeight);
 		ex.setRotate(mazeData.getExplorerHeading().getRotation());
 
 
@@ -219,6 +217,8 @@ public class MazeController {
 			return mazeData.solve(stack);
 		}
 		 *******/
+
+		/****** TODO COMMENT THIS FOR STEP 4 ****/
 		return null;
 	}
 
@@ -232,7 +232,7 @@ public class MazeController {
 	private void setupChoices(ChoiceBox<String> choices, String type) {
 		choices.getItems().add("Array" + type);
 		choices.getItems().add("List" + type);
-		if (choices.getItems().size() > 0) {
+		if (!choices.getItems().isEmpty()) {
 			choices.getSelectionModel().select(0);
 		}
 	}

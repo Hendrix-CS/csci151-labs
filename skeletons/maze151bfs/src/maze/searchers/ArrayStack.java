@@ -23,8 +23,7 @@ public class ArrayStack<E> implements Stack<E> {
 	public E pop() {
 		emptyCheck();
 		top--;
-		E temp = stuff[top];
-		return temp;
+        return stuff[top];
 	}
 
 	@Override
