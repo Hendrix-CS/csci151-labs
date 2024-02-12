@@ -9,6 +9,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.paint.Color;
 import maze.model.Move;
 import maze.model.Position;
 import maze.model.Puzzle;
@@ -130,8 +131,8 @@ public class MazeController {
 
 
 		Position spot = mazeData.getExplorerPosition();
-		ex.setTranslateX(spot.getX() * cellWidth);
-		ex.setTranslateY(spot.getY() * cellHeight);
+		ex.setTranslateX(spot.X() * cellWidth);
+		ex.setTranslateY(spot.Y() * cellHeight);
 		ex.setRotate(mazeData.getExplorerHeading().getRotation());
 
 		***********/
