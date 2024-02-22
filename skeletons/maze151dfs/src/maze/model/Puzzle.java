@@ -1,6 +1,7 @@
 package maze.model;
 
 import javafx.scene.paint.Color;
+import maze.searchers.*;
 
 //Create an implementation that passes all tests in PuzzleTest.
 

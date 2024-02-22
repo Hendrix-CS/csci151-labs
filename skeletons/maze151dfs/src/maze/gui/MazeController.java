@@ -13,6 +13,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
 import maze.model.*;
+import maze.searchers.*;
 
 public class MazeController {
 	@FXML
@@ -218,7 +219,7 @@ public class MazeController {
 		}
 		 *******/
 
-		/****** TODO COMMENT THIS FOR STEP 4 ****/
+		/****** TODO COMMENT THIS OUT FOR STEP 4 ****/
 		return null;
 	}
 
