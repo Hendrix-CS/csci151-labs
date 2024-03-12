@@ -26,7 +26,7 @@ public class ClassFinder<T> {
 
         File targetDir = null;
         try {
-            URL targetDirName = new URI(getClass().getProtectionDomain().getCodeSource().getLocation() + packageName.replace('.', File.separatorChar)).toURL();
+            URL targetDirName = new URI(getClass().getProtectionDomain().getCodeSource().getLocation() + packageName.replace('.', '/')).toURL();
             targetDir = Paths.get(targetDirName.toURI()).toFile();
         } catch (URISyntaxException e) {
             // TODO Auto-generated catch block
