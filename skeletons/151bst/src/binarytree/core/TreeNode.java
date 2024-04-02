@@ -112,19 +112,29 @@ public class TreeNode<T extends Comparable<T>> {
 		return null;
 	}
 
-	public TreeNode<T> leftRotateAt(T value) {
+	public Optional<TreeNode<T>> leftRotateAt(T target) {
 		// TODO:
-		// - If value is present in the tree, perform a left rotation of
-		//   the node containing it, and return its new parent node.
+		// - If target is less than value:
+		//   - Set the left child to be the result of calling this method recursively.
+		// - If target is greater than value:
+		//   - Set the right child to be the result of calling this method recursively.
+		// - If target and value are equivalent:
+		// 		perform a left rotation of this node
+		//      and return the value to be held by the parent.
 		// - If value is not present, just return this.
-		return this;
+		return Optional.of(this);
 	}
 
-	public TreeNode<T> rightRotateAt(T value) {
+	public Optional<TreeNode<T>> rightRotateAt(T target) {
 		// TODO:
-		// - If value is present in the tree, perform a right rotation of
-		//   the node containing it, and return its new parent node.
+		// - If target is less than value:
+		//   - Set the left child to be the result of calling this method recursively.
+		// - If target is greater than value:
+		//   - Set the right child to be the result of calling this method recursively.
+		// - If target and value are equivalent:
+		// 		perform a right rotation of this node
+		//      and return the value to be held by the parent.
 		// - If value is not present, just return this.
-		return this;
+		return Optional.of(this);
 	}
 }

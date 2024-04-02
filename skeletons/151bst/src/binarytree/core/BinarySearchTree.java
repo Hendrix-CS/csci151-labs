@@ -87,13 +87,13 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
 	public void leftRotateAt(T value) {
 		if (root.isPresent()) {
-			root = Optional.of(root.get().leftRotateAt(value));
+			root = root.get().leftRotateAt(value);
 		}
 	}
 	
 	public void rightRotateAt(T value) {
 		if (root.isPresent()) {
-			root = Optional.of(root.get().rightRotateAt(value));
+			root = root.get().rightRotateAt(value);
 		}
 	}
 

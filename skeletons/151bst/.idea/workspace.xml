@@ -5,67 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11add174-885c-4d86-a179-1600fa7eff5f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../151sortimator/.idea/libraries/junit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/151bst.iml" beforeDir="false" afterPath="$PROJECT_DIR$/151bst.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/binarytree/core/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/binarytree/core/BinarySearchTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/binarytree/core/BinarySearchTreeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/binarytree/core/BinarySearchTreeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/binarytree/core/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/binarytree/core/TreeNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/binarytree/gui/BinaryTreeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/binarytree/gui/BinaryTreeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../151hashtictactoe/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../151hashtictactoe/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../151hashtictactoe/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../151sortimator/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../151sortimator/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../151sortimator/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../151sortimator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../151sortimator/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../151sortimator/151sortimator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../151sortimator/151sortimator.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../151sortimator/src/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../151sortimator/src/sorting/algorithms/Setting.java" beforeDir="false" afterPath="$PROJECT_DIR$/../151sortimator/src/sorting/algorithms/Setting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../151sortimator/src/sorting/gui/ClassFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../151sortimator/src/sorting/gui/ClassFinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AnimationDemo/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RocketLauncher/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cake151/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../cake151/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cake151/src/engine/BasicPayoffs.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cake151/src/engine/BasicPayoffs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cake151/src/engine/Contest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cake151/src/engine/Contest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cake151/src/engine/Simulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cake151/src/engine/Simulator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cake151/src/specs/Score.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cake151/src/specs/Score.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cake151/src/strategies/Timid.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cake151/src/strategies/Timid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151/.idea/maze151.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151/.idea/maze151.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151/src/maze/model/Direction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151/src/maze/model/Direction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151/src/maze/model/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151/src/maze/model/Position.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151/src/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151astar/.idea/maze151.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151astar/.idea/maze151.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151astar/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151astar/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151astar/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151astar/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151astar/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151astar/src/maze/gui/MazeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151astar/src/maze/gui/MazeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151astar/src/maze/model/Direction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151astar/src/maze/model/Direction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151astar/src/maze/model/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151astar/src/maze/model/Maze.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151astar/src/maze/model/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151astar/src/maze/model/Position.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151astar/src/maze/model/Trail.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151astar/src/maze/model/Trail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151astar/src/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151bfs/.idea/maze151.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151bfs/.idea/maze151.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151bfs/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151bfs/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151bfs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151bfs/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151bfs/src/maze/gui/MazeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151bfs/src/maze/gui/MazeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151bfs/src/maze/model/Direction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151bfs/src/maze/model/Direction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151bfs/src/maze/model/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151bfs/src/maze/model/Maze.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151bfs/src/maze/model/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151bfs/src/maze/model/Position.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151bfs/src/maze/model/Trail.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151bfs/src/maze/model/Trail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151bfs/src/maze/searchers/ArrayStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151bfs/src/maze/searchers/ArrayStack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151bfs/src/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151dfs/.idea/maze151.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151dfs/.idea/maze151.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151dfs/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151dfs/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151dfs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151dfs/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151dfs/src/maze/gui/MazeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151dfs/src/maze/gui/MazeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151dfs/src/maze/model/Direction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151dfs/src/maze/model/Direction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151dfs/src/maze/model/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151dfs/src/maze/model/Maze.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151dfs/src/maze/model/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151dfs/src/maze/model/Position.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151dfs/src/maze/model/Trail.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151dfs/src/maze/model/Trail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151dfs/src/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trie151/src/trie/core/Trie.java" beforeDir="false" afterPath="$PROJECT_DIR$/../trie151/src/trie/core/Trie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trie151/src/trie/core/TrieTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../trie151/src/trie/core/TrieTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,9 +22,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="1ZjBK8Nv4EvIP2G3B3myEPF9PAM" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -90,6 +34,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.BinaryTreeApp.executor": "Run",
+    "JUnit.BinarySearchTreeTest.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
@@ -113,7 +58,7 @@
       <recent name="$PROJECT_DIR$/src/binarytree/core" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BinaryTreeApp">
+  <component name="RunManager" selected="JUnit.BinarySearchTreeTest">
     <configuration name="BinaryTreeApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="binarytree.gui.BinaryTreeApp" />
       <module name="151bst" />
@@ -144,15 +89,15 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BinaryTreeApp" />
         <item itemvalue="JUnit.BinarySearchTreeTest" />
+        <item itemvalue="Application.BinaryTreeApp" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.1-azul-21.0.1-f644763e9732-2a3cadbc" />
+        <option value="jdk-21.0.1-openjdk-21.0.1-f644763e9732-2f79fb23" />
       </set>
     </attachedChunks>
   </component>
@@ -168,6 +113,7 @@
       <option name="presentableId" value="Default" />
       <updated>1585342555668</updated>
       <workItem from="1704829968347" duration="638000" />
+      <workItem from="1712078145754" duration="3227000" />
     </task>
     <servers />
   </component>

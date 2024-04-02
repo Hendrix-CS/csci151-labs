@@ -250,6 +250,24 @@ public class BinarySearchTreeTest {
 		tree.leftRotateAt("a");
 		assertEquals("b a c", tree.preorderString());
 	}
+
+	@Test
+	public void testLeftRotateBig() {
+		tree.insert("f");
+		tree.insert("b");
+		tree.insert("a");
+		tree.insert("d");
+		tree.insert("c");
+		tree.insert("e");
+		tree.insert("j");
+		tree.insert("h");
+		tree.insert("g");
+		tree.insert("i");
+		tree.insert("k");
+		assertEquals("f b a d c e j h g i k", tree.preorderString());
+		tree.leftRotateAt("b");
+		assertEquals("f d b a c e j h g i k", tree.preorderString());
+	}
 	
 	@Test
 	public void testRightRotate() {
@@ -261,7 +279,23 @@ public class BinarySearchTreeTest {
 		assertEquals("b a c", tree.preorderString());
 	}
 
-
+	@Test
+	public void testRightRotateBig() {
+		tree.insert("f");
+		tree.insert("b");
+		tree.insert("a");
+		tree.insert("d");
+		tree.insert("c");
+		tree.insert("e");
+		tree.insert("j");
+		tree.insert("h");
+		tree.insert("g");
+		tree.insert("i");
+		tree.insert("k");
+		assertEquals("f b a d c e j h g i k", tree.preorderString());
+		tree.rightRotateAt("j");
+		assertEquals("f b a d c e h g j i k", tree.preorderString());
+	}
 	@Test
 	public void testBig() {
 		for (char c = 0; c < 127; c++) {

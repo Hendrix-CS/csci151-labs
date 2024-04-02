@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7d58a0d-770f-4ecc-af23-a74f6d1bb4bf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../examples/LightsOut/out/production/LightsOut/games/LightsOut.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/LightsOut/out/production/LightsOut/games/LightsOut.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../examples/LightsOut/out/production/LightsOut/games/LightsOutApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/LightsOut/out/production/LightsOut/games/LightsOutApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../examples/LightsOut/out/production/LightsOut/games/LightsOutController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/LightsOut/out/production/LightsOut/games/LightsOutController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../examples/LightsOut/out/production/LightsOut/games/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/LightsOut/out/production/LightsOut/games/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../examples/LightsOut/out/production/LightsOut/games/Position.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/LightsOut/out/production/LightsOut/games/Position.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../examples/LightsOut/out/production/LightsOut/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/LightsOut/out/production/LightsOut/module-info.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sorting/gui/ClassFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sorting/gui/ClassFinder.java" afterDir="false" />
-    </list>
+    <list default="true" id="a7d58a0d-770f-4ecc-af23-a74f6d1bb4bf" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -123,7 +115,7 @@
       <updated>1583462076138</updated>
       <workItem from="1704828855260" duration="1017000" />
       <workItem from="1704831751616" duration="5000" />
-      <workItem from="1710270183263" duration="32000" />
+      <workItem from="1710270183263" duration="469000" />
     </task>
     <servers />
   </component>
