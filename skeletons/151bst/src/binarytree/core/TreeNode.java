@@ -19,27 +19,27 @@ public class TreeNode<T extends Comparable<T>> {
 	public Optional<TreeNode<T>> getRight() {return right;}
 	public boolean isLeaf() {return left.isEmpty() && right.isEmpty();}
 
-	public void insert(T value) {
+	public void insert(T target) {
 		// TODO: Step 1
-		// Insert a new node containing value, preserving the ordering.
+		// Insert a new node containing target, preserving the ordering.
 		//
-		// Compare the parameter to this.value to determine which direction to go.
-		// If the parameter is less than this.value, proceed with the left child.
-		// If the parameter is greater than this.value, proceed with the right child.
+		// Compare the target parameter to this.value to determine which direction to go.
+		// If the target is less than this.value, proceed with the left child.
+		// If the target is greater than this.value, proceed with the right child.
 		// If the child is empty, replace it with a new Optional<TreeNode>
-		// containing the value.
+		// containing the target.
 		// Otherwise, call insert recursively on the child.
 
 	}
 
-	public boolean contains(T value) {
+	public boolean contains(T target) {
 		// TODO: Step 1
-		// Return true if value is present in the tree, false otherwise
+		// Return true if target is present in the tree, false otherwise
 		//
-		// Compare the parameter to this.value to determine which direction to go.
-		// If the parameter is equal to this.value, return true
-		// If the parameter is less than this.value, proceed with the left child.
-		// If the parameter is greater than this.value, proceed with the right child.
+		// Compare the target parameter to this.value to determine which direction to go.
+		// If the target is equal to this.value, return true
+		// If the target is less than this.value, proceed with the left child.
+		// If the target is greater than this.value, proceed with the right child.
 		// If the child is empty, return false.
 		// Otherwise, call contains recursively on the child.
 
@@ -93,7 +93,6 @@ public class TreeNode<T extends Comparable<T>> {
 	public void inOrder(Consumer<T> op) {
 		// TODO: Step 3
 		// Perform an inorder traversal using op.accept(value)
-
 	}
 
 	public Optional<TreeNode<T>> remove(T target) {
@@ -121,7 +120,7 @@ public class TreeNode<T extends Comparable<T>> {
 		// - If target and value are equivalent:
 		// 		perform a left rotation of this node
 		//      and return the value to be held by the parent.
-		// - If value is not present, just return this.
+		// - If target is not present, just return this.
 		return Optional.of(this);
 	}
 
@@ -134,7 +133,7 @@ public class TreeNode<T extends Comparable<T>> {
 		// - If target and value are equivalent:
 		// 		perform a right rotation of this node
 		//      and return the value to be held by the parent.
-		// - If value is not present, just return this.
+		// - If target is not present, just return Optional.empty().
 		return Optional.of(this);
 	}
 }
