@@ -20,7 +20,7 @@ public class PersonView extends Parent {
 
     public void update() {
         c.setFill(person.getState().getColor());
-        c.setRadius(person.radius);
+        c.setRadius(Person.radius);
         c.setTranslateX(person.getLoc().getX());
         c.setTranslateY(person.getLoc().getY());
     }

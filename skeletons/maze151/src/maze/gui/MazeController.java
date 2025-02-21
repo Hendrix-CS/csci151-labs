@@ -131,8 +131,8 @@ public class MazeController {
 
 
 		Position spot = mazeData.getExplorerPosition();
-		ex.setTranslateX(spot.X() * cellWidth);
-		ex.setTranslateY(spot.Y() * cellHeight);
+		ex.setTranslateX(spot.x() * cellWidth);
+		ex.setTranslateY(spot.y() * cellHeight);
 		ex.setRotate(mazeData.getExplorerHeading().getRotation());
 
 		***********/

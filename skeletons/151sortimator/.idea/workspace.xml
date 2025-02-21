@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7d58a0d-770f-4ecc-af23-a74f6d1bb4bf" name="Default Changelist" comment="" />
+    <list default="true" id="a7d58a0d-770f-4ecc-af23-a74f6d1bb4bf" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../examples/pigDiceGame/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/pigDiceGame/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/pigDiceGame/pigDiceGame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/pigDiceGame/pigDiceGame.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/pigDiceGame/src/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/virusSim/src/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/virusSim/src/virus/gui/PersonView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/virusSim/src/virus/gui/PersonView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/virusSim/virusSim.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/virusSim/virusSim.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../151bst/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../151bst/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../151bst/src/binarytree/core/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/../151bst/src/binarytree/core/TreeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cake151/src/strategies/Timid.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,6 +33,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "mgoadric"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Hendrix-CS/csci151-labs.git",
+    "accountId": "f28e142b-aa0f-4f70-9b04-c9c4f4ae6e11"
+  }
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -94,13 +117,6 @@
         <item itemvalue="JUnit.SorterTest" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-21.0.1-openjdk-21.0.1-f644763e9732-2f79fb23" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">

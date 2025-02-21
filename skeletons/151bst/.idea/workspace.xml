@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11add174-885c-4d86-a179-1600fa7eff5f" name="Default Changelist" comment="">
+    <list default="true" id="11add174-885c-4d86-a179-1600fa7eff5f" name="Default Changelist" comment="Updating parameter value to target to disambiguate.">
+      <change beforePath="$PROJECT_DIR$/../../examples/pigDiceGame/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/pigDiceGame/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/pigDiceGame/pigDiceGame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/pigDiceGame/pigDiceGame.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/pigDiceGame/src/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/virusSim/src/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/virusSim/src/virus/gui/PersonView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/virusSim/src/virus/gui/PersonView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/virusSim/virusSim.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/virusSim/virusSim.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/binarytree/core/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/binarytree/core/BinarySearchTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/binarytree/core/BinarySearchTreeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/binarytree/core/BinarySearchTreeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/binarytree/core/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/binarytree/core/TreeNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../151sortimator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../151sortimator/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cake151/src/strategies/Timid.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +23,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "mgoadric"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Hendrix-CS/csci151-labs.git",
+    "accountId": "f28e142b-aa0f-4f70-9b04-c9c4f4ae6e11"
+  }
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -31,26 +47,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.BinaryTreeApp.executor": "Run",
-    "JUnit.BinarySearchTreeTest.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/goadrich/Github/csci151-labs/skeletons/151bst",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.BinaryTreeApp.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BinarySearchTreeTest.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/goadrich/Github/csci151-labs/skeletons/151bst&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
@@ -94,13 +110,6 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-21.0.1-openjdk-21.0.1-f644763e9732-2f79fb23" />
-      </set>
-    </attachedChunks>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
@@ -113,8 +122,18 @@
       <option name="presentableId" value="Default" />
       <updated>1585342555668</updated>
       <workItem from="1704829968347" duration="638000" />
-      <workItem from="1712078145754" duration="3227000" />
+      <workItem from="1712078145754" duration="3457000" />
+      <workItem from="1713899492488" duration="819000" />
     </task>
+    <task id="LOCAL-00001" summary="Updating parameter value to target to disambiguate.">
+      <option name="closed" value="true" />
+      <created>1731101760077</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1731101760077</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,5 +149,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Updating parameter value to target to disambiguate." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating parameter value to target to disambiguate." />
   </component>
 </project>
