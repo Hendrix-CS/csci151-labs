@@ -2,6 +2,7 @@ package maze.model;
 
 import javafx.scene.paint.Color;
 import maze.searchers.ArrayStack;
+import maze.searchers.Queue;
 import maze.searchers.Searcher;
 
 //Create an implementation that passes all tests in PuzzleTest.
@@ -117,26 +118,9 @@ public class Puzzle {
 
 	}
 
-	public Trail solve(Searcher<Trail> searcher) {
+	public Trail solve(Searcher<Trail> solver) {
 
-		if (!hasExplorer() || !hasGoal()) {
-			return null;
-		}
-
-		searcher.add(new Trail(hero.getLocation(), null));
-
-		while (!searcher.isEmpty()) {
-			Trail possible = searcher.remove();
-			if (possible.getEnd().equals(goal)) {
-				return possible;
-			}
-			if (dungeon.getStateFor(possible.getEnd()) == Cell.OPEN) {
-				dungeon.setStateFor(possible.getEnd(), Cell.VISITED);
-				for (Direction d : Direction.values()) {
-					searcher.add(new Trail(d.getNeighbor(possible.getEnd()), possible));
-				}
-			}
-		}
+		// TODO Step 5 WRITE CODE HERE
 
 		return null;
 	}

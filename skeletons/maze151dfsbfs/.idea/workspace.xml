@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="856c62dd-58f4-4f7d-b1cb-00f5ddbc79ae" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/maze151.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/.idea/$PRODUCT_WORKSPACE_FILE$" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/.idea/libraries/junit_junit_4_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/.idea/maze151.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/maze/gui/MazeApp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/maze/gui/MazeController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/maze/gui/MazeGUI.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/maze/model/Cell$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/maze/model/Cell$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/maze/model/Cell$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/maze/model/Cell.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/maze/model/CellTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/maze/model/Direction$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/maze/model/Direction$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/maze/model/Direction$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/maze/model/Direction$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/maze/model/Direction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/maze/model/DirectionTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/maze/model/Explorer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/maze/model/Maze.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/maze/model/MazeTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/maze/model/Move$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/maze/model/Move$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/maze/model/Move$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/maze/model/Move.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/maze/model/MoveTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/maze/model/Position.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/maze/model/Puzzle.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/maze/model/PuzzleTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/maze/model/Trail.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/maze/searchers/ArrayQueue.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/maze/searchers/ArrayQueueTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/maze/searchers/ArrayStack.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/maze/searchers/ArrayStackTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/maze/searchers/ListNode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/maze/searchers/ListQueue.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/maze/searchers/ListQueueTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/maze/searchers/ListStack.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/maze/searchers/ListStackTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/maze/searchers/Queue.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/maze/searchers/QueueTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/maze/searchers/Stack.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/maze/searchers/StackTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/maze151.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/maze151/src/maze/gui/MazeGUI.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/maze/gui/MazeApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/maze/gui/MazeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/maze/gui/MazeGUI.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/maze/model/Cell.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/maze/model/CellTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/maze/model/Direction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/maze/model/DirectionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/maze/model/Explorer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/maze/model/Maze.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/maze/model/MazeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/maze/model/Move.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/maze/model/MoveTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/maze/model/Position.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/maze/model/Puzzle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/maze/model/PuzzleTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/maze/model/Trail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/maze/searchers/ArrayQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/maze/searchers/ArrayQueueTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/maze/searchers/ArrayStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/maze/searchers/ArrayStackTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/maze/searchers/ListNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/maze/searchers/ListQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/maze/searchers/ListQueueTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/maze/searchers/ListStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/maze/searchers/ListStackTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/maze/searchers/Queue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/maze/searchers/QueueTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/maze/searchers/Searcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/maze/searchers/Stack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/maze/searchers/StackTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/maze/searchers/WrappedQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/maze/searchers/WrappedStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151astar/src/maze/model/Puzzle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151astar/src/maze/model/Puzzle.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="201" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "mgoadric"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Hendrix-CS/csci151-labs.git",
+    "accountId": "f28e142b-aa0f-4f70-9b04-c9c4f4ae6e11"
+  }
+}]]></component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="1X54xxdqZf95Cc4GRbh40djwRg6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.MazeApp.executor": "Run",
+    "JUnit.PuzzleTest.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/goadrich/Github/csci151-labs/skeletons/maze151dfsbfs/src/maze/searchers",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/maze/searchers" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="maze.searchers" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.PuzzleTest">
+    <configuration name="MazeApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="maze.gui.MazeApp" />
+      <module name="maze151" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="maze.gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ArrayQueueTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="maze151" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="maze.searchers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="maze.searchers" />
+      <option name="MAIN_CLASS_NAME" value="maze.searchers.ArrayQueueTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ListQueueTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="maze151" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="maze.searchers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="maze.searchers" />
+      <option name="MAIN_CLASS_NAME" value="maze.searchers.ListQueueTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ListStackTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="maze151" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="maze.searchers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="maze.searchers" />
+      <option name="MAIN_CLASS_NAME" value="maze.searchers.ListStackTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PuzzleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="maze151" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="maze.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="maze.model" />
+      <option name="MAIN_CLASS_NAME" value="maze.model.PuzzleTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.PuzzleTest" />
+        <item itemvalue="Application.MazeApp" />
+        <item itemvalue="JUnit.ArrayQueueTest" />
+        <item itemvalue="JUnit.ListQueueTest" />
+        <item itemvalue="JUnit.ListStackTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="856c62dd-58f4-4f7d-b1cb-00f5ddbc79ae" name="Default Changelist" comment="" />
+      <created>1580322871527</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1580322871527</updated>
+      <workItem from="1704827346409" duration="804000" />
+      <workItem from="1708096112269" duration="334000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/maze151$MazeTest.ic" NAME="MazeTest Coverage Results" MODIFIED="1580495496359" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>maze.model.*</FILTER>
+    </SUITE>
+  </component>
+</project>
