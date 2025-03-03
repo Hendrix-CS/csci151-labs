@@ -65,7 +65,7 @@ public class MazeController {
 		setupButton(left, Move.LEFT);
 		setupButton(right, Move.RIGHT);
 
-		setupChoices(stackBox, "Stack");
+		setupChoices(stackBox);
 
 		clearFill.setSelected(true);
 
@@ -171,56 +171,14 @@ public class MazeController {
 		/********** TODO UNCOMMENT FOR STEP 3
 
 		 resetMaze();
-		 mazeData.tunnelRandomly();
+		 if (stackBox.getSelectionModel().getSelectedItem().equals("Perfect")) {
+		 	mazeData.tunnelRandomly(true);
+		 } else {
+			 mazeData.tunnelRandomly(false);
+		 }
 		 recolor();
 
 		 ***********/
-	}
-
-	@FXML
-	void solve() {
-		/********** TODO UNCOMMENT IN STEP 4
-
-		 if (mazeData == null) {
-			steps.setText("No maze created");
-			return;
-		}
-		mazeData.clearVisits();
-		if (!mazeData.hasExplorer()) {
-			steps.setText("No explorer placed");
-		} else if (!mazeData.hasGoal()) {
-			steps.setText("No goal placed");
-		} else {
-			Trail solution = findSolution();
-			recolor();
-			if (solution == null) {
-				steps.setText("Failed");
-			} else {
-				steps.setText(solution.getLength() + " steps");
-			}
-			while (solution != null) {
-				cells.get(solution.getEnd()).setFill(Color.BLUE);
-				solution = solution.getPrev();
-			}
-		 }
-
-		 ***********/
-	}
-
-	private Trail findSolution() {
-		/********** TODO UNCOMMENT IN STEP 4
-
-		 if (stackBox.getSelectionModel().getSelectedItem().equals("ArrayStack")) {
-			Stack<Trail> stack = new ArrayStack<>();
-			return mazeData.solve(stack);
-		} else {
-			Stack<Trail> stack = new ListStack<>();
-			return mazeData.solve(stack);
-		}
-		 *******/
-
-		/****** TODO COMMENT THIS OUT FOR STEP 4 ****/
-		return null;
 	}
 
 	// NEW FOR THIS LAB
@@ -230,9 +188,9 @@ public class MazeController {
 		}
 	}
 
-	private void setupChoices(ChoiceBox<String> choices, String type) {
-		choices.getItems().add("Array" + type);
-		choices.getItems().add("List" + type);
+	private void setupChoices(ChoiceBox<String> choices) {
+		choices.getItems().add("Perfect");
+		choices.getItems().add("Braided");
 		if (!choices.getItems().isEmpty()) {
 			choices.getSelectionModel().select(0);
 		}

@@ -80,31 +80,4 @@ public class PuzzleTest {
 			}
 		}
 	}
-
-	/********** TODO UNCOMMENT FOR STEP 4
-
-	 @Test
-	 public void solveTest() {
-	 testSolution(puzzle);
-	 }
-
-	 @Test
-	 public void randomTest() {
-	 for (int i = 0; i < 100; i++) {
-	 Puzzle puzzle = new Puzzle(15, 10);
-	 puzzle.tunnelRandomly();
-	 testSolution(puzzle);
-	 }
-	 }
-
-	 void testSolution(Puzzle puzzle) {
-	 puzzle.placeExplorer(new Position(0, 0));
-	 findGoal(puzzle);
-	 Trail solution = puzzle.solve(new ArrayStack<Trail>());
-	 assertTrue(solution != null);
-	 assertTrue(solution.solves(puzzle));
-	 }
-
-	 ************/
-
 }

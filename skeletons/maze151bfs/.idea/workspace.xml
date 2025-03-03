@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="856c62dd-58f4-4f7d-b1cb-00f5ddbc79ae" name="Default Changelist" comment="" />
+    <list default="true" id="856c62dd-58f4-4f7d-b1cb-00f5ddbc79ae" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/maze/model/Puzzle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/maze/model/Puzzle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151dfs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151dfs/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151dfs/src/maze/gui/MazeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151dfs/src/maze/gui/MazeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151dfs/src/maze/gui/MazeGUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151dfs/src/maze/gui/MazeGUI.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151dfs/src/maze/model/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151dfs/src/maze/model/Maze.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151dfs/src/maze/model/PuzzleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151dfs/src/maze/model/PuzzleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151dfsbfs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151dfsbfs/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151dfsbfs/src/maze/model/PuzzleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151dfsbfs/src/maze/model/PuzzleTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,6 +33,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;mgoadric&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Hendrix-CS/csci151-labs.git&quot;,
+    &quot;accountId&quot;: &quot;f28e142b-aa0f-4f70-9b04-c9c4f4ae6e11&quot;
+  }
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -141,13 +163,6 @@
         <item itemvalue="JUnit.ArrayStackTest" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-21.0.1-openjdk-21.0.1-f644763e9732-2f79fb23" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">

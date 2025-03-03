@@ -2,7 +2,7 @@ package maze.model;
 
 import static org.junit.Assert.*;
 
-import maze.searchers.ArrayQueue;
+import maze.searchers.ListQueue;
 import maze.searchers.WrappedQueue;
 import org.junit.Before;
 import org.junit.Test;
@@ -100,7 +100,7 @@ public class PuzzleTest {
 	 void testSolution(Puzzle puzzle) {
 		 puzzle.placeExplorer(new Position(0, 0));
 		 findGoal(puzzle);
-		 WrappedQueue<Trail> queue = new WrappedQueue<>(new ArrayQueue<>());
+		 WrappedQueue<Trail> queue = new WrappedQueue<>(new ListQueue<>());
 		 Trail solution = puzzle.solve(queue);
 		 assertTrue(solution != null);
 		 assertTrue(solution.solves(puzzle));

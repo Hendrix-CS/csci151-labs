@@ -96,4 +96,8 @@ public class Puzzle {
 	// NEW FOR THIS LAB!!
 	public boolean hasGoal() {return goal != null;}
 
+
+	public void tunnelRandomly(boolean perfect) {
+		// TODO STEP 3 WRITE ME
+	}
 }

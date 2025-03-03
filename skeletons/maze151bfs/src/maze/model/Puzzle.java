@@ -119,24 +119,7 @@ public class Puzzle {
 
 	public Trail solve(Queue<Trail> queue) {
 
-		if (!hasExplorer() || !hasGoal()) {
-			return null;
-		}
-
-		queue.add(new Trail(hero.getLocation(), null));
-
-		while (!queue.isEmpty()) {
-			Trail possible = queue.remove();
-			if (possible.getEnd().equals(goal)) {
-				return possible;
-			}
-			if (dungeon.getStateFor(possible.getEnd()) == Cell.OPEN) {
-				dungeon.setStateFor(possible.getEnd(), Cell.VISITED);
-				for (Direction d : Direction.values()) {
-					queue.add(new Trail(d.getNeighbor(possible.getEnd()), possible));
-				}
-			}
-		}
+		// TODO STEP 3 WRITE ME
 
 		return null;
 	}
