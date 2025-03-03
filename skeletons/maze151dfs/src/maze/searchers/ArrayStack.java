@@ -18,6 +18,7 @@ public class ArrayStack<E> implements Stack<E> {
 	@Override
 	public void push(E e) {
 		// TODO Step 1 Implement ArrayStack
+		// HINT it is helpful to write a private resize() method
 	}
 
 	@Override

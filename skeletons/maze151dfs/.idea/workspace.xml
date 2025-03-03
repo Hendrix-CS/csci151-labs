@@ -5,15 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="856c62dd-58f4-4f7d-b1cb-00f5ddbc79ae" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../maze151bfs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151bfs/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151bfs/src/maze/model/Puzzle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151bfs/src/maze/model/Puzzle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/maze/gui/MazeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/maze/gui/MazeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/maze/gui/MazeGUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/maze/gui/MazeGUI.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/maze/model/Puzzle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/maze/model/Puzzle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/maze/model/PuzzleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/maze/model/PuzzleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151dfsbfs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151dfsbfs/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151dfsbfs/src/maze/model/PuzzleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151dfsbfs/src/maze/model/PuzzleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/maze/searchers/ArrayStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/maze/searchers/ArrayStack.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
