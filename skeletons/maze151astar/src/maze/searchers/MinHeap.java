@@ -105,16 +105,20 @@ public class MinHeap<E> implements Searcher<E> {
     }
 
     /**
-     * Given the index of a parent, this method checks the value at that index
-     * against the values of its children. If either child is smaller than the
-     * parent, the index of the smallest child is returned. If no children are
-     * present, or the parent has the lowest value among the three, the parent's
-     * own index is returned.
-     *
-     * Your solution can be simplified by using the legal(), left(),
-     * and right() methods.
+     * If either child is smaller than the parent, return true.
+     * Otherwise, return false.
      */
-    int indexOfLowestInFamily(int parent) {
+    boolean hasSmallerChild(int parent) {
+        // TODO Step 5 Implement solution
+        return false;
+    }
+
+    /**
+     * if the right child is present and smaller than the left child,
+     * return the index of the right child. Otherwise, return the
+     * index of the left child.
+     */
+    int smallestChildOf(int parent) {
         // TODO Step 5 Implement solution
         return -1;
     }
@@ -131,8 +135,8 @@ public class MinHeap<E> implements Searcher<E> {
      * check the subsequent descendants to guarantee that the Heap
      * property is always preserved.
      *
-     * Your solution can be simplified by using the indexOfLowestInFamily()
-     * and swap() methods.
+     * Your solution can be simplified by using the hasSmallerChild(),
+     * smallestChildOf(), and swap() methods.
      */
     public E remove() {
         // TODO Step 6 Implement remove().

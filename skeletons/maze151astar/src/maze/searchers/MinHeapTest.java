@@ -10,18 +10,18 @@ import java.util.Random;
 import static org.junit.Assert.*;
 
 public class MinHeapTest {
-	
+
 	public final static int NUM_ITEMS = 1000;
-	
-	private Comparator<Integer> c = (i, j) -> i < j ? -1 : i > j ? 1 : 0;
-	
+
+	private Comparator<Integer> c = Integer::compareTo;
+
 	private MinHeap<Integer> heap;
-	
+
 	@Before
 	public void setup() {
 		heap = new MinHeap<>(c);
 	}
-	
+
 	@Test
 	public void testParent() {
 		assertEquals(0, MinHeap.parent(1));
@@ -33,7 +33,7 @@ public class MinHeapTest {
 		assertEquals(3, MinHeap.parent(7));
 		assertEquals(3, MinHeap.parent(8));
 	}
-	
+
 	@Test
 	public void testLeft() {
 		assertEquals(1, MinHeap.left(0));
@@ -44,7 +44,7 @@ public class MinHeapTest {
 		assertEquals(11, MinHeap.left(5));
 		assertEquals(13, MinHeap.left(6));
 	}
-	
+
 	@Test
 	public void testRight() {
 		assertEquals(2, MinHeap.right(0));
@@ -55,7 +55,7 @@ public class MinHeapTest {
 		assertEquals(12, MinHeap.right(5));
 		assertEquals(14, MinHeap.right(6));
 	}
-	
+
 	@Test
 	public void testLegal() {
 		assertFalse(heap.legal(-1));
@@ -66,16 +66,16 @@ public class MinHeapTest {
 			assertFalse(heap.legal(i+1));
 		}
 	}
-	
+
 	@Test
 	public void testIsHeap1() {
 		assertTrue(heap.isHeap());
 		for (int i = 0; i < 10; i++) {
-			heap.add(i);
+			heap.backdoorAdd(i);
 			assertTrue(heap.isHeap());
 		}
 	}
-	
+
 	@Test
 	public void testIsHeap2() {
 		assertTrue(heap.isHeap());
@@ -83,7 +83,7 @@ public class MinHeapTest {
 		heap.backdoorAdd(1);
 		assertFalse(heap.isHeap());
 	}
-	
+
 	@Test
 	public void testIsHeap3() {
 		assertTrue(heap.isHeap());
@@ -92,7 +92,7 @@ public class MinHeapTest {
 		heap.backdoorAdd(0);
 		assertFalse(heap.isHeap());
 	}
-	
+
 	@Test
 	public void testIsHeap4() {
 		assertTrue(heap.isHeap());
@@ -102,44 +102,44 @@ public class MinHeapTest {
 		heap.backdoorAdd(2);
 		assertFalse(heap.isHeap());
 	}
-	
+
 	@Test
 	public void testSwap() {
 		heap.backdoorAdd(10);
 		heap.backdoorAdd(20);
 		heap.backdoorAdd(30);
 		heap.swap(0, 2);
-		assertTrue(30 == heap.get(0));
-		assertTrue(20 == heap.get(1));
-		assertTrue(10 == heap.get(2));
-		
+		assertEquals(30, (int) heap.get(0));
+		assertEquals(20, (int) heap.get(1));
+		assertEquals(10, (int) heap.get(2));
+
 		heap.swap(1, 2);
-		assertTrue(30 == heap.get(0));
-		assertTrue(10 == heap.get(1));
-		assertTrue(20 == heap.get(2));
+		assertEquals(30, (int) heap.get(0));
+		assertEquals(10, (int) heap.get(1));
+		assertEquals(20, (int) heap.get(2));
 	}
-	
+
 	@Test
 	public void testAdd1() {
 		int[] adds = new int[]{10, 9, 11};
 		int[] peeks = new int[]{10, 9, 9};
 		assertEquals(adds.length, peeks.length);
-		
+
 		for (int i = 0; i < adds.length; i++) {
 			heap.add(adds[i]);
 			assertEquals(i + 1, heap.size());
-			assertTrue(peeks[i] == heap.element());
+			assertEquals(peeks[i], (int) heap.element());
 			assertTrue(heap.isHeap());
 			allPresentInHeap(adds, i);
 		}
 	}
-	
+
 	public void allPresentInHeap(int[] values, int limit) {
 		for (int i = 0; i <= limit; i++) {
 			assertTrue(presentInHeap(values[i]));
 		}
 	}
-	
+
 	public boolean presentInHeap(int value) {
 		for (int i = 0; i < heap.size(); i++) {
 			if (value == heap.get(i)) {
@@ -148,7 +148,7 @@ public class MinHeapTest {
 		}
 		return false;
 	}
-	
+
 	@Test
 	public void testAdd2() {
 		Random rand = new Random();
@@ -160,71 +160,82 @@ public class MinHeapTest {
 			assertEquals(oldSize + 1, heap.size());
 		}
 	}
-	
+
 	@Test
-	public void testLowestInFamily1() {
+	public void testSmallestChild1() {
 		assertTrue(heap.isHeap());
 		heap.backdoorAdd(0);
 		heap.backdoorAdd(1);
 		heap.backdoorAdd(2);
-		assertEquals(0, heap.indexOfLowestInFamily(0));
+		assertTrue(heap.isHeap());
+		assertFalse(heap.hasSmallerChild(0));
+		assertEquals(1, heap.smallestChildOf(0));
 	}
-	
+
 	@Test
-	public void testLowestInFamily2() {
+	public void testSmallestChild2() {
 		assertTrue(heap.isHeap());
 		heap.backdoorAdd(1);
 		heap.backdoorAdd(0);
 		heap.backdoorAdd(2);
-		assertEquals(1, heap.indexOfLowestInFamily(0));
+		assertFalse(heap.isHeap());
+		assertTrue(heap.hasSmallerChild(0));
+		assertEquals(1, heap.smallestChildOf(0));
 	}
 
 	@Test
-	public void testLowestInFamily3() {
+	public void testSmallestChild3() {
 		assertTrue(heap.isHeap());
 		heap.backdoorAdd(1);
 		heap.backdoorAdd(2);
 		heap.backdoorAdd(0);
-		assertEquals(2, heap.indexOfLowestInFamily(0));
+		assertFalse(heap.isHeap());
+		assertTrue(heap.hasSmallerChild(0));
+		assertEquals(2, heap.smallestChildOf(0));
 	}
 
 	@Test
-	public void testLowestInFamily4() {
+	public void testSmallestChild4() {
 		assertTrue(heap.isHeap());
 		heap.backdoorAdd(1);
 		heap.backdoorAdd(0);
-		assertEquals(1, heap.indexOfLowestInFamily(0));
+		assertFalse(heap.isHeap());
+		assertTrue(heap.hasSmallerChild(0));
+		assertEquals(1, heap.smallestChildOf(0));
 	}
 
 	@Test
-	public void testLowestInFamily5() {
+	public void testSmallestChild5() {
 		assertTrue(heap.isHeap());
 		heap.backdoorAdd(1);
-		assertEquals(0, heap.indexOfLowestInFamily(0));
+		assertTrue(heap.isHeap());
+		assertFalse(heap.hasSmallerChild(0));
 	}
 
 	@Test
-	public void testLowestInFamily6() {
+	public void testSmallestChild6() {
 		assertTrue(heap.isHeap());
 		heap.backdoorAdd(2);
 		heap.backdoorAdd(1);
 		heap.backdoorAdd(0);
-		assertEquals(2, heap.indexOfLowestInFamily(0));
+		assertFalse(heap.isHeap());
+		assertTrue(heap.hasSmallerChild(0));
+		assertEquals(2, heap.smallestChildOf(0));
 	}
 
 	@Test
 	public void testRemove() {
 		testAdd2();
-		
+
 		ArrayList<Integer> sortedResults = new ArrayList<>();
-		while (heap.size() > 0) {
+		while (!heap.isEmpty()) {
 			int oldSize = heap.size();
 			int removing = heap.remove();
 			sortedResults.add(removing);
 			assertTrue(heap.isHeap());
 			assertEquals(oldSize - 1, heap.size());
 		}
-		
+
 		for (int i = 1; i < sortedResults.size(); i++) {
 			assertTrue(sortedResults.get(i-1).compareTo(sortedResults.get(i)) <= 0);
 		}
