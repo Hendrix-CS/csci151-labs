@@ -3,16 +3,20 @@ package tictactoe.learn;
 import static org.junit.Assert.*;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Random;
 
 import org.junit.Test;
+import tictactoe.core.Coord;
 
 public class HashTableTest {
 	HashTable<String,Integer> table = new HashTable<>();
-	
-	String[] keys = new String[]{"this", "is", "a", "test", "to", "check", "how", "it", 
-			"works", "in", "practice", "with", "many", "different", "keys", "included", 
+	HashTable<Coord,Integer> coordtable = new HashTable<>();
+
+	String[] keys = new String[]{"this", "is", "a", "test", "to", "check", "how", "it",
+			"works", "in", "practice", "with", "many", "different", "keys", "included",
 			"within", "the", "table"};
-	
+
 	@Test
 	public void testIndex() {
 		assertEquals(14, table.index("this"));
@@ -45,15 +49,30 @@ public class HashTableTest {
 			assertEquals(oldSize + 1, table.size());
 			assertTrue(table.get(key).isPresent());
 		}
-		
+
 		assertEquals(keys.length, table.size());
-		
+
 		for (String key: keys) {
 			assertTrue(table.get(key).isPresent());
 			assertTrue(key.length() == table.get(key).get());
 		}
 	}
-	
+
+	@Test
+	public void testCoordEquals() {
+		Random random = new Random();
+		HashSet<Coord> myset = new HashSet<>();
+		for (int i = 0; i < 100; i++) {
+			Coord key = new Coord(random.nextInt(10), random.nextInt(10));
+			int value = random.nextInt(100);
+			myset.add(key);
+			coordtable.put(key, value);
+			assertEquals(myset.size(), coordtable.size());
+			assertTrue(coordtable.get(key).isPresent());
+			assertEquals(value, (int) coordtable.get(key).get());
+		}
+	}
+
 	@Test
 	public void testDuplicate() {
 		testPutGet();
@@ -64,15 +83,15 @@ public class HashTableTest {
 			assertTrue(table.get(key).isPresent());
 			assertTrue(key.length() * 2 == table.get(key).get());
 		}
-		
+
 		assertEquals(keys.length, table.size());
-		
+
 		for (String key: keys) {
 			assertTrue(table.get(key).isPresent());
 			assertTrue(key.length() * 2 == table.get(key).get());
 		}
 	}
-	
+
 	@Test
 	public void testCapacityIncrease() {
 		assertEquals(16, table.capacity());
@@ -82,7 +101,7 @@ public class HashTableTest {
 		}
 		assertEquals(16, table.capacity());
 		assertEquals(11, table.size());
-		
+
 		for (int i = 11; i < keys.length; i++) {
 			table.put(keys[i], keys[i].length());
 		}
@@ -99,7 +118,7 @@ public class HashTableTest {
 			assertTrue(table.allKeys().contains(key));
 		}
 	}
-	
+
 	@Test
 	public void testVeryBad() {
 		HashTable<VeryBad,Integer> vbTable = new HashTable<>();
