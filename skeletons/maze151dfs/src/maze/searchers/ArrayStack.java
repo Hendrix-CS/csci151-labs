@@ -30,9 +30,6 @@ public class ArrayStack<E> implements Stack<E> {
 	@Override
 	public E peek() {
 		// TODO Step 1 Implement ArrayStack
-
-		emptyCheck();
-
 		return null;
 	}
 
