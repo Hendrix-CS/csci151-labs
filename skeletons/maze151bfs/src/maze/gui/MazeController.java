@@ -13,9 +13,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
 import maze.model.*;
-import maze.searchers.ArrayQueue;
-import maze.searchers.ListQueue;
-import maze.searchers.Queue;
+import maze.searchers.*;
 
 public class MazeController {
 	@FXML
@@ -40,9 +38,9 @@ public class MazeController {
 
 	private Puzzle mazeData;
 	private Polygon ex;
-	private HashMap<Position,Rectangle> cells = new HashMap<>();
+	private final HashMap<Position,Rectangle> cells = new HashMap<>();
 	private double cellWidth, cellHeight;
-	private EnumMap<Cell,TextField> cellCounts = new EnumMap<>(Cell.class);
+	private final EnumMap<Cell,TextField> cellCounts = new EnumMap<>(Cell.class);
 
 	// NEW FOR THIS LAB
 	@FXML
@@ -67,6 +65,7 @@ public class MazeController {
 		setupButton(left, Move.LEFT);
 		setupButton(right, Move.RIGHT);
 
+		setupChoices(stackBox, "Stack");
 		setupChoices(stackBox, "Queue");
 
 		clearFill.setSelected(true);
@@ -206,10 +205,16 @@ public class MazeController {
 
 	private Trail findSolution() {
 		if (stackBox.getSelectionModel().getSelectedItem().equals("ArrayQueue")) {
-			Queue<Trail> queue = new ArrayQueue<>();
+			Searcher<Trail> queue = new WrappedQueue<>(new ArrayQueue<>());
+			return mazeData.solve(queue);
+		} else if (stackBox.getSelectionModel().getSelectedItem().equals("ListQueue")){
+			Searcher<Trail> queue = new WrappedQueue<>(new ListQueue<>());
+			return mazeData.solve(queue);
+		} else if (stackBox.getSelectionModel().getSelectedItem().equals("ArrayStack")){
+			Searcher<Trail> queue = new WrappedStack<>(new ListStack<>());
 			return mazeData.solve(queue);
 		} else {
-			Queue<Trail> queue = new ListQueue<>();
+			Searcher<Trail> queue = new WrappedStack<>(new ListStack<>());
 			return mazeData.solve(queue);
 		}
 	}

@@ -5,15 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="856c62dd-58f4-4f7d-b1cb-00f5ddbc79ae" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/maze/searchers/Searcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/maze/searchers/WrappedQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/maze/searchers/WrappedStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151astar/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151astar/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/maze/gui/MazeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/maze/gui/MazeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/maze/model/Puzzle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/maze/model/Puzzle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/maze/model/PuzzleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/maze/model/PuzzleTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../maze151dfs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151dfs/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151dfs/src/maze/gui/MazeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151dfs/src/maze/gui/MazeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151dfs/src/maze/gui/MazeGUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151dfs/src/maze/gui/MazeGUI.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151dfs/src/maze/model/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151dfs/src/maze/model/Maze.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151dfs/src/maze/model/PuzzleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151dfs/src/maze/model/PuzzleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151dfsbfs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151dfsbfs/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151dfsbfs/src/maze/model/PuzzleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151dfsbfs/src/maze/model/PuzzleTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,35 +52,42 @@
   &quot;associatedIndex&quot;: 4
 }</component>
   <component name="ProjectId" id="1X54xxdqZf95Cc4GRbh40djwRg6" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.MazeApp.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/goadrich/Github/csci151-labs/skeletons/maze151bfs&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.MazeApp.executor": "Run",
+    "JUnit.ArrayQueueTest.executor": "Run",
+    "JUnit.ListQueueTest.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/markgoadrich/Github/csci151-labs/skeletons/maze151bfs/src/maze/searchers",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/maze/searchers" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="maze.searchers" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MazeApp">
+  <component name="RunManager" selected="JUnit.ArrayQueueTest">
     <configuration name="MazeApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="maze.gui.MazeApp" />
       <module name="maze151" />
@@ -156,13 +163,21 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MazeApp" />
         <item itemvalue="JUnit.ArrayQueueTest" />
         <item itemvalue="JUnit.ListQueueTest" />
+        <item itemvalue="Application.MazeApp" />
         <item itemvalue="JUnit.ListStackTest" />
         <item itemvalue="JUnit.ArrayStackTest" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-34e2839f716b-intellij.indexing.shared.core-IU-262.9437.185" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.9437.185" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">

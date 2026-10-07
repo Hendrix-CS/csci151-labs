@@ -2,7 +2,7 @@ package maze.model;
 
 import javafx.scene.paint.Color;
 import maze.searchers.ArrayStack;
-import maze.searchers.Queue;
+import maze.searchers.Searcher;
 
 //Create an implementation that passes all tests in PuzzleTest.
 
@@ -117,8 +117,7 @@ public class Puzzle {
 
 	}
 
-	public Trail solve(Queue<Trail> queue) {
-
+	public Trail solve(Searcher<Trail> queue) {
 		// TODO STEP 3 WRITE ME
 
 		return null;
