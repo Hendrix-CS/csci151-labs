@@ -5,6 +5,8 @@ import org.junit.*;
 import java.util.ArrayList;
 import java.util.Collections;
 
+import static org.junit.Assert.assertEquals;
+
 public class RBTest {
     @Test
     public void smallRandomTrees() {

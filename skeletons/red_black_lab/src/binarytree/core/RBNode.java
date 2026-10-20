@@ -73,9 +73,8 @@ public class RBNode<K extends Comparable<K>> implements RBParent<K> {
     }
 
     public void assertNoRedRed() {
-        if (color == RedBlack.BLACK || !hasRedChild())
-        {
-            throw new IllegalStateException("Node is black and has no red child!");
+        if (color == RedBlack.RED && hasRedChild()) {
+            throw new IllegalStateException("Red node has a red child!");
         }
 
         if (getLeft().isPresent()) {

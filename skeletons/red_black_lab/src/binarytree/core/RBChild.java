@@ -22,9 +22,8 @@ public interface RBChild<K extends Comparable<K>> {
         return Optional.empty();
     }
 
-    default boolean isLeaf()
-    {
-        return this instanceof Leaf;
+    default boolean isLeaf() {
+        return this instanceof Leaf<K>;
     }
 
     void showTree(int depth, StringBuilder shower);

@@ -9,8 +9,6 @@ import java.util.function.Function;
 public class RedBlackTree<K extends Comparable<K>> implements RBParent<K> {
     private RBChild<K> root = new Leaf<>(this);
 
-    public RedBlackTree() {}
-
     public int size() {
         return root.size();
     }
@@ -22,7 +20,7 @@ public class RedBlackTree<K extends Comparable<K>> implements RBParent<K> {
     @Override
     public int blackHeight()
     {
-        return 0;
+        return root.blackHeight();
     }
 
     @Override
@@ -43,7 +41,7 @@ public class RedBlackTree<K extends Comparable<K>> implements RBParent<K> {
     }
 
     public Optional<K> find(K key) {
-        return root.asNode().flatMap(n -> n.find(key));
+        return root instanceof RBNode<K> node ? node.find(key) : Optional.empty();
     }
 
     @Override
@@ -54,7 +52,7 @@ public class RedBlackTree<K extends Comparable<K>> implements RBParent<K> {
     @Override
     public RedBlack getColor()
     {
-        return null;
+        return root.getColor();
     }
 
     @Override
@@ -66,13 +64,13 @@ public class RedBlackTree<K extends Comparable<K>> implements RBParent<K> {
     @Override
     public int numChildren()
     {
-        return 0;
+        return root instanceof RBParent<K> parent ? parent.numChildren() : 0;
     }
 
     @Override
     public void insertFixup()
     {
-
+        root.insertFixup();
     }
 
     @Override
@@ -99,15 +97,7 @@ public class RedBlackTree<K extends Comparable<K>> implements RBParent<K> {
     @Override
     public void showTree(int depth, StringBuilder shower)
     {
-
-    }
-
-    public String showTree() {
-        if (root.asNode().isPresent()) {
-            return root.asNode().get().showTree();
-        } else {
-            return "";
-        }
+        root.showTree(depth, shower);
     }
 
     public void assertInvariants() {
@@ -154,7 +144,7 @@ public class RedBlackTree<K extends Comparable<K>> implements RBParent<K> {
 
     private static <K> boolean allSentinels(ArrayList<ArrayList<NodeColor<K>>> entries) {
         for (ArrayList<NodeColor<K>> entry: entries) {
-            for (NodeColor<K> key: entry) {
+            for (NodeColor<K> key : entry) {
                 if (key.key() != null) {
                     return false;
                 }
