@@ -124,24 +124,15 @@ public class RBNode<K extends Comparable<K>> implements RBParent<K> {
         if (comp == 0) {
             this.key = key;
         } else if (comp < 0) {
-            if (getLeft().isEmpty()) {
-                left = new RBNode<>(key, this);
-                left.insertFixup();
-            } else {
-                getLeft().get().insert(key);
-            }
-
             getLeft().ifPresentOrElse(node -> node.insert(key), () -> {
                 left = new RBNode<>(key, this);
                 left.insertFixup();
             });
         } else {
-            if (getRight().isEmpty()) {
+            getRight().ifPresentOrElse(node -> node.insert(key), () -> {
                 right = new RBNode<>(key, this);
                 right.insertFixup();
-            } else {
-                getRight().get().insert(key);
-            }
+            });
         }
     }
 
@@ -153,6 +144,12 @@ public class RBNode<K extends Comparable<K>> implements RBParent<K> {
         } else {
             throw new IllegalArgumentException("Specified child not present in this node!");
         }
+    }
+
+    // needed for a test
+    public void setColor(RedBlack color)
+    {
+        this.color = color;
     }
 
     /*

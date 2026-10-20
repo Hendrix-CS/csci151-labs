@@ -5,7 +5,7 @@ import org.junit.*;
 import java.util.ArrayList;
 import java.util.Collections;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class RBTest {
     @Test
@@ -31,6 +31,23 @@ public class RBTest {
             Collections.shuffle(values);
             makeTestTreeFrom(values);
         }
+    }
+
+    @Test
+    public void testRedRedViolation() {
+        RedBlackTree<Character> tree = makeTreeFromString("ba");
+        RBNode<Character> root = tree.getRoot().orElseThrow();
+        RBNode<Character> child = root.getLeft().orElseThrow();
+
+        assertFalse(root.redRedViolation());
+        assertFalse(child.redRedViolation());
+
+        root.setColor(RedBlack.RED);
+        child.setColor(RedBlack.RED);
+        assertTrue(child.redRedViolation());
+
+        child.setColor(RedBlack.BLACK);
+        assertFalse(child.redRedViolation());
     }
 
     @Test
@@ -73,6 +90,20 @@ public class RBTest {
         {
             throw new IllegalStateException("Failed on " + testCase.description(), e);
         }
+    }
+
+    @Test
+    public void testRedPiblingFixup() {
+        RedBlackTree<Character> tree = makeTreeFromString("dbfac");
+
+        tree.assertInvariants();
+
+        RBNode<Character> root = tree.getRoot().get();
+
+        assertEquals(RedBlack.BLACK, root.getColor());
+
+        assertEquals(RedBlack.BLACK, root.getLeft().orElseThrow().getColor());
+        assertEquals(RedBlack.BLACK, root.getRight().orElseThrow().getColor());
     }
 
     public RedBlackTree<Character> makeTreeFromString(String line)
