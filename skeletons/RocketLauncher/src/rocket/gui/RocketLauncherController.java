@@ -11,6 +11,12 @@ public class RocketLauncherController {
     @FXML
     private Pane centerPane;
 
+    @FXML
+    private Button blastOff;
+
+    @FXML
+    private Button land;
+
     private RocketView rocketView;
 
     private Rocket rocket;
