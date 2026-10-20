@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="binarytree.gui.BinaryTreeController">
+   <center>
+      <Pane fx:id="visualTree" prefHeight="400.0" prefWidth="400.0" BorderPane.alignment="CENTER" />
+   </center>
+   <top>
+      <Button fx:id="clear" mnemonicParsing="false" text="Clear" BorderPane.alignment="CENTER" />
+   </top>
+   <bottom>
+      <HBox spacing="5.0">
+         <children>
+            <VBox BorderPane.alignment="CENTER" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox spacing="5.0">
+                     <children>
+                        <TextField fx:id="insertValue" onAction="#insert" prefHeight="26.0" prefWidth="147.0" />
+                        <Button mnemonicParsing="false" onAction="#insert" text="Insert" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+   <right>
+      <GridPane prefHeight="382.0" prefWidth="101.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Size" />
+            <TextField fx:id="size" editable="false" prefHeight="26.0" prefWidth="60.0" GridPane.columnIndex="1" />
+            <Label prefHeight="16.0" prefWidth="33.0" text="Min" GridPane.rowIndex="1" />
+            <TextField fx:id="min" editable="false" prefHeight="26.0" prefWidth="66.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Max" GridPane.rowIndex="2" />
+            <TextField fx:id="max" editable="false" prefHeight="26.0" prefWidth="59.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label prefHeight="16.0" prefWidth="68.0" text="Height" GridPane.rowIndex="3" />
+            <TextField fx:id="height" editable="false" prefHeight="26.0" prefWidth="66.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+   </right>
+</BorderPane>
