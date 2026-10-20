@@ -103,6 +103,7 @@ public class RedBlackTree<K extends Comparable<K>> implements RBParent<K> {
     public void assertInvariants() {
         if (root.asNode().isPresent()) {
             root.asNode().get().assertSearchTree();
+
             if (root.getColor() != RedBlack.BLACK)
             {
                 throw new IllegalStateException("Root node must be black!");

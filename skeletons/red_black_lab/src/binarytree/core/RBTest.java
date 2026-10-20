@@ -118,7 +118,7 @@ public class RBTest {
         RedBlackTree<T> t = new RedBlackTree<>();
         for (int i = 0; i < values.size(); i++) {
             t.insert(values.get(i));
-            t.getRoot().get().assertParentChildSymmetry();
+            t.getRoot().orElseThrow().assertParentChildSymmetry();
         }
         t.assertInvariants();
     }
