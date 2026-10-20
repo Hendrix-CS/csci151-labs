@@ -102,13 +102,13 @@ public class BinaryTreeController {
 		if (!nodeAndKids.isEmpty() && nodeAndKids.get(0) != null) {
 			double x = xOffset * (1 + column);
 			double y = yOffset * (0.5 + level);
-			Circle c = new Circle(x, y, 12, nodeAndKids.get(0).color == RedBlack.RED ? Color.RED : Color.BLACK);
-			Text nodeText = new Text(nodeAndKids.get(0).key);
+			Circle c = new Circle(x, y, 12, nodeAndKids.get(0).color() == RedBlack.RED ? Color.RED : Color.BLACK);
+			Text nodeText = new Text(nodeAndKids.get(0).key());
             nodeText.setFill(Color.WHITE);
 			string2circle.put(nodeText.getText(), c);
             for (int kid = 1; kid < nodeAndKids.size(); kid++) {
-                if (string2circle.containsKey(nodeAndKids.get(kid).key)) {
-                    connect(c, string2circle.get(nodeAndKids.get(kid).key));
+                if (string2circle.containsKey(nodeAndKids.get(kid).key())) {
+                    connect(c, string2circle.get(nodeAndKids.get(kid).key()));
                 }
             }
             nodeText.setX(x - 3);

@@ -7,7 +7,7 @@ import java.util.Queue;
 import java.util.function.Function;
 
 public class RedBlackTree<K extends Comparable<K>> implements RBParent<K> {
-    private RBChild<K> root = new Leaf<>(this);
+    private RBParent<K> root = new Leaf<>(this);
 
     public RedBlackTree() {}
 
@@ -118,7 +118,7 @@ public class RedBlackTree<K extends Comparable<K>> implements RBParent<K> {
     private static <K> boolean allSentinels(ArrayList<ArrayList<NodeColor<K>>> entries) {
         for (ArrayList<NodeColor<K>> entry: entries) {
             for (NodeColor<K> key: entry) {
-                if (key.key != null) {
+                if (key.key() != null) {
                     return false;
                 }
             }

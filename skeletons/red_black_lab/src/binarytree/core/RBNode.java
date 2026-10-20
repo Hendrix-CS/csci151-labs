@@ -2,7 +2,7 @@ package binarytree.core;
 
 import java.util.Optional;
 
-public class RBNode<K extends Comparable<K>> implements RBChild<K> {
+public class RBNode<K extends Comparable<K>> implements RBParent<K> {
     private RedBlack color;
     private K key;
     private RBChild<K> left, right;
@@ -183,14 +183,6 @@ public class RBNode<K extends Comparable<K>> implements RBChild<K> {
         } else {
             return getRight().isEmpty() ? Optional.empty() : getRight().get().findNode(key);
         }
-    }
-
-    public Optional<K> getMin() {
-        return getLeft().isEmpty() ? Optional.of(key) : left.getMin();
-    }
-
-    public Optional<K> getMax() {
-        return getRight().isEmpty() ? Optional.of(key) : right.getMax();
     }
 
     @Override

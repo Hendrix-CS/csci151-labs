@@ -2,22 +2,20 @@ package binarytree.core;
 
 import java.util.Optional;
 
-public interface RBChild<K extends Comparable<K>> extends RBParent<K> {
-    int size();
-    int numChildren();
+public interface RBChild<K extends Comparable<K>> {
+    boolean hasChild(RBNode<K> candidate);
     RedBlack getColor();
+
+    void setParent(RBParent<K> parent);
+    int size();
     int height();
     int blackHeight();
-    void setParent(RBParent<K> parent);
-    void insertFixup();
-    void showTree(int depth, StringBuilder shower);
-    Optional<K> getMin();
-    Optional<K> getMax();
+    K getKey();
 
-    Optional<RBNode<K>> getLeft();
-    Optional<RBNode<K>> getRight();
-
-    default boolean isSentinel() {
-        return asNode().isEmpty();
+    default Optional<RBNode<K>> asNode() {
+        if (this instanceof RBNode<K> node) {
+            return Optional.of(node);
+        } return Optional.empty();
     }
+    void showTree(int depth, StringBuilder shower);
 }
