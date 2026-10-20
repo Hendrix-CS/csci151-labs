@@ -53,12 +53,12 @@
          </BorderPane.margin></Pane>
     </center>
     <bottom>
-        <Label text="Value" BorderPane.alignment="CENTER" />
+        <Label text="Position" BorderPane.alignment="CENTER" />
     </bottom>
     <left>
         <Pane BorderPane.alignment="CENTER">
             <children>
-                <Label layoutY="92.0" rotate="-90.0" text="Position" />
+                <Label layoutY="92.0" rotate="-90.0" text="Value" />
             </children>
         </Pane>
     </left>

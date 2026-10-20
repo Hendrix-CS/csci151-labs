@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="856c62dd-58f4-4f7d-b1cb-00f5ddbc79ae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../maze151bfs/src/maze/searchers/Searcher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../maze151bfs/src/maze/searchers/WrappedQueue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../maze151bfs/src/maze/searchers/WrappedStack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151bfs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151bfs/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151bfs/src/maze/gui/MazeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151bfs/src/maze/gui/MazeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151bfs/src/maze/model/Puzzle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151bfs/src/maze/model/Puzzle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151bfs/src/maze/model/PuzzleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151bfs/src/maze/model/PuzzleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151dfs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151dfs/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="856c62dd-58f4-4f7d-b1cb-00f5ddbc79ae" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

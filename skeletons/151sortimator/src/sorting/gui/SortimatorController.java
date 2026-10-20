@@ -1,10 +1,10 @@
 package sorting.gui;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
+import javafx.scene.shape.Line;
+import javafx.scene.shape.Rectangle;
+import org.w3c.dom.css.Rect;
 import sorting.algorithms.Sorter;
 import sorting.algorithms.Setting;
 import javafx.animation.AnimationTimer;
@@ -19,13 +19,15 @@ import javafx.scene.shape.Ellipse;
 
 public class SortimatorController {
     ArrayList<Integer> nums;
-    ArrayList<Ellipse> dots;
+    ArrayList<Rectangle> dots;
     double xOffset, yOffset;
     Queue<Setting<Integer>> updates = new LinkedList<>();
     ClassFinder<Sorter<Integer>> sorterFinder = new ClassFinder<>(Sorter.class, "sorting.algorithms");
 
     private long FRAMES_PER_SEC = 50L;
     private long NANO_INTERVAL = 1000000000L / FRAMES_PER_SEC;
+    private List<Integer> sorted;
+    private int greenIndex = 0;
 
     private AnimationTimer timer = new AnimationTimer() {
         long last = 0;
@@ -34,7 +36,22 @@ public class SortimatorController {
         public void handle(long now) {
             if (now - last > NANO_INTERVAL) {
                 if (updates.isEmpty()) {
-                    timer.stop();
+                    if (greenIndex == 0)
+                    {
+                        sorted = nums.stream().sorted().toList();
+                    }
+
+                    if (greenIndex < dots.size())
+                    {
+                        Color color = (sorted.get(greenIndex).equals(nums.get(greenIndex)) ? Color.LIMEGREEN : Color.RED);
+                        dots.get(greenIndex).setFill(color);
+                        greenIndex++;
+                    }
+                    else
+                    {
+                        timer.stop();
+                        greenIndex = 0;
+                    }
                 } else {
                     try {
                         Setting<Integer> update = updates.remove();
@@ -51,6 +68,8 @@ public class SortimatorController {
     };
 
     void killSort() {
+        sorted = null;
+        greenIndex = 0;
         timer.stop();
         updates.clear();
         Platform.runLater(() -> updateCounts.setText("0"));
@@ -96,27 +115,41 @@ public class SortimatorController {
     @FXML
     void reset() {
         killSort();
+
         if (dots != null) {
-            for (Ellipse dot: dots) {
-                panel.getChildren().remove(dot);
-            }
+            panel.getChildren().removeAll(dots);
         }
 
-
-        int size = (int)numDots.getValue();
+        int size = (int) numDots.getValue();
         xOffset = panel.getWidth() / size;
         yOffset = panel.getHeight() / size;
-        nums = new ArrayList<Integer>();
-        dots = new ArrayList<Ellipse>();
+
+        //System.out.println(xOffset);
+        //System.out.println(panel.getWidth());
+        //System.out.println(panel.getHeight());
+
+        nums = new ArrayList<>();
+        dots = new ArrayList<>();
+
         for (int i = 0; i < size; i++) {
             nums.add(i);
-            Ellipse dot = new Ellipse(xOffset, yOffset);
-            dot.setFill(Color.BLUE);
-            panel.getChildren().add(dot);
-            dot.setTranslateX(xOffset * i);
-            dot.setTranslateY(panel.getHeight() - (yOffset * i));
-            dots.add(dot);
+
+            double x = xOffset * i;
+            double y = panel.getHeight() - (yOffset * (i + 1));
+
+            Rectangle rectangle = new Rectangle(
+                    x, y, xOffset, panel.getHeight() - y
+            );
+
+            rectangle.setFill(Color.BLUE);
+            rectangle.setStroke(Color.WHITE);
+            rectangle.setStrokeWidth(1);
+
+            panel.getChildren().add(rectangle);
+            dots.add(rectangle);
         }
+
+        updateCounts.setText("0");
     }
 
     void resynchDots() {
@@ -130,7 +163,17 @@ public class SortimatorController {
     }
 
     void updateDot(int i, int where) {
-        dots.get(i).setTranslateY(panel.getHeight() - (yOffset * where));
-        updateCounts.setText(Integer.toString(1 + Integer.parseInt(updateCounts.getText())));
+        Rectangle line = dots.get(i);
+
+        double x = xOffset * i;
+        double y = panel.getHeight() - (yOffset * (where + 1));
+
+        line.setX(x);
+        line.setY(y);
+        line.setHeight(panel.getHeight() - y);
+
+        updateCounts.setText(
+                Integer.toString(1 + Integer.parseInt(updateCounts.getText()))
+        );
     }
 }

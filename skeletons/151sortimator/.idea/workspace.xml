@@ -5,16 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7d58a0d-770f-4ecc-af23-a74f6d1bb4bf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../examples/pigDiceGame/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/pigDiceGame/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../examples/pigDiceGame/pigDiceGame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/pigDiceGame/pigDiceGame.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../examples/pigDiceGame/src/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../examples/virusSim/src/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../examples/virusSim/src/virus/gui/PersonView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/virusSim/src/virus/gui/PersonView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../examples/virusSim/virusSim.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/virusSim/virusSim.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../151bst/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../151bst/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../151bst/src/binarytree/core/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/../151bst/src/binarytree/core/TreeNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cake151/src/strategies/Timid.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sorting/gui/SortimatorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sorting/gui/SortimatorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sorting/gui/SortimatorGUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sorting/gui/SortimatorGUI.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maze151astar/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151astar/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,18 +27,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "mgoadric"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;mgoadric&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Hendrix-CS/csci151-labs.git",
-    "accountId": "f28e142b-aa0f-4f70-9b04-c9c4f4ae6e11"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Hendrix-CS/csci151-labs.git&quot;,
+    &quot;accountId&quot;: &quot;f28e142b-aa0f-4f70-9b04-c9c4f4ae6e11&quot;
   }
-}]]></component>
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -52,7 +46,6 @@
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="1YjhnPVv8YkWzbjyefMqEkzxMOZ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -67,10 +60,13 @@
     &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/goadrich/Github/csci151-labs/skeletons/151sortimator&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/markgoadrich/Github/csci151-labs/skeletons/151sortimator&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -117,6 +113,14 @@
         <item itemvalue="JUnit.SorterTest" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-34e2839f716b-intellij.indexing.shared.core-IU-262.9437.185" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.9437.185" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
