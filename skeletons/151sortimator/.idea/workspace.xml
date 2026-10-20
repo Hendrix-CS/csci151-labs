@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7d58a0d-770f-4ecc-af23-a74f6d1bb4bf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sorting/gui/SortimatorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sorting/gui/SortimatorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sorting/gui/SortimatorGUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sorting/gui/SortimatorGUI.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../maze151astar/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../maze151astar/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="a7d58a0d-770f-4ecc-af23-a74f6d1bb4bf" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
