@@ -53,18 +53,31 @@ public class RBNode<K extends Comparable<K>> implements RBParent<K> {
     }
 
     public void assertSearchTree() {
-        if (getLeft().isPresent()) {
-            assert getLeft().get().key.compareTo(key) <= 0;
-            getLeft().get().assertSearchTree();
-        }
-        if (getRight().isPresent()) {
-            assert getRight().get().key.compareTo(key) >= 0;
-            getRight().get().assertSearchTree();
-        }
+        getLeft().ifPresent(node -> {
+            if (node.getKey().compareTo(key) > 0)
+            {
+                throw new IllegalStateException("Left node is greater than it's parent!");
+            }
+
+            node.assertSearchTree();
+        });
+
+        getRight().ifPresent(node -> {
+            if (node.getKey().compareTo(key) < 0)
+            {
+                throw new IllegalStateException("Right node is less than it's parent!");
+            }
+
+            node.assertSearchTree();
+        });
     }
 
     public void assertNoRedRed() {
-        assert color != RedBlack.RED || !hasRedChild();
+        if (color == RedBlack.BLACK || !hasRedChild())
+        {
+            throw new IllegalStateException("Node is black and has no red child!");
+        }
+
         if (getLeft().isPresent()) {
             getLeft().get().assertNoRedRed();
         }
@@ -139,7 +152,7 @@ public class RBNode<K extends Comparable<K>> implements RBParent<K> {
         } else if (child == right) {
             return Child.RIGHT;
         } else {
-            throw new IllegalArgumentException("Specified child not present");
+            throw new IllegalArgumentException("Specified child not present in this node!");
         }
     }
 
@@ -194,13 +207,13 @@ public class RBNode<K extends Comparable<K>> implements RBParent<K> {
 
     public Optional<RBNode<K>> findNode(K key) {
         int comp = key.compareTo(this.key);
-        if (comp == 0) {
-            return Optional.of(this);
-        } else if (comp < 0) {
-            return getLeft().isEmpty() ? Optional.empty() : getLeft().get().findNode(key);
-        } else {
-            return getRight().isEmpty() ? Optional.empty() : getRight().get().findNode(key);
-        }
+
+        return switch (comp)
+        {
+            case -1 -> getLeft().flatMap(node -> node.findNode(key));
+            case 1 -> getRight().flatMap(node -> node.findNode(key));
+            default -> Optional.of(this);
+        };
     }
 
     @Override
@@ -220,7 +233,7 @@ public class RBNode<K extends Comparable<K>> implements RBParent<K> {
         } else if (right == oldChild) {
             right = newChild;
         } else {
-            assert false;
+            throw new IllegalArgumentException("Tried to update an oldChild that is not present in the specified node!");
         }
     }
 

@@ -17,7 +17,9 @@ public interface RBChild<K extends Comparable<K>> {
     default Optional<RBNode<K>> asNode() {
         if (this instanceof RBNode<K> node) {
             return Optional.of(node);
-        } return Optional.empty();
+        }
+
+        return Optional.empty();
     }
 
     default boolean isLeaf()

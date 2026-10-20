@@ -15,10 +15,6 @@ public class RedBlackTree<K extends Comparable<K>> implements RBParent<K> {
         return root.size();
     }
 
-    public boolean isEmpty() {
-        return size() == 0;
-    }
-
     public int height() {
         return root.height();
     }
@@ -64,7 +60,7 @@ public class RedBlackTree<K extends Comparable<K>> implements RBParent<K> {
     @Override
     public void setParent(RBParent<K> parent)
     {
-
+        root.setParent(parent);
     }
 
     @Override
