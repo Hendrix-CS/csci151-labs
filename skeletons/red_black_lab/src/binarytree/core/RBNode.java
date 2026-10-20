@@ -11,8 +11,8 @@ public class RBNode<K extends Comparable<K>> implements RBParent<K> {
     public RBNode(K key, RBParent<K> parent) {
         this.key = key;
         this.parent = parent;
-        left = new Leaf(this);
-        right = new Leaf(this);
+        left = new Leaf<>(this);
+        right = new Leaf<>(this);
         color = RedBlack.RED;
     }
 
@@ -29,25 +29,26 @@ public class RBNode<K extends Comparable<K>> implements RBParent<K> {
     }
 
     public int numChildren() {
-        return (left.isSentinel() ? 0 : 1) + (right.isSentinel() ? 0 : 1);
+        return (left.isLeaf() ? 0 : 1) + (right.isLeaf() ? 0 : 1);
     }
 
-    public K getKey() {return key;}
+    public K getKey() {
+        return key;
+    }
 
-    public RedBlack getColor() {return color;}
+    public RedBlack getColor() {
+        return color;
+    }
 
     @Override
     public int height() {
-        if (left.isSentinel() && right.isSentinel()) {
+        if (left.isLeaf() && right.isLeaf()) {
             return 0;
         } else {
             int lh = left.height();
             int rh = right.height();
-            if (lh > rh) {
-                return 1 + lh;
-            } else {
-                return 1 + rh;
-            }
+
+            return Math.max(lh, rh) + 1;
         }
     }
 
@@ -106,11 +107,6 @@ public class RBNode<K extends Comparable<K>> implements RBParent<K> {
         return left.getColor() == RedBlack.BLACK || right.getColor() == RedBlack.BLACK;
     }
 
-    public boolean redRedViolation() {
-        // TODO: Your code here
-        return false;
-    }
-
     public void insert(K key) {
         int comp = key.compareTo(this.key);
         if (comp == 0) {
@@ -122,6 +118,11 @@ public class RBNode<K extends Comparable<K>> implements RBParent<K> {
             } else {
                 getLeft().get().insert(key);
             }
+
+            getLeft().ifPresentOrElse(node -> node.insert(key), () -> {
+                left = new RBNode<>(key, this);
+                left.insertFixup();
+            });
         } else {
             if (getRight().isEmpty()) {
                 right = new RBNode<>(key, this);
@@ -132,7 +133,7 @@ public class RBNode<K extends Comparable<K>> implements RBParent<K> {
         }
     }
 
-    private Child whichOne(RBNode<K> child) {
+    private Child whichChild(RBNode<K> child) {
         if (child == left) {
             return Child.LEFT;
         } else if (child == right) {
@@ -140,6 +141,15 @@ public class RBNode<K extends Comparable<K>> implements RBParent<K> {
         } else {
             throw new IllegalArgumentException("Specified child not present");
         }
+    }
+
+    /*
+        TODO: This is the code you need to implement!
+     */
+
+    public boolean redRedViolation() {
+        // TODO: Your code here
+        return false;
     }
 
     public void insertFixup() {
@@ -167,6 +177,14 @@ public class RBNode<K extends Comparable<K>> implements RBParent<K> {
     }
 
     private void redPiblingFixup() {
+        // TODO: Your code here
+    }
+
+    public void leftRotate() {
+        // TODO: Your code here
+    }
+
+    public void rightRotate() {
         // TODO: Your code here
     }
 
@@ -206,14 +224,6 @@ public class RBNode<K extends Comparable<K>> implements RBParent<K> {
         }
     }
 
-    public void leftRotate() {
-        // TODO: Your code here
-    }
-
-    public void rightRotate() {
-        // TODO: Your code here
-    }
-
     public String showTree() {
         StringBuilder shower = new StringBuilder();
         showTree(0, shower);
@@ -222,7 +232,7 @@ public class RBNode<K extends Comparable<K>> implements RBParent<K> {
 
     public void showTree(int depth, StringBuilder shower) {
         assert depth >= 0;
-        shower.append("\t".repeat(depth));
+        shower.repeat("\t", depth);
         shower.append(key);
         shower.append(':');
         shower.append(color);

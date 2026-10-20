@@ -30,6 +30,18 @@ public class Leaf<K extends Comparable<K>> implements RBChild<K> {
     }
 
     @Override
+    public K getKey()
+    {
+        return null;
+    }
+
+    @Override
+    public void insertFixup()
+    {
+
+    }
+
+    @Override
     public void setParent(RBParent<K> parent) {
         this.parent = parent;
     }
@@ -37,11 +49,6 @@ public class Leaf<K extends Comparable<K>> implements RBChild<K> {
     @Override
     public boolean hasChild(RBNode<K> candidate) {
         return false;
-    }
-
-    @Override
-    public Optional<RBNode<K>> asNode() {
-        return Optional.empty();
     }
 
     @Override

@@ -92,10 +92,10 @@ public class BinaryTreeController {
 			visualTree.getChildren().add(t);
 		}
 		
-		size.setText("" + tree.size());
-		tree.getMin().ifPresent(m -> min.setText("" + m));
-		tree.getMax().ifPresent(m -> max.setText("" + m));
-        height.setText("" + tree.height());
+		size.setText(Integer.toString(tree.size()));
+		tree.getMin().ifPresent(m -> min.setText(m));
+		tree.getMax().ifPresent(m -> max.setText(m));
+        height.setText(Integer.toString(tree.height()));
 	}
 	
 	private void placeNodeAt(double xOffset, double yOffset, int level, int column, ArrayList<NodeColor<String>> nodeAndKids, ArrayList<Text> allLabels, HashMap<String,Circle> string2circle) {

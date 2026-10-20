@@ -7,7 +7,7 @@ import java.util.Queue;
 import java.util.function.Function;
 
 public class RedBlackTree<K extends Comparable<K>> implements RBParent<K> {
-    private RBParent<K> root = new Leaf<>(this);
+    private RBChild<K> root = new Leaf<>(this);
 
     public RedBlackTree() {}
 
@@ -19,16 +19,20 @@ public class RedBlackTree<K extends Comparable<K>> implements RBParent<K> {
         return size() == 0;
     }
 
-    public Optional<K> getMin() {
-        return root.getMin();
-    }
-
-    public Optional<K> getMax() {
-        return root.getMax();
-    }
-
     public int height() {
         return root.height();
+    }
+
+    @Override
+    public int blackHeight()
+    {
+        return 0;
+    }
+
+    @Override
+    public K getKey()
+    {
+        return root.getKey();
     }
 
     public Optional<RBNode<K>> getRoot() {return root.asNode();}
@@ -52,6 +56,30 @@ public class RedBlackTree<K extends Comparable<K>> implements RBParent<K> {
     }
 
     @Override
+    public RedBlack getColor()
+    {
+        return null;
+    }
+
+    @Override
+    public void setParent(RBParent<K> parent)
+    {
+
+    }
+
+    @Override
+    public int numChildren()
+    {
+        return 0;
+    }
+
+    @Override
+    public void insertFixup()
+    {
+
+    }
+
+    @Override
     public void changeChild(RBChild<K> oldChild, RBChild<K> newChild) {
         if (root == oldChild) {
             root = newChild;
@@ -61,8 +89,21 @@ public class RedBlackTree<K extends Comparable<K>> implements RBParent<K> {
     }
 
     @Override
-    public Optional<RBNode<K>> asNode() {
-        return Optional.empty();
+    public Optional<RBNode<K>> getLeft()
+    {
+        return root instanceof RBParent<K> parent ? parent.getLeft() : Optional.empty();
+    }
+
+    @Override
+    public Optional<RBNode<K>> getRight()
+    {
+        return root instanceof RBParent<K> parent ? parent.getRight() : Optional.empty();
+    }
+
+    @Override
+    public void showTree(int depth, StringBuilder shower)
+    {
+
     }
 
     public String showTree() {

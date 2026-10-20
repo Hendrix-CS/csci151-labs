@@ -12,10 +12,18 @@ public interface RBChild<K extends Comparable<K>> {
     int blackHeight();
     K getKey();
 
+    void insertFixup();
+
     default Optional<RBNode<K>> asNode() {
         if (this instanceof RBNode<K> node) {
             return Optional.of(node);
         } return Optional.empty();
     }
+
+    default boolean isLeaf()
+    {
+        return this instanceof Leaf;
+    }
+
     void showTree(int depth, StringBuilder shower);
 }
