@@ -17,9 +17,6 @@ public class RBNode<K extends Comparable<K>> implements RBParent<K> {
     }
 
     @Override
-    public Optional<RBNode<K>> asNode() {return Optional.of(this);}
-
-    @Override
     public boolean hasChild(RBNode<K> candidate) {
         return left == candidate || right == candidate;
     }
