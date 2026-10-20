@@ -108,7 +108,7 @@ public class RBNode<K extends Comparable<K>> implements RBParent<K> {
     }
 
     public boolean isRoot() {
-        return parent.asNode().isEmpty();
+        return parent instanceof RedBlackTree<K>;
     }
 
     public boolean hasRedChild() {
