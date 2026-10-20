@@ -103,11 +103,24 @@ public class RedBlackTree<K extends Comparable<K>> implements RBParent<K> {
     public void assertInvariants() {
         if (root.asNode().isPresent()) {
             root.asNode().get().assertSearchTree();
-            assert root.getColor() == RedBlack.BLACK;
+            if (root.getColor() != RedBlack.BLACK)
+            {
+                throw new IllegalStateException("Root node must be black!");
+            }
+
             root.asNode().get().assertNoRedRed();
             int height = root.height();
-            assert height <= (int)(2 * Math.log(root.size())) + 1;
-            assert root.blackHeight() <= height;
+            int max = (int) (2 * Math.log(root.size())) + 1;
+
+            if (height > max)
+            {
+                throw new IllegalStateException("Tree is unbalanced!");
+            }
+
+            if (root.blackHeight() > height)
+            {
+                throw new IllegalStateException("Black Height is higher than height of tree!");
+            }
         }
     }
 
