@@ -11,13 +11,10 @@ public class RBNode<K extends Comparable<K>> implements RBParent<K> {
     public RBNode(K key, RBParent<K> parent) {
         this.key = key;
         this.parent = parent;
-        left = new Leaf(this);
-        right = new Leaf(this);
+        left = new Leaf<>(this);
+        right = new Leaf<>(this);
         color = RedBlack.RED;
     }
-
-    @Override
-    public Optional<RBNode<K>> asNode() {return Optional.of(this);}
 
     @Override
     public boolean hasChild(RBNode<K> candidate) {
@@ -29,41 +26,54 @@ public class RBNode<K extends Comparable<K>> implements RBParent<K> {
     }
 
     public int numChildren() {
-        return (left.isSentinel() ? 0 : 1) + (right.isSentinel() ? 0 : 1);
+        return (left.isLeaf() ? 0 : 1) + (right.isLeaf() ? 0 : 1);
     }
 
-    public K getKey() {return key;}
+    public K getKey() {
+        return key;
+    }
 
-    public RedBlack getColor() {return color;}
+    public RedBlack getColor() {
+        return color;
+    }
 
     @Override
     public int height() {
-        if (left.isSentinel() && right.isSentinel()) {
+        if (left.isLeaf() && right.isLeaf()) {
             return 0;
         } else {
             int lh = left.height();
             int rh = right.height();
-            if (lh > rh) {
-                return 1 + lh;
-            } else {
-                return 1 + rh;
-            }
+
+            return Math.max(lh, rh) + 1;
         }
     }
 
     public void assertSearchTree() {
-        if (getLeft().isPresent()) {
-            assert getLeft().get().key.compareTo(key) <= 0;
-            getLeft().get().assertSearchTree();
-        }
-        if (getRight().isPresent()) {
-            assert getRight().get().key.compareTo(key) >= 0;
-            getRight().get().assertSearchTree();
-        }
+        getLeft().ifPresent(node -> {
+            if (node.getKey().compareTo(key) > 0)
+            {
+                throw new IllegalStateException("Left node is greater than it's parent!");
+            }
+
+            node.assertSearchTree();
+        });
+
+        getRight().ifPresent(node -> {
+            if (node.getKey().compareTo(key) < 0)
+            {
+                throw new IllegalStateException("Right node is less than it's parent!");
+            }
+
+            node.assertSearchTree();
+        });
     }
 
     public void assertNoRedRed() {
-        assert color != RedBlack.RED || !hasRedChild();
+        if (color == RedBlack.RED && hasRedChild()) {
+            throw new IllegalStateException("Red node has a red child!");
+        }
+
         if (getLeft().isPresent()) {
             getLeft().get().assertNoRedRed();
         }
@@ -95,7 +105,7 @@ public class RBNode<K extends Comparable<K>> implements RBParent<K> {
     }
 
     public boolean isRoot() {
-        return parent.asNode().isEmpty();
+        return parent instanceof RedBlackTree<K>;
     }
 
     public boolean hasRedChild() {
@@ -106,40 +116,46 @@ public class RBNode<K extends Comparable<K>> implements RBParent<K> {
         return left.getColor() == RedBlack.BLACK || right.getColor() == RedBlack.BLACK;
     }
 
-    public boolean redRedViolation() {
-        // TODO: Your code here
-        return false;
-    }
-
     public void insert(K key) {
         int comp = key.compareTo(this.key);
         if (comp == 0) {
             this.key = key;
         } else if (comp < 0) {
-            if (getLeft().isEmpty()) {
+            getLeft().ifPresentOrElse(node -> node.insert(key), () -> {
                 left = new RBNode<>(key, this);
                 left.insertFixup();
-            } else {
-                getLeft().get().insert(key);
-            }
+            });
         } else {
-            if (getRight().isEmpty()) {
+            getRight().ifPresentOrElse(node -> node.insert(key), () -> {
                 right = new RBNode<>(key, this);
                 right.insertFixup();
-            } else {
-                getRight().get().insert(key);
-            }
+            });
         }
     }
 
-    private Child whichOne(RBNode<K> child) {
+    private Child whichChild(RBNode<K> child) {
         if (child == left) {
             return Child.LEFT;
         } else if (child == right) {
             return Child.RIGHT;
         } else {
-            throw new IllegalArgumentException("Specified child not present");
+            throw new IllegalArgumentException("Specified child not present in this node!");
         }
+    }
+
+    // needed for a test
+    public void setColor(RedBlack color)
+    {
+        this.color = color;
+    }
+
+    /*
+        TODO: This is the code you need to implement!
+     */
+
+    public boolean redRedViolation() {
+        // TODO: Your code here
+        return false;
     }
 
     public void insertFixup() {
@@ -170,19 +186,27 @@ public class RBNode<K extends Comparable<K>> implements RBParent<K> {
         // TODO: Your code here
     }
 
+    public void leftRotate() {
+        // TODO: Your code here
+    }
+
+    public void rightRotate() {
+        // TODO: Your code here
+    }
+
     public Optional<K> find(K key) {
         return findNode(key).map(n -> n.key);
     }
 
     public Optional<RBNode<K>> findNode(K key) {
         int comp = key.compareTo(this.key);
-        if (comp == 0) {
-            return Optional.of(this);
-        } else if (comp < 0) {
-            return getLeft().isEmpty() ? Optional.empty() : getLeft().get().findNode(key);
-        } else {
-            return getRight().isEmpty() ? Optional.empty() : getRight().get().findNode(key);
-        }
+
+        return switch (comp)
+        {
+            case -1 -> getLeft().flatMap(node -> node.findNode(key));
+            case 1 -> getRight().flatMap(node -> node.findNode(key));
+            default -> Optional.of(this);
+        };
     }
 
     @Override
@@ -202,16 +226,8 @@ public class RBNode<K extends Comparable<K>> implements RBParent<K> {
         } else if (right == oldChild) {
             right = newChild;
         } else {
-            assert false;
+            throw new IllegalArgumentException("Tried to update an oldChild that is not present in the specified node!");
         }
-    }
-
-    public void leftRotate() {
-        // TODO: Your code here
-    }
-
-    public void rightRotate() {
-        // TODO: Your code here
     }
 
     public String showTree() {
@@ -222,7 +238,7 @@ public class RBNode<K extends Comparable<K>> implements RBParent<K> {
 
     public void showTree(int depth, StringBuilder shower) {
         assert depth >= 0;
-        shower.append("\t".repeat(depth));
+        shower.repeat("\t", depth);
         shower.append(key);
         shower.append(':');
         shower.append(color);

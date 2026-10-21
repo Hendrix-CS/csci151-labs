@@ -7,28 +7,26 @@ import java.util.Queue;
 import java.util.function.Function;
 
 public class RedBlackTree<K extends Comparable<K>> implements RBParent<K> {
-    private RBParent<K> root = new Leaf<>(this);
-
-    public RedBlackTree() {}
+    private RBChild<K> root = new Leaf<>(this);
 
     public int size() {
         return root.size();
     }
 
-    public boolean isEmpty() {
-        return size() == 0;
-    }
-
-    public Optional<K> getMin() {
-        return root.getMin();
-    }
-
-    public Optional<K> getMax() {
-        return root.getMax();
-    }
-
     public int height() {
         return root.height();
+    }
+
+    @Override
+    public int blackHeight()
+    {
+        return root.blackHeight();
+    }
+
+    @Override
+    public K getKey()
+    {
+        return root.getKey();
     }
 
     public Optional<RBNode<K>> getRoot() {return root.asNode();}
@@ -43,12 +41,36 @@ public class RedBlackTree<K extends Comparable<K>> implements RBParent<K> {
     }
 
     public Optional<K> find(K key) {
-        return root.asNode().flatMap(n -> n.find(key));
+        return root instanceof RBNode<K> node ? node.find(key) : Optional.empty();
     }
 
     @Override
     public boolean hasChild(RBNode<K> candidate) {
         return root == candidate;
+    }
+
+    @Override
+    public RedBlack getColor()
+    {
+        return root.getColor();
+    }
+
+    @Override
+    public void setParent(RBParent<K> parent)
+    {
+        root.setParent(parent);
+    }
+
+    @Override
+    public int numChildren()
+    {
+        return root instanceof RBParent<K> parent ? parent.numChildren() : 0;
+    }
+
+    @Override
+    public void insertFixup()
+    {
+        root.insertFixup();
     }
 
     @Override
@@ -61,26 +83,45 @@ public class RedBlackTree<K extends Comparable<K>> implements RBParent<K> {
     }
 
     @Override
-    public Optional<RBNode<K>> asNode() {
-        return Optional.empty();
+    public Optional<RBNode<K>> getLeft()
+    {
+        return root instanceof RBParent<K> parent ? parent.getLeft() : Optional.empty();
     }
 
-    public String showTree() {
-        if (root.asNode().isPresent()) {
-            return root.asNode().get().showTree();
-        } else {
-            return "";
-        }
+    @Override
+    public Optional<RBNode<K>> getRight()
+    {
+        return root instanceof RBParent<K> parent ? parent.getRight() : Optional.empty();
+    }
+
+    @Override
+    public void showTree(int depth, StringBuilder shower)
+    {
+        root.showTree(depth, shower);
     }
 
     public void assertInvariants() {
         if (root.asNode().isPresent()) {
             root.asNode().get().assertSearchTree();
-            assert root.getColor() == RedBlack.BLACK;
+
+            if (root.getColor() != RedBlack.BLACK)
+            {
+                throw new IllegalStateException("Root node must be black!");
+            }
+
             root.asNode().get().assertNoRedRed();
             int height = root.height();
-            assert height <= (int)(2 * Math.log(root.size())) + 1;
-            assert root.blackHeight() <= height;
+            int max = (int) (2 * Math.log(root.size())) + 1;
+
+            if (height > max)
+            {
+                throw new IllegalStateException("Tree is unbalanced!");
+            }
+
+            if (root.blackHeight() > height)
+            {
+                throw new IllegalStateException("Black Height is higher than height of tree!");
+            }
         }
     }
 
@@ -117,7 +158,7 @@ public class RedBlackTree<K extends Comparable<K>> implements RBParent<K> {
 
     private static <K> boolean allSentinels(ArrayList<ArrayList<NodeColor<K>>> entries) {
         for (ArrayList<NodeColor<K>> entry: entries) {
-            for (NodeColor<K> key: entry) {
+            for (NodeColor<K> key : entry) {
                 if (key.key() != null) {
                     return false;
                 }
