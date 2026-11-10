@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11add174-885c-4d86-a179-1600fa7eff5f" name="Default Changelist" comment="Updating parameter value to target to disambiguate.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/binarytree/core/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/binarytree/core/BinarySearchTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/binarytree/core/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/binarytree/core/TreeNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/binarytree/gui/BinaryTreeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/binarytree/gui/BinaryTreeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../151sortimator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../151sortimator/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../red_black_lab/src/binarytree/core/RBNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/../red_black_lab/src/binarytree/core/RBNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../red_black_lab/src/binarytree/core/RBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../red_black_lab/src/binarytree/core/RBTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="11add174-885c-4d86-a179-1600fa7eff5f" name="Default Changelist" comment="Updating parameter value to target to disambiguate." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,7 +45,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "lukemain",
+    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/markgoadrich/Github/csci151-labs/skeletons/151bst",
     "node.js.detected.package.eslint": "true",
