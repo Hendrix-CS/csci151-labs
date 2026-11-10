@@ -5,15 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11add174-885c-4d86-a179-1600fa7eff5f" name="Default Changelist" comment="Updating parameter value to target to disambiguate.">
-      <change beforePath="$PROJECT_DIR$/../../examples/pigDiceGame/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/pigDiceGame/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../examples/pigDiceGame/pigDiceGame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/pigDiceGame/pigDiceGame.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../examples/pigDiceGame/src/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../examples/virusSim/src/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../examples/virusSim/src/virus/gui/PersonView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/virusSim/src/virus/gui/PersonView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../examples/virusSim/virusSim.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/virusSim/virusSim.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/binarytree/core/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/binarytree/core/BinarySearchTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/binarytree/core/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/binarytree/core/TreeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/binarytree/gui/BinaryTreeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/binarytree/gui/BinaryTreeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../151sortimator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../151sortimator/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cake151/src/strategies/Timid.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_black_lab/src/binarytree/core/RBNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/../red_black_lab/src/binarytree/core/RBNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../red_black_lab/src/binarytree/core/RBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../red_black_lab/src/binarytree/core/RBTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,18 +21,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "mgoadric"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;mgoadric&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Hendrix-CS/csci151-labs.git",
-    "accountId": "f28e142b-aa0f-4f70-9b04-c9c4f4ae6e11"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Hendrix-CS/csci151-labs.git&quot;,
+    &quot;accountId&quot;: &quot;f28e142b-aa0f-4f70-9b04-c9c4f4ae6e11&quot;
   }
-}]]></component>
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -42,31 +40,33 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="1ZjBK8Nv4EvIP2G3B3myEPF9PAM" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.BinaryTreeApp.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BinarySearchTreeTest.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/goadrich/Github/csci151-labs/skeletons/151bst&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.BinaryTreeApp.executor": "Run",
+    "JUnit.BinarySearchTreeTest.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "lukemain",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/markgoadrich/Github/csci151-labs/skeletons/151bst",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
@@ -109,6 +109,14 @@
         <item itemvalue="Application.BinaryTreeApp" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-34e2839f716b-intellij.indexing.shared.core-IU-262.9437.185" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.9437.185" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
