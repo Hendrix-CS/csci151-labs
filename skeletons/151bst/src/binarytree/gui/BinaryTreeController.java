@@ -32,12 +32,6 @@ public class BinaryTreeController {
 	@FXML
 	RadioButton remove;
 	
-	@FXML
-	RadioButton leftRotate;
-	
-	@FXML
-	RadioButton rightRotate;
-	
 	BinarySearchTree<String> tree = new BinarySearchTree<>();
 	
 	@FXML
@@ -61,8 +55,6 @@ public class BinaryTreeController {
 	
 		ToggleGroup changeGroup = new ToggleGroup();
 		changeGroup.getToggles().add(remove);
-		changeGroup.getToggles().add(leftRotate);
-		changeGroup.getToggles().add(rightRotate);
 	}
 	
 	@FXML
@@ -125,8 +117,6 @@ public class BinaryTreeController {
 			c.setOnMouseClicked(event -> {
 				String t = nodeText.getText();
 				if (remove.isSelected()) tree.remove(t);
-				if (leftRotate.isSelected()) tree.leftRotateAt(t);
-				if (rightRotate.isSelected()) tree.rightRotateAt(t);
 				redrawTree();
 			});
 			nodeText.setOnMouseClicked(c.getOnMouseClicked());
