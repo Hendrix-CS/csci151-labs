@@ -1,5 +1,7 @@
 package binarytree.core;
 
+import binarytree.core.nodes.RBNode;
+import binarytree.core.nodes.TreeNode;
 import org.junit.*;
 
 import java.util.ArrayList;
@@ -8,6 +10,35 @@ import java.util.Collections;
 import static org.junit.Assert.*;
 
 public class RBTest {
+
+    @Test
+    public void testRightRotate()
+    {
+        TreeNode<Integer> tree = new RBNode<>(1, null);
+
+        TreeNode<Integer> firstLeft =  new RBNode<>(0, tree);
+        TreeNode<Integer> secondLeft = new RBNode<>(-1, null);
+
+        tree.setLeft(firstLeft);
+        firstLeft.setLeft(secondLeft);
+
+        tree.rightRotate();
+    }
+
+    @Test
+    public void testLeftRotate()
+    {
+        TreeNode<Integer> tree = new RBNode<>(1, null);
+
+        TreeNode<Integer> firstRight = new RBNode<>(0, tree);
+        TreeNode<Integer> secondRight = new RBNode<>(-1, null);
+
+        tree.setLeft(firstRight);
+        firstRight.setLeft(secondRight);
+
+        tree.leftRotate();
+    }
+
     @Test
     public void smallRandomTrees() {
         for (int test = 0; test < 30; test++) {
@@ -35,19 +66,28 @@ public class RBTest {
 
     @Test
     public void testRedRedViolation() {
-        RedBlackTree<Character> tree = makeTreeFromString("ba");
-        RBNode<Character> root = tree.getRoot().orElseThrow();
-        RBNode<Character> child = root.getLeft().orElseThrow();
+        TreeNode<Character> tree = makeTreeFromString("ba");
+        TreeNode<Character> child = tree.getLeft();
 
-        assertFalse(root.redRedViolation());
-        assertFalse(child.redRedViolation());
+        tree.checkTree();
 
-        root.setColor(RedBlack.RED);
+        tree.setColor(RedBlack.RED);
         child.setColor(RedBlack.RED);
-        assertTrue(child.redRedViolation());
+
+        try
+        {
+            tree.checkTree();
+
+            throw new AssertionError("Red Red Violation was not reported!");
+        }
+        catch (IllegalStateException ignored)
+        {
+            // this is on purpose i promise
+        }
 
         child.setColor(RedBlack.BLACK);
-        assertFalse(child.redRedViolation());
+
+        tree.checkTree();
     }
 
     @Test
@@ -81,10 +121,10 @@ public class RBTest {
 
     public void testTrees(TestCase testCase)
     {
-        RedBlackTree<Character> tree = makeTreeFromString(testCase.line());
+        TreeNode<Character> tree = makeTreeFromString(testCase.line());
         try
         {
-            tree.assertInvariants();
+            tree.checkTree();
         }
         catch (Exception e)
         {
@@ -94,33 +134,38 @@ public class RBTest {
 
     @Test
     public void testRedPiblingFixup() {
-        RedBlackTree<Character> tree = makeTreeFromString("dbfac");
+        TreeNode<Character> tree = makeTreeFromString("dbfac");
 
-        tree.assertInvariants();
+        tree.checkTree();
 
-        RBNode<Character> root = tree.getRoot().get();
+        TreeNode<Character> root = tree;
 
         assertEquals(RedBlack.BLACK, root.getColor());
 
-        assertEquals(RedBlack.BLACK, root.getLeft().orElseThrow().getColor());
-        assertEquals(RedBlack.BLACK, root.getRight().orElseThrow().getColor());
+        assertEquals(RedBlack.BLACK, root.getLeft().getColor());
+        assertEquals(RedBlack.BLACK, root.getRight().getColor());
     }
 
-    public RedBlackTree<Character> makeTreeFromString(String line)
+    public TreeNode<Character> makeTreeFromString(String line)
     {
-        RedBlackTree<Character> tree = new RedBlackTree<>();
-        line.chars().forEach(k -> tree.insert((char) k));
+        TreeNode<Character> tree = new RBNode<>(line.charAt(0), null);
+        //line.chars().forEach(k -> tree.insert((char) k));
+
+        for (int i = 1; i < line.length(); i++)
+        {
+            tree.insert(line.charAt(i));
+        }
 
         return tree;
     }
 
     public <T extends Comparable<T>> void makeTestTreeFrom(ArrayList<T> values) {
-        RedBlackTree<T> t = new RedBlackTree<>();
-        for (int i = 0; i < values.size(); i++) {
+        TreeNode<T> t = new RBNode<>(values.getFirst(), null);
+        for (int i = 1; i < values.size(); i++) {
             t.insert(values.get(i));
-            t.getRoot().orElseThrow().assertParentChildSymmetry();
+            t.checkTree();
         }
-        t.assertInvariants();
+        t.checkTree();
     }
 
     public record TestCase(String line, String description)
