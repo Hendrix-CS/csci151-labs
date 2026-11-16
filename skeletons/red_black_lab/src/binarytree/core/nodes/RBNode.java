@@ -3,15 +3,13 @@ package binarytree.core.nodes;
 import binarytree.core.Child;
 import binarytree.core.RedBlack;
 
-public class RBNode<K extends Comparable<K>> implements TreeNode<K>
-{
+public class RBNode<K extends Comparable<K>> implements TreeNode<K> {
     private RedBlack color;
     private K value;
     private TreeNode<K> left, right;
     private TreeNode<K> parent;
 
-    public RBNode(K value, TreeNode<K> parent)
-    {
+    public RBNode(K value, TreeNode<K> parent) {
         this.value = value;
         this.parent = parent;
 
@@ -21,36 +19,29 @@ public class RBNode<K extends Comparable<K>> implements TreeNode<K>
     }
 
     @Override
-    public TreeNode<K> getParent()
-    {
+    public TreeNode<K> getParent() {
         return parent;
     }
 
     @Override
-    public void setParent(TreeNode<K> parent)
-    {
+    public void setParent(TreeNode<K> parent) {
         this.parent = parent;
     }
 
     @Override
-    public TreeNode<K> getChild(Child child)
-    {
-        return switch (child)
-        {
+    public TreeNode<K> getChild(Child child) {
+        return switch (child) {
             case LEFT -> left;
             case RIGHT -> right;
         };
     }
 
     @Override
-    public Child whichChild(TreeNode<K> node)
-    {
-        if (node == left)
-        {
+    public Child whichChild(TreeNode<K> node) {
+        if (node == left) {
             return Child.LEFT;
         }
-        else if (node == right)
-        {
+        else if (node == right) {
             return Child.RIGHT;
         }
 
@@ -58,65 +49,54 @@ public class RBNode<K extends Comparable<K>> implements TreeNode<K>
     }
 
     @Override
-    public void setChild(Child child, TreeNode<K> node)
-    {
-        if (node == null)
+    public void setChild(Child child, TreeNode<K> node) {
+        if (node == null) {
             throw new IllegalStateException("Cannot set child to null!");
+        }
 
-        switch (child)
-        {
+        switch (child) {
             case LEFT -> left = node;
             case RIGHT -> right = node;
         }
     }
 
     @Override
-    public RedBlack getColor()
-    {
+    public RedBlack getColor() {
         return color;
     }
 
     @Override
-    public void setColor(RedBlack color)
-    {
+    public void setColor(RedBlack color) {
         this.color = color;
     }
 
     @Override
     public void insert(K value)
     {
-        if (this.value == null)
-        {
+        if (this.value == null) {
             this.value = value;
             return;
         }
 
         int compare = value.compareTo(this.value);
 
-        if (compare == 0)
-        {
+        if (compare == 0) {
             this.value = value;
         }
-        else if (compare < 0)
-        {
-            if (!this.left.isLeaf())
-            {
+        else if (compare < 0) {
+            if (!this.left.isLeaf()) {
                 this.left.insert(value);
             }
-            else
-            {
+            else {
                 this.left = new RBNode<>(value, this);
                 this.left.insertFixup();
             }
         }
-        else
-        {
-            if (!this.right.isLeaf())
-            {
+        else {
+            if (!this.right.isLeaf()) {
                 this.right.insert(value);
             }
-            else
-            {
+            else {
                 this.right = new RBNode<>(value, this);
                 this.right.insertFixup();
             }
@@ -124,107 +104,116 @@ public class RBNode<K extends Comparable<K>> implements TreeNode<K>
     }
 
     @Override
-    public K getValue()
-    {
+    public K getValue() {
         return value;
     }
 
     @Override
-    public void setValue(K value)
-    {
+    public void setValue(K value) {
         this.value = value;
     }
 
     @Override
-    public int size()
-    {
+    public int size() {
         return 1 + left.size() + right.size();
     }
 
     @Override
-    public int height()
-    {
-        if (left.isLeaf() && right.isLeaf())
-        {
+    public int height() {
+        if (left.isLeaf() && right.isLeaf()) {
             return 0;
         }
-        else
-        {
+        else {
             return 1 + Math.max(left.height(), right.height());
         }
     }
 
     @Override
-    public int blackHeight()
-    {
+    public int blackHeight() {
         int leftHeight = left.blackHeight();
         int rightHeight = right.blackHeight();
 
-        if (leftHeight != rightHeight)
-        {
+        if (leftHeight != rightHeight) {
             throw new IllegalStateException("Both sides of the tree's black height must be the same!");
         }
 
         return leftHeight + (color == RedBlack.RED ? 0 : 1);
     }
 
-    private void parentChildSymmetry()
-    {
-        if (!this.parent.hasChild(this))
+    private void parentChildSymmetry() {
+        if (!this.parent.hasChild(this)) {
             throw new IllegalStateException("Node is not one of it's parent's children!");
+        }
     }
 
-    private void searchTree()
-    {
-        if (!left.isLeaf())
-        {
-            if (left.getValue().compareTo(value) > 0)
+    private void searchTree() {
+        if (!left.isLeaf()) {
+            if (left.getValue().compareTo(value) > 0) {
                 throw new IllegalStateException("Left is greater than value!");
+            }
         }
 
-        if (!right.isLeaf())
-        {
-            if (right.getValue().compareTo(value) < 0)
-            {
+        if (!right.isLeaf()) {
+            if (right.getValue().compareTo(value) < 0) {
                 throw new IllegalStateException("Right is less than value!");
             }
         }
     }
 
-    private void redRedViolation()
-    {
-        if (color == RedBlack.RED && hasRedChild())
-        {
-            throw new IllegalStateException("Red node has a red child!");
-        }
-    }
-
     @Override
-    public void checkTree()
-    {
+    public void checkTree() {
         parentChildSymmetry();
         searchTree();
-        redRedViolation();
+
+        if (redRedViolation()) {
+            throw new IllegalStateException("A red node cannot have a child who is red!");
+        }
 
         left.checkTree();
         right.checkTree();
     }
 
-    @Override
-    public void insertFixup()
-    {
+    /*
+        TODO: This is the code you need to implement!
+     */
 
+    public boolean redRedViolation() {
+        return getColor() == RedBlack.RED && hasRedChild();
     }
 
-    @Override
-    public void leftRotate()
-    {
-
+    public void insertFixup() {
+        // TODO: Your code here
     }
 
-    @Override
-    public void rightRotate()
-    {
+    private void blackPiblingFixup(RBNode<K> parent, RBNode<K> grandparent) {
+        // TODO: Your code here
+    }
 
+    private void zigZigFixup(RBNode<K> parent, RBNode<K> grandparent) {
+        // TODO: Your code here
+    }
+
+    private void zigZagFixup(RBNode<K> parent, RBNode<K> grandparent) {
+        // TODO: Your code here
+    }
+
+    private void zagZigFixup(RBNode<K> parent, RBNode<K> grandparent) {
+        // TODO: Your code here
+    }
+
+    private void zagZagFixup(RBNode<K> parent, RBNode<K> grandparent) {
+        // TODO: Your code here
+    }
+
+    private void redPiblingFixup() {
+        // TODO: Your code here
+    }
+
+    public void leftRotate() {
+        // TODO: Your code here
+    }
+
+    public void rightRotate() {
+        // TODO: Your code here
     }
 }

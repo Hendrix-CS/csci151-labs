@@ -9,122 +9,102 @@ import java.util.Optional;
 import java.util.Queue;
 import java.util.function.Function;
 
-public class RedBlackTree<K extends Comparable<K>> implements TreeNode<K>
-{
+public class RedBlackTree<K extends Comparable<K>> implements TreeNode<K> {
     private final TreeNode<K> root = new RBNode<>(null, null);
 
     @Override
-    public TreeNode<K> getParent()
-    {
+    public TreeNode<K> getParent() {
         return root.getParent();
     }
 
     @Override
-    public void setParent(TreeNode<K> parent)
-    {
+    public void setParent(TreeNode<K> parent) {
         root.setParent(parent);
     }
 
     @Override
-    public TreeNode<K> getChild(Child child)
-    {
+    public TreeNode<K> getChild(Child child) {
         return root.getChild(child);
     }
 
     @Override
-    public Child whichChild(TreeNode<K> node)
-    {
+    public Child whichChild(TreeNode<K> node) {
         return root.whichChild(node);
     }
 
     @Override
-    public void setChild(Child child, TreeNode<K> node)
-    {
+    public void setChild(Child child, TreeNode<K> node) {
         root.setChild(child, node);
     }
 
     @Override
-    public RedBlack getColor()
-    {
+    public RedBlack getColor() {
         return root.getColor();
     }
 
     @Override
-    public void setColor(RedBlack color)
-    {
+    public void setColor(RedBlack color) {
         root.setColor(color);
     }
 
     @Override
-    public void insert(K value)
-    {
-        if (root.getValue() == null)
-        {
+    public void insert(K value) {
+        if (root.getValue() == null) {
             root.setValue(value);
+            root.insertFixup();
         }
-        else
-        {
+        else {
             root.insert(value);
         }
     }
 
     @Override
-    public K getValue()
-    {
+    public K getValue() {
         return root.getValue();
     }
 
     @Override
-    public void setValue(K value)
-    {
+    public void setValue(K value) {
         root.setValue(value);
     }
 
     @Override
-    public int size()
-    {
+    public int size() {
         return root.size();
     }
 
     @Override
-    public int height()
-    {
+    public int height() {
         return root.height();
     }
 
     @Override
-    public void insertFixup()
-    {
+    public void insertFixup() {
         root.insertFixup();
     }
 
     @Override
-    public int blackHeight()
-    {
+    public int blackHeight() {
         return root.blackHeight();
     }
 
     @Override
-    public void checkTree()
-    {
+    public void checkTree() {
         root.checkTree();
     }
 
     @Override
-    public void leftRotate()
-    {
+    public void leftRotate() {
         root.leftRotate();
     }
 
     @Override
-    public void rightRotate()
-    {
+    public void rightRotate() {
         root.rightRotate();
     }
 
     @Override
-    public boolean isEmpty()
-    {
+    public boolean isEmpty() {
         return root.getValue() == null && root.isEmpty();
     }
 

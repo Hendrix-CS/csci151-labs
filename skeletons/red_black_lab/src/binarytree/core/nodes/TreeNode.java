@@ -27,18 +27,15 @@ public interface TreeNode<K extends Comparable<K>>
         return getChild(Child.LEFT);
     }
 
-    default TreeNode<K> getRight()
-    {
+    default TreeNode<K> getRight() {
         return getChild(Child.RIGHT);
     }
 
-    default boolean hasLeft()
-    {
+    default boolean hasLeft() {
         return !getLeft().isLeaf();
     }
 
-    default boolean hasRight()
-    {
+    default boolean hasRight() {
         return !getRight().isLeaf();
     }
 
@@ -58,67 +55,52 @@ public interface TreeNode<K extends Comparable<K>>
         return getLeft().getColor() == RedBlack.BLACK;
     }
 
-    default boolean hasChild(TreeNode<K> node)
-    {
+    default boolean hasChild(TreeNode<K> node) {
         return getLeft() == node || getRight() == node;
     }
 
-    default boolean isRoot()
-    {
+    default boolean isRoot() {
         return getParent() == null;
     }
 
-    default boolean isLeaf()
-    {
+    default boolean isLeaf() {
         return this instanceof BlackLeaf;
     }
 
-    default int numChildren()
-    {
+    default int numChildren() {
         return (getLeft().isLeaf() ? 0 : 1) + (getRight().isLeaf() ? 0 : 1);
     }
 
-    default void changeChild(TreeNode<K> oldChild, TreeNode<K> newChild)
-    {
-        if (oldChild == getLeft())
-        {
+    default void changeChild(TreeNode<K> oldChild, TreeNode<K> newChild) {
+        if (oldChild == getLeft()) {
             setLeft(newChild);
         }
-        else if (oldChild == getRight())
-        {
+        else if (oldChild == getRight()) {
             setRight(newChild);
         }
-        else
-        {
+        else {
             throw new IllegalStateException("Cannot change child because oldChild is not a child of this node!");
         }
     }
 
-    default boolean isEmpty()
-    {
+    default boolean isEmpty() {
         return !hasLeft() && !hasRight();
     }
 
-    default K getMin()
-    {
-        if (getLeft().isLeaf())
-        {
+    default K getMin() {
+        if (getLeft().isLeaf()) {
             return getValue();
         }
-        else
-        {
+        else {
             return getLeft().getValue();
         }
     }
 
-    default K getMax()
-    {
-        if (getRight().isLeaf())
-        {
+    default K getMax() {
+        if (getRight().isLeaf()) {
             return getValue();
         }
-        else
-        {
+        else {
             return getRight().getValue();
         }
     }

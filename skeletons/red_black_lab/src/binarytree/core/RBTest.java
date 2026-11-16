@@ -12,8 +12,7 @@ import static org.junit.Assert.*;
 public class RBTest {
 
     @Test
-    public void testRightRotate()
-    {
+    public void testRightRotate() {
         TreeNode<Integer> tree = new RBNode<>(1, null);
 
         TreeNode<Integer> firstLeft =  new RBNode<>(0, tree);
@@ -26,8 +25,7 @@ public class RBTest {
     }
 
     @Test
-    public void testLeftRotate()
-    {
+    public void testLeftRotate() {
         TreeNode<Integer> tree = new RBNode<>(1, null);
 
         TreeNode<Integer> firstRight = new RBNode<>(0, tree);
@@ -91,43 +89,36 @@ public class RBTest {
     }
 
     @Test
-    public void zigZigInvariant()
-    {
+    public void zigZigInvariant() {
         testTrees(new TestCase("cba", "Zig-Zig invariant tree."));
     }
 
     @Test
-    public void zigZagInvariant()
-    {
+    public void zigZagInvariant() {
         testTrees(new TestCase("cab", "Zig-Zag invariant tree."));
     }
 
     @Test
-    public void zagZigInvariant()
-    {
+    public void zagZigInvariant() {
         testTrees(new TestCase("acb", "Zag-Zig invariant tree."));
     }
+
     @Test
-    public void zagZagInvariant()
-    {
+    public void zagZagInvariant() {
         testTrees(new TestCase("abc", "Zag-Zag invariant tree."));
     }
 
     @Test
-    public void allZigZagInvariants()
-    {
+    public void allZigZagInvariants() {
         testTrees(new TestCase("cbadfe", "Test all Zig-Zag invariants on one tree."));
     }
 
-    public void testTrees(TestCase testCase)
-    {
+    public void testTrees(TestCase testCase) {
         TreeNode<Character> tree = makeTreeFromString(testCase.line());
-        try
-        {
+        try {
             tree.checkTree();
         }
-        catch (Exception e)
-        {
+        catch (Exception e) {
             throw new IllegalStateException("Failed on " + testCase.description(), e);
         }
     }
@@ -146,8 +137,7 @@ public class RBTest {
         assertEquals(RedBlack.BLACK, root.getRight().getColor());
     }
 
-    public TreeNode<Character> makeTreeFromString(String line)
-    {
+    public TreeNode<Character> makeTreeFromString(String line) {
         TreeNode<Character> tree = new RBNode<>(line.charAt(0), null);
         //line.chars().forEach(k -> tree.insert((char) k));
 
@@ -168,8 +158,7 @@ public class RBTest {
         t.checkTree();
     }
 
-    public record TestCase(String line, String description)
-    {
+    public record TestCase(String line, String description) {
 
     }
 }
