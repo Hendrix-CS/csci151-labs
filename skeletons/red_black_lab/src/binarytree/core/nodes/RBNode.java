@@ -175,7 +175,7 @@ public class RBNode<K extends Comparable<K>> implements TreeNode<K> {
      */
 
     public boolean redRedViolation() {
-        return /*getColor() == RedBlack.RED && getParent().getColor() == RedBlack.RED;*/ false;
+        return false;
     }
 
     public void insertFixup() {
