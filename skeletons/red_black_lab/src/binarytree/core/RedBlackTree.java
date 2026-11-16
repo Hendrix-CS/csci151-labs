@@ -12,6 +12,11 @@ import java.util.function.Function;
 public class RedBlackTree<K extends Comparable<K>> implements TreeNode<K> {
     private final TreeNode<K> root = new RBNode<>(null, null);
 
+    public RedBlackTree()
+    {
+        root.setColor(RedBlack.BLACK);
+    }
+
     @Override
     public TreeNode<K> getParent() {
         return root.getParent();
@@ -51,11 +56,12 @@ public class RedBlackTree<K extends Comparable<K>> implements TreeNode<K> {
     public void insert(K value) {
         if (root.getValue() == null) {
             root.setValue(value);
-            root.insertFixup();
         }
         else {
             root.insert(value);
         }
+
+        root.insertFixup();
     }
 
     @Override
@@ -106,6 +112,30 @@ public class RedBlackTree<K extends Comparable<K>> implements TreeNode<K> {
     @Override
     public boolean isEmpty() {
         return root.getValue() == null && root.isEmpty();
+    }
+
+    public void assertInvariants() {
+        if (!root.isEmpty()) {
+            root.checkTree();
+
+            if (root.getColor() != RedBlack.BLACK)
+            {
+                throw new IllegalStateException("Root node must be black!");
+            }
+
+            int height = root.height();
+            int max = (int) (2 * Math.log(root.size()));
+
+            if (height >= max)
+            {
+                throw new IllegalStateException("Tree is unbalanced!");
+            }
+
+            if (root.blackHeight() > height)
+            {
+                throw new IllegalStateException("Black Height is higher than height of tree!");
+            }
+        }
     }
 
     private class TreeQueueEntry {

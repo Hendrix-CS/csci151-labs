@@ -104,4 +104,14 @@ public interface TreeNode<K extends Comparable<K>>
             return getRight().getValue();
         }
     }
+
+    default TreeNode<K> getPibling() {
+        Child child = getParent().whichChild(this);
+
+        return switch (child)
+        {
+            case LEFT -> getParent().getRight();
+            case RIGHT -> getParent().getLeft();
+        };
+    }
 }

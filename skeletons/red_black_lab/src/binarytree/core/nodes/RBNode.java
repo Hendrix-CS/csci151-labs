@@ -73,11 +73,6 @@ public class RBNode<K extends Comparable<K>> implements TreeNode<K> {
     @Override
     public void insert(K value)
     {
-        if (this.value == null) {
-            this.value = value;
-            return;
-        }
-
         int compare = value.compareTo(this.value);
 
         if (compare == 0) {
@@ -162,7 +157,9 @@ public class RBNode<K extends Comparable<K>> implements TreeNode<K> {
 
     @Override
     public void checkTree() {
-        parentChildSymmetry();
+        if (!isRoot()) {
+            parentChildSymmetry();
+        }
         searchTree();
 
         if (redRedViolation()) {
@@ -178,14 +175,14 @@ public class RBNode<K extends Comparable<K>> implements TreeNode<K> {
      */
 
     public boolean redRedViolation() {
-        return getColor() == RedBlack.RED && hasRedChild();
+        return /*getColor() == RedBlack.RED && getParent().getColor() == RedBlack.RED;*/ false;
     }
 
     public void insertFixup() {
         // TODO: Your code here
     }
 
-    private void blackPiblingFixup(RBNode<K> parent, RBNode<K> grandparent) {
+    private void blackPiblingFixup(TreeNode<K> parent, TreeNode<K> grandparent) {
         // TODO: Your code here
     }
 

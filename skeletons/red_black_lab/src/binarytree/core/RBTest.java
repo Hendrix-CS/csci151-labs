@@ -22,6 +22,9 @@ public class RBTest {
         firstLeft.setLeft(secondLeft);
 
         tree.rightRotate();
+        tree.insertFixup();
+
+        if (tree.height() != 1) throw new IllegalStateException("Right rotate failed! Tree is height 2.");
     }
 
     @Test
@@ -35,6 +38,9 @@ public class RBTest {
         firstRight.setLeft(secondRight);
 
         tree.leftRotate();
+        tree.insertFixup();
+
+        if (tree.height() != 1) throw new IllegalStateException("Left rotate failed! Tree is height 2.");
     }
 
     @Test
@@ -114,9 +120,10 @@ public class RBTest {
     }
 
     public void testTrees(TestCase testCase) {
-        TreeNode<Character> tree = makeTreeFromString(testCase.line());
+        RedBlackTree<Character> tree = makeTreeFromString(testCase.line());
+
         try {
-            tree.checkTree();
+            tree.assertInvariants();
         }
         catch (Exception e) {
             throw new IllegalStateException("Failed on " + testCase.description(), e);
@@ -137,25 +144,20 @@ public class RBTest {
         assertEquals(RedBlack.BLACK, root.getRight().getColor());
     }
 
-    public TreeNode<Character> makeTreeFromString(String line) {
-        TreeNode<Character> tree = new RBNode<>(line.charAt(0), null);
-        //line.chars().forEach(k -> tree.insert((char) k));
-
-        for (int i = 1; i < line.length(); i++)
-        {
-            tree.insert(line.charAt(i));
-        }
+    public RedBlackTree<Character> makeTreeFromString(String line) {
+        RedBlackTree<Character> tree = new RedBlackTree<>();
+        line.chars().forEach(k -> tree.insert((char) k));
 
         return tree;
     }
 
     public <T extends Comparable<T>> void makeTestTreeFrom(ArrayList<T> values) {
-        TreeNode<T> t = new RBNode<>(values.getFirst(), null);
+        RedBlackTree<T> t = new RedBlackTree<>();
         for (int i = 1; i < values.size(); i++) {
             t.insert(values.get(i));
             t.checkTree();
         }
-        t.checkTree();
+        t.assertInvariants();
     }
 
     public record TestCase(String line, String description) {
