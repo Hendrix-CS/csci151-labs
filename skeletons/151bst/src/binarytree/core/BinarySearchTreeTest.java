@@ -49,7 +49,7 @@ public class BinarySearchTreeTest {
 	}
 
 	@Test
-	public void test1() {
+	public void testInsertContains() {
 		foreach(CHARS, c -> tree.insert(c));
 		foreach(CHARS, c -> assertTrue(tree.contains(c)));
 		foreach("ABCDEFGHIJKLMNOPQRSTUVWXYZpqrstuvwxyz", c -> assertFalse(tree.contains(c)));
@@ -57,31 +57,31 @@ public class BinarySearchTreeTest {
 
 	@Test
 	public void testSize() {
-		test1();
+		testInsertContains();
 		assertEquals(CHARS.length(), tree.size());
 	}
 
 	@Test
 	public void testMin() {
-		test1();
+		testInsertContains();
 		assertEquals("b", tree.getMin().get());
 	}
 
 	@Test
 	public void testMax() {
-		test1();
+		testInsertContains();
 		assertEquals("n", tree.getMax().get());
 	}
 
 	@Test
 	public void testHeight() {
-		test1();
+		testInsertContains();
 		assertEquals(2, (int)tree.height().get());
 	}
 
 	@Test
 	public void testHeightBig() {
-		test1();
+		testInsertContains();
 		foreach("pqrstuvwxyz", c -> tree.insert(c));
 		assertEquals(13, (int)tree.height().get());
 	}
@@ -95,7 +95,7 @@ public class BinarySearchTreeTest {
 
 	@Test
 	public void testInorder() {
-		test1();
+		testInsertContains();
 		print("Inorder", tree.inorder());
 		assertTrue(isSorted(tree.inorder()));
 	}
@@ -110,7 +110,7 @@ public class BinarySearchTreeTest {
 	
 	@Test
 	public void testPreorder() {
-		test1();
+		testInsertContains();
 		ArrayList<String> pre = tree.preorder();
 		print("Preorder", pre);
 		foreachIndexed("hdbfljn", (i, c) -> assertEquals(c, pre.get(i)));
@@ -118,7 +118,7 @@ public class BinarySearchTreeTest {
 	
 	@Test
 	public void testPostorder() {
-		test1();
+		testInsertContains();
 		ArrayList<String> post = tree.postorder();
 		print("Postorder", post);
 		foreachIndexed("bfdjnlh", (i, c) -> assertEquals(c, post.get(i)));
@@ -126,7 +126,7 @@ public class BinarySearchTreeTest {
 	
 	@Test
 	public void testLevelOrder() {
-		test1();
+		testInsertContains();
 		ArrayList<ArrayList<ArrayList<String>>> levels = tree.levelOrder();
 		for (int i = 0; i < levels.size(); i++) {
 			System.out.print("Level " + i + ":");
@@ -169,7 +169,7 @@ public class BinarySearchTreeTest {
 
 	@Test
 	public void testRemove1() {
-		test1();
+		testInsertContains();
 		foreachReversed(CHARS, c -> assertRemove(c));
 	}
 	
@@ -180,7 +180,7 @@ public class BinarySearchTreeTest {
 	
 	@Test
 	public void testRemove2() {
-		test1();
+		testInsertContains();
 		foreach(CHARS, c -> assertRemove(c));
 	}	
 	
@@ -191,7 +191,7 @@ public class BinarySearchTreeTest {
 
 	@Test
 	public void testRemove3() {
-		test1();
+		testInsertContains();
 		foreach("njfblhd", c -> assertRemove(c));
 	}
 
@@ -202,7 +202,7 @@ public class BinarySearchTreeTest {
 
 	@Test
 	public void testRemove4() {
-		test1();
+		testInsertContains();
 		foreach("dbfjlnh", c -> assertRemove(c));
 	}
 	
@@ -213,12 +213,12 @@ public class BinarySearchTreeTest {
 
 	@Test
 	public void testRemove5() {
-		test1();
+		testInsertContains();
 		foreach("hh", c -> assertRemove(c));
 	}
 	
 	public void testAddRemove(String removals) {
-		test1();
+		testInsertContains();
 		foreachIndexed(removals, (i, c) -> assertCorrectRemove(c, removals.substring(i+1)));
 	}
 	
@@ -241,61 +241,6 @@ public class BinarySearchTreeTest {
 		assertTrue(!tree.contains(c) && containsAll(left));
 	}
 
-	@Test
-	public void testLeftRotate() {
-		tree.insert("a");
-		tree.insert("b");
-		tree.insert("c");
-		assertEquals("a b c", tree.preorderString());
-		tree.leftRotateAt("a");
-		assertEquals("b a c", tree.preorderString());
-	}
-
-	@Test
-	public void testLeftRotateBig() {
-		tree.insert("f");
-		tree.insert("b");
-		tree.insert("a");
-		tree.insert("d");
-		tree.insert("c");
-		tree.insert("e");
-		tree.insert("j");
-		tree.insert("h");
-		tree.insert("g");
-		tree.insert("i");
-		tree.insert("k");
-		assertEquals("f b a d c e j h g i k", tree.preorderString());
-		tree.leftRotateAt("b");
-		assertEquals("f d b a c e j h g i k", tree.preorderString());
-	}
-	
-	@Test
-	public void testRightRotate() {
-		tree.insert("c");
-		tree.insert("b");
-		tree.insert("a");
-		assertEquals("c b a", tree.preorderString());
-		tree.rightRotateAt("c");
-		assertEquals("b a c", tree.preorderString());
-	}
-
-	@Test
-	public void testRightRotateBig() {
-		tree.insert("f");
-		tree.insert("b");
-		tree.insert("a");
-		tree.insert("d");
-		tree.insert("c");
-		tree.insert("e");
-		tree.insert("j");
-		tree.insert("h");
-		tree.insert("g");
-		tree.insert("i");
-		tree.insert("k");
-		assertEquals("f b a d c e j h g i k", tree.preorderString());
-		tree.rightRotateAt("j");
-		assertEquals("f b a d c e h g j i k", tree.preorderString());
-	}
 	@Test
 	public void testBig() {
 		for (char c = 0; c < 127; c++) {

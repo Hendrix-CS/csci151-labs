@@ -13,10 +13,8 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 import javafx.scene.text.Text;
 import javafx.scene.control.Button;
-import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.control.ToggleGroup;
 
 public class BinaryTreeController {
 	
@@ -28,15 +26,6 @@ public class BinaryTreeController {
 	
 	@FXML
 	Button clear;
-	
-	@FXML
-	RadioButton remove;
-	
-	@FXML
-	RadioButton leftRotate;
-	
-	@FXML
-	RadioButton rightRotate;
 	
 	BinarySearchTree<String> tree = new BinarySearchTree<>();
 	
@@ -58,11 +47,6 @@ public class BinaryTreeController {
 			tree = new BinarySearchTree<>();
 			redrawTree();
 		});
-	
-		ToggleGroup changeGroup = new ToggleGroup();
-		changeGroup.getToggles().add(remove);
-		changeGroup.getToggles().add(leftRotate);
-		changeGroup.getToggles().add(rightRotate);
 	}
 	
 	@FXML
@@ -85,7 +69,7 @@ public class BinaryTreeController {
 		for (int level = levels.size() - 1; level >= 0; level -= 1) {
 			double xOffset = visualTree.getWidth() / (1 + Math.pow(2, level));
 			for (int column = 0; column < levels.get(level).size(); column++) {
-				placeNodeAt(xOffset, yOffset, level, column, levels.get(level).get(column), allLabels, string2circle);
+				placeNodeAt(xOffset, yOffset, levels.size() - 1 - level, levels.get(level).size() - 1 - column, levels.get(level).get(column), allLabels, string2circle);
 			}
 		}
 		
@@ -124,9 +108,7 @@ public class BinaryTreeController {
 			allLabels.add(nodeText);
 			c.setOnMouseClicked(event -> {
 				String t = nodeText.getText();
-				if (remove.isSelected()) tree.remove(t);
-				if (leftRotate.isSelected()) tree.leftRotateAt(t);
-				if (rightRotate.isSelected()) tree.rightRotateAt(t);
+				tree.remove(t);
 				redrawTree();
 			});
 			nodeText.setOnMouseClicked(c.getOnMouseClicked());
