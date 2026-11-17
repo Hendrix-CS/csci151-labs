@@ -3,6 +3,7 @@ package binarytree.gui;
 import binarytree.core.NodeColor;
 import binarytree.core.RedBlack;
 import binarytree.core.RedBlackTree;
+import binarytree.core.nodes.RBNode;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -83,7 +84,7 @@ public class BinaryTreeController {
 		}
 
         for (Map.Entry<String, Circle> entry: string2circle.entrySet()) {
-            if (entry.getKey().length() > 0) {
+            if (!entry.getKey().isEmpty()) {
                 visualTree.getChildren().add(entry.getValue());
             }
         }
@@ -93,17 +94,20 @@ public class BinaryTreeController {
 		}
 		
 		size.setText(Integer.toString(tree.size()));
-		tree.getMin().ifPresent(m -> min.setText(m));
-		tree.getMax().ifPresent(m -> max.setText(m));
+        if (!tree.isEmpty())
+        {
+            min.setText(tree.getMin());
+            max.setText(tree.getMax());
+        }
         height.setText(Integer.toString(tree.height()));
 	}
 	
 	private void placeNodeAt(double xOffset, double yOffset, int level, int column, ArrayList<NodeColor<String>> nodeAndKids, ArrayList<Text> allLabels, HashMap<String,Circle> string2circle) {
-		if (!nodeAndKids.isEmpty() && nodeAndKids.get(0) != null) {
+		if (!nodeAndKids.isEmpty() && nodeAndKids.getFirst() != null) {
 			double x = xOffset * (1 + column);
 			double y = yOffset * (0.5 + level);
-			Circle c = new Circle(x, y, 12, nodeAndKids.get(0).color() == RedBlack.RED ? Color.RED : Color.BLACK);
-			Text nodeText = new Text(nodeAndKids.get(0).key());
+			Circle c = new Circle(x, y, 12, nodeAndKids.getFirst().color() == RedBlack.RED ? Color.RED : Color.BLACK);
+			Text nodeText = new Text(nodeAndKids.getFirst().key());
             nodeText.setFill(Color.WHITE);
 			string2circle.put(nodeText.getText(), c);
             for (int kid = 1; kid < nodeAndKids.size(); kid++) {

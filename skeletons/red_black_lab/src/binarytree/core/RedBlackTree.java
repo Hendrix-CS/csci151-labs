@@ -1,120 +1,140 @@
 package binarytree.core;
 
+import binarytree.core.nodes.RBNode;
+import binarytree.core.nodes.TreeNode;
+
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Optional;
 import java.util.Queue;
 import java.util.function.Function;
 
-public class RedBlackTree<K extends Comparable<K>> implements RBParent<K> {
-    private RBChild<K> root = new Leaf<>(this);
+public class RedBlackTree<K extends Comparable<K>> implements TreeNode<K> {
+    private TreeNode<K> root = new RBNode<>(null, this);
 
+    public RedBlackTree()
+    {
+        root.setColor(RedBlack.BLACK);
+    }
+
+    @Override
+    public TreeNode<K> getParent() {
+        throw new IllegalStateException("Cannot call getParent() on a RedBlackTree");
+    }
+
+    @Override
+    public void setParent(TreeNode<K> parent) {
+        root.setParent(parent);
+    }
+
+    @Override
+    public TreeNode<K> getChild(Child child) {
+        return root.getChild(child);
+    }
+
+    @Override
+    public Child whichChild(TreeNode<K> node) {
+        return root.whichChild(node);
+    }
+
+    @Override
+    public void setChild(Child child, TreeNode<K> node) {
+        root.setChild(child, node);
+    }
+
+    @Override
+    public RedBlack getColor() {
+        return root.getColor();
+    }
+
+    @Override
+    public void setColor(RedBlack color) {
+        root.setColor(color);
+    }
+
+    @Override
+    public void insert(K value) {
+        if (root.getValue() == null) {
+            root.setValue(value);
+        }
+        else {
+            root.insert(value);
+        }
+    }
+
+    @Override
+    public K getValue() {
+        return root.getValue();
+    }
+
+    @Override
+    public void setValue(K value) {
+        root.setValue(value);
+    }
+
+    @Override
     public int size() {
         return root.size();
     }
 
+    @Override
     public int height() {
         return root.height();
     }
 
     @Override
-    public int blackHeight()
-    {
+    public void insertFixup() {
+
+    }
+
+    @Override
+    public int blackHeight() {
         return root.blackHeight();
     }
 
     @Override
-    public K getKey()
-    {
-        return root.getKey();
-    }
-
-    public Optional<RBNode<K>> getRoot() {return root.asNode();}
-
-    public void insert(K key) {
-        if (root.asNode().isEmpty()) {
-            root = new RBNode<>(key, this);
-            root.insertFixup();
-        } else {
-            root.asNode().get().insert(key);
-        }
-    }
-
-    public Optional<K> find(K key) {
-        return root instanceof RBNode<K> node ? node.find(key) : Optional.empty();
+    public void checkTree() {
+        root.checkTree();
     }
 
     @Override
-    public boolean hasChild(RBNode<K> candidate) {
-        return root == candidate;
+    public void leftRotate() {
+        root.leftRotate();
     }
 
     @Override
-    public RedBlack getColor()
-    {
-        return root.getColor();
+    public void rightRotate() {
+        root.rightRotate();
     }
 
     @Override
-    public void setParent(RBParent<K> parent)
-    {
-        root.setParent(parent);
-    }
-
-    @Override
-    public int numChildren()
-    {
-        return root instanceof RBParent<K> parent ? parent.numChildren() : 0;
-    }
-
-    @Override
-    public void insertFixup()
-    {
-        root.insertFixup();
-    }
-
-    @Override
-    public void changeChild(RBChild<K> oldChild, RBChild<K> newChild) {
-        if (root == oldChild) {
+    public void changeChild(TreeNode<K> oldChild, TreeNode<K> newChild) {
+        if (oldChild == root) {
             root = newChild;
         } else {
-            throw new IllegalArgumentException("That wasn't the root.");
+            throw new IllegalStateException("Cannot change child of root node if oldChild is not root!");
         }
     }
 
     @Override
-    public Optional<RBNode<K>> getLeft()
-    {
-        return root instanceof RBParent<K> parent ? parent.getLeft() : Optional.empty();
-    }
-
-    @Override
-    public Optional<RBNode<K>> getRight()
-    {
-        return root instanceof RBParent<K> parent ? parent.getRight() : Optional.empty();
-    }
-
-    @Override
-    public void showTree(int depth, StringBuilder shower)
-    {
-        root.showTree(depth, shower);
+    public boolean isEmpty() {
+        return root.getValue() == null && root.isEmpty();
     }
 
     public void assertInvariants() {
-        if (root.asNode().isPresent()) {
-            root.asNode().get().assertSearchTree();
+        if (!root.isEmpty()) {
+            root.checkTree();
 
             if (root.getColor() != RedBlack.BLACK)
             {
                 throw new IllegalStateException("Root node must be black!");
             }
 
-            root.asNode().get().assertNoRedRed();
             int height = root.height();
-            int max = (int) (2 * Math.log(root.size())) + 1;
+            int n = root.size();
+            double max = 2 * (Math.log(n + 1) / Math.log(2)) - 1;
 
-            if (height > max)
-            {
+            if (height > max) {
                 throw new IllegalStateException("Tree is unbalanced!");
             }
 
@@ -125,11 +145,15 @@ public class RedBlackTree<K extends Comparable<K>> implements RBParent<K> {
         }
     }
 
+    public TreeNode<K> getRoot() {
+        return root;
+    }
+
     private class TreeQueueEntry {
-        RBNode<K> node;
+        TreeNode<K> node;
         int level;
 
-        TreeQueueEntry(RBNode<K> node, int level) {
+        TreeQueueEntry(TreeNode<K> node, int level) {
             this.node = node;
             this.level = level;
         }
@@ -137,11 +161,11 @@ public class RedBlackTree<K extends Comparable<K>> implements RBParent<K> {
 
     public ArrayList<ArrayList<ArrayList<NodeColor<K>>>> levelOrder() {
         ArrayList<ArrayList<ArrayList<NodeColor<K>>>> levels = new ArrayList<>();
-        if (root.asNode().isEmpty()) {return levels;}
+        if (isEmpty()) return levels;
 
         levels.add(new ArrayList<>());
         Queue<TreeQueueEntry> q = new ArrayDeque<>();
-        q.add(new TreeQueueEntry(root.asNode().get(), 0));
+        q.add(new TreeQueueEntry(root, 0));
 
         for (;;) {
             TreeQueueEntry node = q.remove();
@@ -169,19 +193,19 @@ public class RedBlackTree<K extends Comparable<K>> implements RBParent<K> {
 
     private ArrayList<NodeColor<K>> createEntryFrom(TreeQueueEntry node, Queue<TreeQueueEntry> q) {
         ArrayList<NodeColor<K>> entry = new ArrayList<>();
-        if (node.node.asNode().isPresent()) {
-            entry.add(new NodeColor<>(node.node.asNode().get().getKey(), node.node.getColor()));
+        if (!node.node.isLeaf()) {
+            entry.add(new NodeColor<>(node.node.getValue(), node.node.getColor()));
         }
         addChildOf(entry, node, q, n -> n.node.getLeft());
         addChildOf(entry, node, q, n -> n.node.getRight());
         return entry;
     }
 
-    private void addChildOf(ArrayList<NodeColor<K>> entry, TreeQueueEntry node, Queue<TreeQueueEntry> q, Function<TreeQueueEntry,Optional<RBNode<K>>> getter) {
-        Optional<RBNode<K>> child = getter.apply(node);
-        if (child.isPresent()) {
-            q.add(new TreeQueueEntry(child.get(), node.level + 1));
-            entry.add(new NodeColor<>(child.get().getKey(), child.get().getColor()));
+    private void addChildOf(ArrayList<NodeColor<K>> entry, TreeQueueEntry node, Queue<TreeQueueEntry> q, Function<TreeQueueEntry, TreeNode<K>> getter) {
+        TreeNode<K> child = getter.apply(node);
+        if (!child.isLeaf()) {
+            q.add(new TreeQueueEntry(child, node.level + 1));
+            entry.add(new NodeColor<>(child.getValue(), child.getColor()));
         } else {
             q.add(new TreeQueueEntry(new RBNode<>(null, node.node), node.level + 1));
         }
