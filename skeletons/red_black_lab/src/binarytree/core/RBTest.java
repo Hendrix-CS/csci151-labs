@@ -12,35 +12,77 @@ import static org.junit.Assert.*;
 public class RBTest {
 
     @Test
+    public void testGrandparent()
+    {
+        RedBlackTree<Integer> tree = new RedBlackTree<>();
+
+        TreeNode<Integer> first = new RBNode<>(1, tree);
+        TreeNode<Integer> firstLeft =  new RBNode<>(0, first);
+        TreeNode<Integer> secondLeft = new RBNode<>(-1, firstLeft);
+
+        tree.setLeft(first);
+        first.setLeft(firstLeft);
+        firstLeft.setLeft(secondLeft);
+
+        if (secondLeft.getGrandparent() == null) {
+            throw new IllegalStateException("Cannot get grandparent!");
+        }
+    }
+
+    @Test
+    public void testPibling()
+    {
+        RedBlackTree<Integer> tree = new RedBlackTree<>();
+
+        TreeNode<Integer> root = new RBNode<>(1, tree);
+        TreeNode<Integer> left1 = new RBNode<>(0, root);
+        TreeNode<Integer> left2 = new RBNode<>(-1, left1);
+        TreeNode<Integer> right1 = new RBNode<>(-1, root);
+        TreeNode<Integer> right2 = new RBNode<>(-1, right1);
+
+        root.setLeft(left1);
+        root.setRight(right1);
+        left1.setLeft(left2);
+        right1.setRight(right2);
+
+        if (right2.getPibling() == null || left2.getPibling() == null) {
+            throw new IllegalStateException("Cannot find pibling, is null!");
+        }
+    }
+
+    @Test
     public void testRightRotate() {
-        TreeNode<Integer> tree = new RBNode<>(1, null);
+        RedBlackTree<Integer> tree = new RedBlackTree<>();
 
-        TreeNode<Integer> firstLeft =  new RBNode<>(0, tree);
-        TreeNode<Integer> secondLeft = new RBNode<>(-1, null);
+        TreeNode<Integer> first = new RBNode<>(1, tree);
+        TreeNode<Integer> firstLeft =  new RBNode<>(0, first);
+        TreeNode<Integer> secondLeft = new RBNode<>(-1, firstLeft);
 
-        tree.setLeft(firstLeft);
+        tree.setLeft(first);
+        first.setLeft(firstLeft);
         firstLeft.setLeft(secondLeft);
 
         tree.rightRotate();
-        tree.insertFixup();
+        //tree.insertFixup();
 
-        if (tree.height() != 1) throw new IllegalStateException("Right rotate failed! Tree is height 2.");
+        if (tree.height() != 2) throw new IllegalStateException("Right rotate failed! Tree is height " + tree.height());
     }
 
     @Test
     public void testLeftRotate() {
-        TreeNode<Integer> tree = new RBNode<>(1, null);
+        RedBlackTree<Integer> tree = new RedBlackTree<>();
 
-        TreeNode<Integer> firstRight = new RBNode<>(0, tree);
-        TreeNode<Integer> secondRight = new RBNode<>(-1, null);
+        TreeNode<Integer> first = new RBNode<>(1, tree);
+        TreeNode<Integer> firstLeft =  new RBNode<>(0, first);
+        TreeNode<Integer> secondLeft = new RBNode<>(-1, firstLeft);
 
-        tree.setLeft(firstRight);
-        firstRight.setLeft(secondRight);
+        tree.setRight(first);
+        first.setRight(firstLeft);
+        firstLeft.setRight(secondLeft);
 
         tree.leftRotate();
-        tree.insertFixup();
 
-        if (tree.height() != 1) throw new IllegalStateException("Left rotate failed! Tree is height 2.");
+        if (tree.height() != 2) throw new IllegalStateException("Left rotate failed! Tree is height " + tree.height());
     }
 
     @Test
@@ -96,52 +138,140 @@ public class RBTest {
 
     @Test
     public void zigZigInvariant() {
-        testTrees(new TestCase("cba", "Zig-Zig invariant tree."));
+        RedBlackTree<Character> tree = new RedBlackTree<>();
+        TreeNode<Character> first = new RBNode<>('c', tree);
+        tree.changeChild(tree.getRoot(), first);
+        TreeNode<Character> firstLeft = new RBNode<>('b', first);
+        RBNode<Character> secondLeft = new RBNode<>('a', firstLeft);
+
+        first.setLeft(firstLeft);
+        firstLeft.setLeft(secondLeft);
+
+        secondLeft.zigZigFixup(firstLeft, first);
+
+        assertEquals(1, tree.height());
     }
 
     @Test
     public void zigZagInvariant() {
-        testTrees(new TestCase("cab", "Zig-Zag invariant tree."));
+        RedBlackTree<Character> tree = new RedBlackTree<>();
+
+        TreeNode<Character> first = new RBNode<>('a', tree);
+        tree.changeChild(tree.getRoot(), first);
+
+        TreeNode<Character> firstRight = new RBNode<>('c', first);
+        RBNode<Character> secondRight = new RBNode<>('b', firstRight);
+
+        first.setRight(firstRight);
+        firstRight.setLeft(secondRight);
+
+        secondRight.zigZagFixup(firstRight, first);
+
+        assertEquals(Character.valueOf('b'), tree.getRoot().getValue());
+        assertEquals(Character.valueOf('a'), tree.getRoot().getLeft().getValue());
+        assertEquals(Character.valueOf('c'), tree.getRoot().getRight().getValue());
+
+        assertEquals(1, tree.height());
     }
 
     @Test
     public void zagZigInvariant() {
-        testTrees(new TestCase("acb", "Zag-Zig invariant tree."));
+        RedBlackTree<Character> tree = new RedBlackTree<>();
+
+        TreeNode<Character> first = new RBNode<>('a', tree);
+        tree.changeChild(tree.getRoot(), first);
+
+        TreeNode<Character> firstRight = new RBNode<>('c', first);
+        RBNode<Character> secondRight = new RBNode<>('b', firstRight);
+
+        first.setRight(firstRight);
+        firstRight.setLeft(secondRight);
+
+        secondRight.zigZagFixup(firstRight, first);
+
+        assertEquals(Character.valueOf('b'), tree.getRoot().getValue());
+        assertEquals(Character.valueOf('a'), tree.getRoot().getLeft().getValue());
+        assertEquals(Character.valueOf('c'), tree.getRoot().getRight().getValue());
+
+        assertEquals(1, tree.height());
+    }
+
+    @Test
+    public void testBlackPiblingFixup() {
+        RedBlackTree<Character> tree = new RedBlackTree<>();
+
+        RBNode<Character> grandparent = new RBNode<>('c', tree);
+        tree.changeChild(tree.getRoot(), grandparent);
+
+        RBNode<Character> parent = new RBNode<>('b', grandparent);
+        RBNode<Character> pibling = new RBNode<>('d', grandparent);
+        RBNode<Character> node = new RBNode<>('a', parent);
+
+        grandparent.setLeft(parent);
+        grandparent.setRight(pibling);
+        parent.setLeft(node);
+
+        grandparent.setColor(RedBlack.BLACK);
+        parent.setColor(RedBlack.RED);
+        pibling.setColor(RedBlack.BLACK);
+        node.setColor(RedBlack.RED);
+
+        node.blackPiblingFixup(parent, grandparent);
+
+        assertEquals(Character.valueOf('b'), tree.getRoot().getValue());
+        assertEquals(Character.valueOf('a'), tree.getRoot().getLeft().getValue());
+        assertEquals(Character.valueOf('c'), tree.getRoot().getRight().getValue());
     }
 
     @Test
     public void zagZagInvariant() {
-        testTrees(new TestCase("abc", "Zag-Zag invariant tree."));
-    }
+        RedBlackTree<Character> tree = new RedBlackTree<>();
 
-    @Test
-    public void allZigZagInvariants() {
-        testTrees(new TestCase("cbadfe", "Test all Zig-Zag invariants on one tree."));
-    }
+        TreeNode<Character> first = new RBNode<>('a', tree);
+        tree.changeChild(tree.getRoot(), first);
 
-    public void testTrees(TestCase testCase) {
-        RedBlackTree<Character> tree = makeTreeFromString(testCase.line());
+        TreeNode<Character> firstRight = new RBNode<>('b', first);
+        RBNode<Character> secondRight = new RBNode<>('c', firstRight);
 
-        try {
-            tree.assertInvariants();
-        }
-        catch (Exception e) {
-            throw new IllegalStateException("Failed on " + testCase.description(), e);
-        }
+        first.setRight(firstRight);
+        firstRight.setRight(secondRight);
+
+        secondRight.zagZagFixup(firstRight, first);
+
+        assertEquals(Character.valueOf('b'), tree.getRoot().getValue());
+        assertEquals(Character.valueOf('a'), tree.getRoot().getLeft().getValue());
+        assertEquals(Character.valueOf('c'), tree.getRoot().getRight().getValue());
+
+        assertEquals(1, tree.height());
     }
 
     @Test
     public void testRedPiblingFixup() {
-        TreeNode<Character> tree = makeTreeFromString("dbfac");
+        RedBlackTree<Character> tree = new RedBlackTree<>();
 
-        tree.checkTree();
+        RBNode<Character> grandparent = new RBNode<>('c', tree);
+        tree.changeChild(tree.getRoot(), grandparent);
 
-        TreeNode<Character> root = tree;
+        RBNode<Character> parent = new RBNode<>('b', grandparent);
+        RBNode<Character> pibling = new RBNode<>('d', grandparent);
+        RBNode<Character> node = new RBNode<>('a', parent);
 
-        assertEquals(RedBlack.BLACK, root.getColor());
+        grandparent.setLeft(parent);
+        grandparent.setRight(pibling);
+        parent.setLeft(node);
 
-        assertEquals(RedBlack.BLACK, root.getLeft().getColor());
-        assertEquals(RedBlack.BLACK, root.getRight().getColor());
+        grandparent.setColor(RedBlack.BLACK);
+        parent.setColor(RedBlack.RED);
+        pibling.setColor(RedBlack.RED);
+        node.setColor(RedBlack.RED);
+
+        node.redPiblingFixup();
+
+        if (parent.getColor() != RedBlack.BLACK || pibling.getColor() != RedBlack.BLACK || grandparent.getColor() != RedBlack.BLACK) {
+            throw new IllegalStateException(
+                    "Red-Pibling Fixup failed! Incorrect recoloring."
+            );
+        }
     }
 
     public RedBlackTree<Character> makeTreeFromString(String line) {
@@ -153,14 +283,17 @@ public class RBTest {
 
     public <T extends Comparable<T>> void makeTestTreeFrom(ArrayList<T> values) {
         RedBlackTree<T> t = new RedBlackTree<>();
-        for (int i = 1; i < values.size(); i++) {
-            t.insert(values.get(i));
-            t.checkTree();
+        try {
+            for (int i = 1; i < values.size(); i++) {
+                t.insert(values.get(i));
+                t.checkTree();
+            }
+            t.assertInvariants();
         }
-        t.assertInvariants();
-    }
-
-    public record TestCase(String line, String description) {
-
+        catch (Exception e)
+        {
+            t.printTree();
+            throw e;
+        }
     }
 }

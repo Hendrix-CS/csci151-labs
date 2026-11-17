@@ -10,7 +10,7 @@ import java.util.Queue;
 import java.util.function.Function;
 
 public class RedBlackTree<K extends Comparable<K>> implements TreeNode<K> {
-    private final TreeNode<K> root = new RBNode<>(null, null);
+    private TreeNode<K> root = new RBNode<>(null, this);
 
     public RedBlackTree()
     {
@@ -19,7 +19,7 @@ public class RedBlackTree<K extends Comparable<K>> implements TreeNode<K> {
 
     @Override
     public TreeNode<K> getParent() {
-        return root.getParent();
+        throw new IllegalStateException("Cannot call getParent() on a RedBlackTree");
     }
 
     @Override
@@ -60,8 +60,6 @@ public class RedBlackTree<K extends Comparable<K>> implements TreeNode<K> {
         else {
             root.insert(value);
         }
-
-        root.insertFixup();
     }
 
     @Override
@@ -86,7 +84,7 @@ public class RedBlackTree<K extends Comparable<K>> implements TreeNode<K> {
 
     @Override
     public void insertFixup() {
-        root.insertFixup();
+
     }
 
     @Override
@@ -110,6 +108,15 @@ public class RedBlackTree<K extends Comparable<K>> implements TreeNode<K> {
     }
 
     @Override
+    public void changeChild(TreeNode<K> oldChild, TreeNode<K> newChild) {
+        if (oldChild == root) {
+            root = newChild;
+        } else {
+            throw new IllegalStateException("Cannot change child of root node if oldChild is not root!");
+        }
+    }
+
+    @Override
     public boolean isEmpty() {
         return root.getValue() == null && root.isEmpty();
     }
@@ -124,10 +131,10 @@ public class RedBlackTree<K extends Comparable<K>> implements TreeNode<K> {
             }
 
             int height = root.height();
-            int max = (int) (2 * Math.log(root.size()));
+            int n = root.size();
+            double max = 2 * (Math.log(n + 1) / Math.log(2)) - 1;
 
-            if (height >= max)
-            {
+            if (height > max) {
                 throw new IllegalStateException("Tree is unbalanced!");
             }
 
@@ -136,6 +143,10 @@ public class RedBlackTree<K extends Comparable<K>> implements TreeNode<K> {
                 throw new IllegalStateException("Black Height is higher than height of tree!");
             }
         }
+    }
+
+    public TreeNode<K> getRoot() {
+        return root;
     }
 
     private class TreeQueueEntry {

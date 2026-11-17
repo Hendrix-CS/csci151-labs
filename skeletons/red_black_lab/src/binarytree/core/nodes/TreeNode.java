@@ -2,6 +2,7 @@ package binarytree.core.nodes;
 
 import binarytree.core.Child;
 import binarytree.core.RedBlack;
+import binarytree.core.RedBlackTree;
 
 public interface TreeNode<K extends Comparable<K>>
 {
@@ -51,24 +52,16 @@ public interface TreeNode<K extends Comparable<K>>
         return getLeft().getColor() == RedBlack.RED || getRight().getColor() == RedBlack.RED;
     }
 
-    default boolean hasBlackChild() {
-        return getLeft().getColor() == RedBlack.BLACK;
-    }
-
     default boolean hasChild(TreeNode<K> node) {
         return getLeft() == node || getRight() == node;
     }
 
     default boolean isRoot() {
-        return getParent() == null;
+        return getParent() instanceof RedBlackTree<K>;
     }
 
     default boolean isLeaf() {
-        return this instanceof BlackLeaf;
-    }
-
-    default int numChildren() {
-        return (getLeft().isLeaf() ? 0 : 1) + (getRight().isLeaf() ? 0 : 1);
+        return this instanceof NullNode<K>;
     }
 
     default void changeChild(TreeNode<K> oldChild, TreeNode<K> newChild) {
@@ -81,6 +74,10 @@ public interface TreeNode<K extends Comparable<K>>
         else {
             throw new IllegalStateException("Cannot change child because oldChild is not a child of this node!");
         }
+    }
+
+    default TreeNode<K> getGrandparent() {
+        throw new UnsupportedOperationException("Cannot get grandparent!");
     }
 
     default boolean isEmpty() {
@@ -106,12 +103,27 @@ public interface TreeNode<K extends Comparable<K>>
     }
 
     default TreeNode<K> getPibling() {
-        Child child = getParent().whichChild(this);
+        throw new UnsupportedOperationException("Cannot get pibling!");
+    }
 
-        return switch (child)
-        {
-            case LEFT -> getParent().getRight();
-            case RIGHT -> getParent().getLeft();
-        };
+    default void printTree() {
+        printTree(this, "", true);
+    }
+
+    default void printTree(TreeNode<K> node, String prefix, boolean isTail) {
+        if (node.isLeaf()) {
+            return;
+        }
+
+        if (!node.getRight().isLeaf()) {
+            printTree(node.getRight(), prefix + (isTail ? "│   " : "    "), false);
+        }
+
+        System.out.println(prefix + (isTail ? "└── " : "┌── ")
+                + node.getValue() + "(" + node.getColor() + ")");
+
+        if (!node.getLeft().isLeaf()) {
+            printTree(node.getLeft(), prefix + (isTail ? "    " : "│   "), true);
+        }
     }
 }

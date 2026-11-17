@@ -13,8 +13,8 @@ public class RBNode<K extends Comparable<K>> implements TreeNode<K> {
         this.value = value;
         this.parent = parent;
 
-        left = new BlackLeaf<>(this);
-        right = new BlackLeaf<>(this);
+        left = new NullNode<>(this);
+        right = new NullNode<>(this);
         color = RedBlack.RED;
     }
 
@@ -174,43 +174,53 @@ public class RBNode<K extends Comparable<K>> implements TreeNode<K> {
         TODO: This is the code you need to implement!
      */
 
+    @Override
+    public TreeNode<K> getGrandparent() {
+        return null; // TODO: Write your code!
+    }
+
+    @Override
+    public TreeNode<K> getPibling() {
+        return null; // TODO: Write you code!
+    }
+
     public boolean redRedViolation() {
         return false;
     }
 
-    public void insertFixup() {
-        // TODO: Your code here
-    }
-
-    private void blackPiblingFixup(TreeNode<K> parent, TreeNode<K> grandparent) {
-        // TODO: Your code here
-    }
-
-    private void zigZigFixup(RBNode<K> parent, RBNode<K> grandparent) {
-        // TODO: Your code here
-    }
-
-    private void zigZagFixup(RBNode<K> parent, RBNode<K> grandparent) {
-        // TODO: Your code here
-    }
-
-    private void zagZigFixup(RBNode<K> parent, RBNode<K> grandparent) {
-        // TODO: Your code here
-    }
-
-    private void zagZagFixup(RBNode<K> parent, RBNode<K> grandparent) {
-        // TODO: Your code here
-    }
-
-    private void redPiblingFixup() {
-        // TODO: Your code here
-    }
-
     public void leftRotate() {
-        // TODO: Your code here
+
     }
 
     public void rightRotate() {
-        // TODO: Your code here
+
+    }
+
+    public void insertFixup() {
+
+    }
+
+    public void blackPiblingFixup(TreeNode<K> parent, TreeNode<K> grandparent) {
+
+    }
+
+    public void zigZigFixup(TreeNode<K> parent, TreeNode<K> grandparent) {
+
+    }
+
+    public void zigZagFixup(TreeNode<K> parent, TreeNode<K> grandparent) {
+
+    }
+
+    public void zagZigFixup(TreeNode<K> parent, TreeNode<K> grandparent) {
+
+    }
+
+    public void zagZagFixup(TreeNode<K> parent, TreeNode<K> grandparent) {
+
+    }
+
+    public void redPiblingFixup() {
+
     }
 }
