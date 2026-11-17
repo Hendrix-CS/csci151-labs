@@ -76,10 +76,6 @@ public interface TreeNode<K extends Comparable<K>>
         }
     }
 
-    default TreeNode<K> getGrandparent() {
-        throw new UnsupportedOperationException("Cannot get grandparent!");
-    }
-
     default boolean isEmpty() {
         return !hasLeft() && !hasRight();
     }
@@ -102,10 +98,6 @@ public interface TreeNode<K extends Comparable<K>>
         }
     }
 
-    default TreeNode<K> getPibling() {
-        throw new UnsupportedOperationException("Cannot get pibling!");
-    }
-
     default void printTree() {
         printTree(this, "", true);
     }
@@ -125,5 +117,15 @@ public interface TreeNode<K extends Comparable<K>>
         if (!node.getLeft().isLeaf()) {
             printTree(node.getLeft(), prefix + (isTail ? "    " : "│   "), true);
         }
+    }
+
+    default TreeNode<K> getGrandparent() {
+        // TODO Fix for Step 0.1
+        throw new UnsupportedOperationException("Cannot get grandparent!");
+    }
+
+    default TreeNode<K> getPibling() {
+        // TODO Fix for Step 0.2
+        throw new UnsupportedOperationException("Cannot get pibling!");
     }
 }
